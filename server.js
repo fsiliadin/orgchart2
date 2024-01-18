@@ -12,6 +12,10 @@ const credentials = {
     cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
 };
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.get('/parsePeople', (req, res) => {
     const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
     try {
