@@ -1,0 +1,6 @@
+firstname: Yann
+lastname: Chevalier
+birthday: 12/12/1990
+position: CEO
+n+1: Yann Chevalier
+date of arrival: 12/10/2009

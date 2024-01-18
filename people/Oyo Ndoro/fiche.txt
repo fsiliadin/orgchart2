@@ -1,0 +1,6 @@
+firstname: Oyo
+lastname: Ndoro
+birthday: 12/12/1990
+position: VP Talent
+n+1: Yann Chevalier
+date of arrival: 12/10/2009

@@ -1,0 +1,6 @@
+firstname: Jean-Marc
+lastname: Coïc
+birthday: 12/12/1980
+position: CTO
+n+1: Yann Chevalier
+date of arrival: 12/10/1979
