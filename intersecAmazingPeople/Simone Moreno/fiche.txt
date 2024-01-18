@@ -1,0 +1,6 @@
+firstname: Simone
+lastname: Moreno
+position: Continuous Integrator
+n+1: Rawad
+img: assets/photos/MORENO.Simone.jpg
+tags: 

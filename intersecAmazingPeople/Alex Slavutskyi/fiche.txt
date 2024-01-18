@@ -1,0 +1,6 @@
+firstname: Alex
+lastname: Slavutskyi
+position: UX/UI Designer
+n+1: Ana
+img: assets/photos/Alex.Slavutskyi.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Nassim
+lastname: Mnafeg
+position: Team Leader
+n+1: Moha
+img: assets/photos/Nassim_MNAFEG.jpg
+tags: 

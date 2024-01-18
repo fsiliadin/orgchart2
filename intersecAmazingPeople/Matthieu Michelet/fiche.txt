@@ -1,0 +1,6 @@
+firstname: Matthieu
+lastname: Michelet
+position: Site Reliability Engineer
+n+1: Clement
+img: assets/photos/matthieu_michelet.jpg
+tags: 

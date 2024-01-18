@@ -1,0 +1,6 @@
+firstname: Yannick
+lastname: Li
+position: C Developer
+n+1: Nassim Mnafeg
+img: assets/photos/Li.Yannick.jpg
+tags: 

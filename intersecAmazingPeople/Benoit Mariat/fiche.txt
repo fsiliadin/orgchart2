@@ -1,0 +1,6 @@
+firstname: Benoit
+lastname: Mariat
+position: Software Architect
+n+1: Ana
+img: assets/photos/Mariat.benoit.jpg
+tags: 

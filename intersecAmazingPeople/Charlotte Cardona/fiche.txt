@@ -1,0 +1,6 @@
+firstname: Charlotte
+lastname: Cardona
+position: Marketing & Communication Director
+n+1: Yann Chevalier@intersec Com
+img: assets/photos/Cardona.Charlotte.png
+tags: management

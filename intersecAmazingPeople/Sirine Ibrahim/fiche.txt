@@ -1,0 +1,6 @@
+firstname: Sirine
+lastname: Ibrahim
+position: Integration Engineer
+n+1: Emilien Coffin@intersec Com
+img: assets/photos/Ibrahim.Sirine.png
+tags: 

@@ -1,0 +1,6 @@
+firstname: Guillaume
+lastname: Chevallerau
+position: Software Architect
+n+1: Nassim Mnafeg
+img: assets/photos/chevallereau.guillaume.png
+tags: 

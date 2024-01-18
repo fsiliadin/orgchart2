@@ -1,0 +1,6 @@
+firstname: Mathieu
+lastname: Vallet
+position: C Developer
+n+1: Rawad
+img: assets/photos/Vallet.Mathieu.jpg
+tags: 

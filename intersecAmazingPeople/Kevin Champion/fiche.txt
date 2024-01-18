@@ -1,0 +1,6 @@
+firstname: Kevin
+lastname: Champion
+position: IT Manager
+n+1: Clement
+img: assets/photos/Kevin_Champion.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Alexis
+lastname: Brasy
+position: Team Leader
+n+1: Moha
+img: assets/photos/Brasy.Alexis.jpg
+tags: 

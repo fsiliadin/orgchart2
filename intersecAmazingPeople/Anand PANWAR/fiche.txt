@@ -1,0 +1,6 @@
+firstname: Anand
+lastname: PANWAR
+position: Integration Engineer
+n+1: Haytham Beshir@intersec Com
+img: assets/photos/Anand.Panwar.jpg
+tags: 

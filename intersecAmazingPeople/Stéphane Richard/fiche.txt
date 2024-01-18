@@ -1,0 +1,6 @@
+firstname: Stéphane
+lastname: Richard
+position: C Developer
+n+1: Alexis
+img: assets/photos/Stephane_RICHARD.jpg
+tags: 

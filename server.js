@@ -13,7 +13,7 @@ const credentials = {
 };
 
 app.get('/parsePeople', (req, res) => {
-    const peopleFolderPath = path.join(__dirname, 'people');
+    const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
     try {
         fs.readdir(peopleFolderPath, (error, peopleFolders) => {
             const peopleData = [];

@@ -1,0 +1,6 @@
+firstname: Nicolas
+lastname: Angevelle
+position: DevOps Engineer
+n+1: Ana
+img: assets/photos/ANGEVELLE.Nicolas.JPG
+tags: 

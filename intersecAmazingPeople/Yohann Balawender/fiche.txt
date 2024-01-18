@@ -1,0 +1,6 @@
+firstname: Yohann
+lastname: Balawender
+position: Product Owner
+n+1: Ana
+img: assets/photos/Balawander.Yohann.jpg
+tags: 

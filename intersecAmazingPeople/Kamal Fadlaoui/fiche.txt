@@ -1,0 +1,6 @@
+firstname: Kamal
+lastname: Fadlaoui
+position: VP Engineering
+n+1: Ana
+img: assets/photos/Fadlaoui.Kamal.jpg
+tags: management

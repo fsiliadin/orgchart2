@@ -1,0 +1,6 @@
+firstname: Ahmed
+lastname: Hamza
+position: VP Sales
+n+1: Ingolf Ruh@intersec Com
+img: assets/photos/HAMZA.Ahmed.jpg
+tags: management

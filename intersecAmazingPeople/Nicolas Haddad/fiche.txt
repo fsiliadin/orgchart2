@@ -1,0 +1,6 @@
+firstname: Nicolas
+lastname: Haddad
+position: Regional Sales Manager
+n+1: Arnaud Westphal@intersec Com
+img: assets/photos/haddad.Nicolas.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Pierre-Louis
+lastname: Cuny
+position: Data Science Team Lead
+n+1: Ana
+img: assets/photos/CUNY.Pierre-Louis.jpg
+tags: 

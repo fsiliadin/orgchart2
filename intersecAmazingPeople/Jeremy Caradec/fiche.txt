@@ -1,0 +1,6 @@
+firstname: Jeremy
+lastname: Caradec
+position: C Developer
+n+1: Rawad
+img: assets/photos/Caradec.Jeremy.png
+tags: 

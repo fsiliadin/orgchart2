@@ -1,0 +1,6 @@
+firstname: Yann
+lastname: Kagan
+position: Software Architect
+n+1: Rawad
+img: assets/photos/Kagan.Yann.jpg
+tags: 

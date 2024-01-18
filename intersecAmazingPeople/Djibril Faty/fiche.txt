@@ -1,0 +1,6 @@
+firstname: Djibril
+lastname: Faty
+position: Support Engineer
+n+1: Onur Topcu@intersec Com
+img: assets/photos/FATY.Djibril.jpg
+tags: 

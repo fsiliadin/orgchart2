@@ -1,0 +1,6 @@
+firstname: John
+lastname: Doe
+position: Developer
+n+1: 1 2 3
+img: john.jpg
+tags: 

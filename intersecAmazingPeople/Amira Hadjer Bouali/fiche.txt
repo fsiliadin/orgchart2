@@ -1,0 +1,6 @@
+firstname: Amira
+lastname: Bouali
+position: Developer
+n+1: Alexis
+img: assets/photos/Bouali.Amira.jpg
+tags: 

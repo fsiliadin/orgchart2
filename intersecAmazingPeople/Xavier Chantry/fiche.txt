@@ -1,0 +1,6 @@
+firstname: Xavier
+lastname: Chantry
+position: Software Architect
+n+1: Rawad
+img: assets/photos/CHANTRY.xavier.JPG
+tags: 

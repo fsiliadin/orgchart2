@@ -1,0 +1,6 @@
+firstname: Nadia
+lastname: Traoré
+position: Project Manager
+n+1: Emilien Coffin@intersec Com
+img: assets/photos/Nadia.Traore.jpg
+tags: 

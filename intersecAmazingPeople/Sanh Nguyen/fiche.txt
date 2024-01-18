@@ -1,0 +1,6 @@
+firstname: Sanh
+lastname: Nguyen
+position: Senior FP&A Analyst
+n+1: Nicolas Rousseau-dumarcet@intersec Com
+img: assets/photos/Sanh_NGUYEN.jpg
+tags: 

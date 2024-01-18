@@ -1,0 +1,6 @@
+firstname: Naveen
+lastname: KUMAR
+position: Solution Architect - DUBAI
+n+1: Neeraj
+img: assets/photos/Naveen_KUMAR.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Anne-Laurence
+lastname: Zanclan
+position: Hiring Consultant
+n+1: Oyo Ndoro@intersec Com
+img: assets/photos/ZANCLAN.Anne-Laurence.jpg
+tags: 

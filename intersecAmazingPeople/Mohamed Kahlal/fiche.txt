@@ -1,0 +1,6 @@
+firstname: Mohamed
+lastname: Kahlal
+position: VP Engineering Delivery
+n+1: Ana
+img: assets/photos/KAHLAL.mohamed.png
+tags: management

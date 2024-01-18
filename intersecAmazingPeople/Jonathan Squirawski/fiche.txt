@@ -1,0 +1,6 @@
+firstname: Jonathan
+lastname: Squirawski
+position: Software Architect
+n+1: Ana
+img: assets/photos/Jonathan_Squirawski.jpg
+tags: 

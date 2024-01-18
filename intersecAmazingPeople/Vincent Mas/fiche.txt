@@ -1,0 +1,6 @@
+firstname: Vincent
+lastname: Mas
+position: Product Owner
+n+1: Ana
+img: assets/photos/Mas.Vincent.png
+tags: 

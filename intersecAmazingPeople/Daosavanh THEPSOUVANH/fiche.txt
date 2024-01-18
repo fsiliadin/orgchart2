@@ -1,0 +1,6 @@
+firstname: Daosavanh
+lastname: THEPSOUVANH
+position: Continuous Integrator
+n+1: Nassim Mnafeg
+img: assets/photos/Daosavanh.Thepsouvanh.jpg
+tags: 

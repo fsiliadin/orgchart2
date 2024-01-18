@@ -1,0 +1,6 @@
+firstname: Dimitri
+lastname: Rivoire
+position: Frontend Developer
+n+1: Alexis
+img: assets/photos/Dimitri_RIVOIRE.jpg
+tags: 

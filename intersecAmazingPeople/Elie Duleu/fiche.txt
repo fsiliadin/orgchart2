@@ -1,0 +1,6 @@
+firstname: Elie
+lastname: Duleu
+position: C Developer
+n+1: Rawad
+img: assets/photos/Elie.Duleu.jpg
+tags: 

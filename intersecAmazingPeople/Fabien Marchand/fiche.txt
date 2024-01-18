@@ -1,0 +1,6 @@
+firstname: Fabien
+lastname: Marchand
+position: DevOps Engineer
+n+1: Ana
+img: assets/photos/MARCHAND.Fabien.jpg
+tags: 

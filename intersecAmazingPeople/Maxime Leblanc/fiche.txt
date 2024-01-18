@@ -1,0 +1,6 @@
+firstname: Maxime
+lastname: Leblanc
+position: C Developer
+n+1: Nassim Mnafeg
+img: assets/photos/Maxime_Leblanc.jpg
+tags: 

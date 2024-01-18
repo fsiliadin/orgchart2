@@ -1,0 +1,6 @@
+firstname: Mohamed
+lastname: Sulaiman
+position: Solution Architect
+n+1: Nicolas Najman@intersec Com
+img: assets/photos/Mohamed.Yousuf.jpg
+tags: 

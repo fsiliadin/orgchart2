@@ -1,0 +1,6 @@
+firstname: Frédéric
+lastname: Tutzo
+position: Continuous Integrator
+n+1: Nassim Mnafeg
+img: assets/photos/Frederic_Tutzo.jpg
+tags: 

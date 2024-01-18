@@ -1,0 +1,6 @@
+firstname: Alexandre
+lastname: Quincé
+position: Sales Development Representative
+n+1: Ingolf Ruh@intersec Com
+img: assets/photos/Alexandre.QUINCE.jpg
+tags: 

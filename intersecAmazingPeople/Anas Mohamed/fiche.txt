@@ -1,0 +1,6 @@
+firstname: Anas
+lastname: Mohamed
+position: Integration Engineer (Egypt)
+n+1: Neeraj
+img: assets/photos/Anas_Mohamed.jpg
+tags: 

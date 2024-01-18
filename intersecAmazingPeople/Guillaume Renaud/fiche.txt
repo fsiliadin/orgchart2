@@ -1,0 +1,6 @@
+firstname: Guillaume
+lastname: Renaud
+position: Continuous Integrator
+n+1: Rawad
+img: assets/photos/Guillaume.Renaud.jpg
+tags: 

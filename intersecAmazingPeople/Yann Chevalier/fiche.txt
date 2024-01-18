@@ -1,0 +1,6 @@
+firstname: Yann
+lastname: Chevalier
+position: CEO
+n+1: Yann Chevalier@intersec Com
+img: assets/photos/CHEVALIER.Yann.jpg
+tags: management

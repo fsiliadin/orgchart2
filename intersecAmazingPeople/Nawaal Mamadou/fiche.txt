@@ -1,0 +1,6 @@
+firstname: Nawaal
+lastname: Mamadou
+position: Support Engineer
+n+1: Onur Topcu@intersec Com
+img: assets/photos/MAMADOU.Nawaal.jpg
+tags: 

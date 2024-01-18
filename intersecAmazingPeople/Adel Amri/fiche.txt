@@ -1,0 +1,6 @@
+firstname: Adel
+lastname: Amri
+position: Solution Architect
+n+1: Nicolas Najman@intersec Com
+img: assets/photos/Adel.Amri.jpg
+tags: 

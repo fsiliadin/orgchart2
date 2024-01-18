@@ -1,0 +1,6 @@
+firstname: Djamel-Eddine
+lastname: Meharga
+position: Developer
+n+1: Alexis
+img: assets/photos/Meharga.Djamel.jpg
+tags: 

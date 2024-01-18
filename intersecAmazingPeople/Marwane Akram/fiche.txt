@@ -1,0 +1,6 @@
+firstname: Marwane
+lastname: Akram
+position: Product Owner
+n+1: Ana
+img: assets/photos/AKRAM.Marwane.jpg
+tags: 

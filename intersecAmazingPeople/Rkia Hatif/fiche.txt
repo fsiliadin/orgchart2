@@ -1,0 +1,6 @@
+firstname: Rkia
+lastname: Hatif
+position: Payroll and Administrative Manager
+n+1: Oyo Ndoro@intersec Com
+img: assets/photos/hatif.rkia.png
+tags: 

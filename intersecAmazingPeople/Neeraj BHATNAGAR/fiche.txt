@@ -1,0 +1,6 @@
+firstname: Neeraj
+lastname: BHATNAGAR
+position: Project Manager
+n+1: Mohit Maheshwari@intersec Com
+img: assets/photos/Neeraj_BHATNAGAR.jpg
+tags: management

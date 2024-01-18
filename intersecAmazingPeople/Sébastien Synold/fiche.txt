@@ -1,0 +1,6 @@
+firstname: Sébastien
+lastname: Synold
+position: Product Manager
+n+1: Christophe Nez@intersec Com
+img: assets/photos/Sebastien_SYNOLD.jpg
+tags: 

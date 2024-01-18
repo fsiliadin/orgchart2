@@ -1,0 +1,6 @@
+firstname: Stéphane
+lastname: Jutras
+position: Presales
+n+1: Ingolf Ruh@intersec Com
+img: assets/photos/Stephane_JUTRAS.jpg
+tags: 

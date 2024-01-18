@@ -1,0 +1,6 @@
+firstname: Nicolas
+lastname: Sery
+position: System administrator
+n+1: Clement
+img: assets/photos/Nicolas.Sery.jpg
+tags: 

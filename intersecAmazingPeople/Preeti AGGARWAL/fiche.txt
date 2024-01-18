@@ -1,0 +1,6 @@
+firstname: Preeti
+lastname: AGGARWAL
+position: Managed Service Expert - DUBAI
+n+1: Haytham Beshir@intersec Com
+img: assets/photos/Preeti_AGGARWAL.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Océane
+lastname: Boudinet
+position: Technical Documentation Writer
+n+1: Christele
+img: assets/photos/Oceane_BOUDINET.jpg
+tags: 

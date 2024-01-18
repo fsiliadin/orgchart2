@@ -1,0 +1,6 @@
+firstname: Matthias
+lastname: Granger
+position: Project Manager & Regional TL
+n+1: Mohit Maheshwari@intersec Com
+img: assets/photos/granger.matthias.jpg
+tags: management

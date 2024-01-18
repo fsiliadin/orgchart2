@@ -1,0 +1,6 @@
+firstname: Ingolf
+lastname: Ruh
+position: CRO
+n+1: Yann Chevalier@intersec Com
+img: assets/photos/RUH.Ingolf.jpg
+tags: management

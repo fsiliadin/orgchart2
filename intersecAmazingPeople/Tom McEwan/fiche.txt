@@ -1,0 +1,6 @@
+firstname: Tom
+lastname: McEwan
+position: Regional Sales Manager
+n+1: Ingolf Ruh@intersec Com
+img: assets/photos/mcewan.Tom.JPG
+tags: 

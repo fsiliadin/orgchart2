@@ -1,0 +1,6 @@
+firstname: Abdelmoula
+lastname: Ousfour
+position: Solution Architect
+n+1: Nicolas Najman@intersec Com
+img: assets/photos/Abdelmoula.Elousfour.jpg
+tags: 

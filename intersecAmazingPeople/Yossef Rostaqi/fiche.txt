@@ -1,0 +1,6 @@
+firstname: Yossef
+lastname: Rostaqi
+position: C Developer
+n+1: Rawad
+img: assets/photos/Rostaqi.Yossef.jpg
+tags: 

@@ -1,0 +1,6 @@
+firstname: Emilien
+lastname: Coffin
+position: Leader of Integration Process
+n+1: Mohit Maheshwari@intersec Com
+img: assets/photos/COFFIN.Emilien.JPG
+tags: management

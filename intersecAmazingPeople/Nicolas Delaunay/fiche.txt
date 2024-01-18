@@ -1,0 +1,6 @@
+firstname: Nicolas
+lastname: Delaunay
+position: Regional Sales Manager
+n+1: Arnaud Westphal@intersec Com
+img: assets/photos/Delaunay.Nicolas.jpg
+tags: 

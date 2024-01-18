@@ -1,0 +1,6 @@
+firstname: Marie-Luna
+lastname: Gonzalez
+position: Marketing and Social Networking Apprentice
+n+1: Cardona
+img: assets/photos/Marie.Luna.Gonzalez.jpg
+tags: 

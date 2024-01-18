@@ -1,0 +1,6 @@
+firstname: Mohammed
+lastname: Abbas
+position: Presales
+n+1: Ingolf Ruh@intersec Com
+img: assets/photos/Mohamed.Abas.jpg
+tags: 

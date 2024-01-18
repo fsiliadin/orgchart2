@@ -1,0 +1,6 @@
+firstname: Rawad
+lastname: Zgheib
+position: Team Leader
+n+1: Moha
+img: assets/photos/Rawad_Zgheib.png
+tags: 

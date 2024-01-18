@@ -1,0 +1,6 @@
+firstname: Killian
+lastname: Goff
+position: Data Scientist
+n+1: Cuny
+img: assets/photos/Killian_LeGoff.jpg
+tags: 

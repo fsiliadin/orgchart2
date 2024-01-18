@@ -1,0 +1,6 @@
+firstname: Amer
+lastname: Bdeoui
+position: Product Owner
+n+1: Ana
+img: assets/photos/Bdoui.Amer.png
+tags: 

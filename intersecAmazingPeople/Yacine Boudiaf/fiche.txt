@@ -1,0 +1,6 @@
+firstname: Yacine
+lastname: Boudiaf
+position: Developer
+n+1: Alexis
+img: assets/photos/Boudiaf.Yacine.jpg
+tags: 
