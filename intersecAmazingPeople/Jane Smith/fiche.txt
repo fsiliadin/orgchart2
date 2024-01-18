@@ -1,6 +1,0 @@
-firstname: Jane
-lastname: Smith
-position: Designer
-n+1: 4 5 6
-img: jane.jpg
-tags: 

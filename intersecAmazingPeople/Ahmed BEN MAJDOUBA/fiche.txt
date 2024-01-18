@@ -1,6 +1,6 @@
 firstname: Ahmed
 lastname: MAJDOUBA
 position: Support Engineer
-n+1: Onur Topcu@intersec Com
+n+1: Onur Topcu
 img: assets/photos/Ahmed_BENMAJDOUBA.jpg
 tags: 

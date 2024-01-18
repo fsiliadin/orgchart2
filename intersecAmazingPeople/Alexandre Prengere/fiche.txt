@@ -1,6 +1,6 @@
 firstname: Alexandre
 lastname: Prengere
 position: Project Manager
-n+1: Emilien Coffin@intersec Com
+n+1: Emilien Coffin
 img: assets/photos/Alexandre.Prengere.jpg
 tags: 

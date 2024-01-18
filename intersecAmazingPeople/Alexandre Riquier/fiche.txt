@@ -1,6 +1,6 @@
 firstname: Alexandre
 lastname: Riquier
 position: Integration Engineer
-n+1: Simon Ravier@intersec Com
+n+1: Simon Ravier
 img: assets/photos/Alexandre_Riquier.jpg
 tags: 

@@ -1,6 +1,6 @@
 firstname: Chiheb
 lastname: Bestaoui
 position: Integration Engineer
-n+1: Emilien Coffin@intersec Com
+n+1: Emilien Coffin
 img: assets/photos/chiheb_bestaoui.jpg
 tags: 

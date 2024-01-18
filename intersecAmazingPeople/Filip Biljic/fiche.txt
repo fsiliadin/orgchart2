@@ -1,6 +1,6 @@
 firstname: Filip
 lastname: Biljic
 position: Integration Engineer
-n+1: Emilien Coffin@intersec Com
+n+1: Emilien Coffin
 img: assets/photos/Filip.Biljic.jpg
 tags: 

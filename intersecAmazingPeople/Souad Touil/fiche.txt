@@ -1,6 +1,6 @@
 firstname: Souad
 lastname: Touil
 position: Regional Sales Director
-n+1: Arnaud Westphal@intersec Com
+n+1: Arnaud Westphal
 img: assets/photos/TOUIL.Souad.JPG
 tags: 

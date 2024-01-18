@@ -1,6 +1,6 @@
 firstname: Imad
 lastname: Zidane
 position: Solution Architect
-n+1: Nicolas Najman@intersec Com
+n+1: Nicolas Najman
 img: assets/photos/Imad_ZIDANE.jpg
 tags: 

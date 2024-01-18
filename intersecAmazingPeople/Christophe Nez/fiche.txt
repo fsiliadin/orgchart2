@@ -1,6 +1,6 @@
 firstname: Christophe
 lastname: Nez
 position: VP Product Marketing
-n+1: Yann Chevalier@intersec Com
+n+1: Yann Chevalier
 img: assets/photos/NEZ.christophe.png
 tags: management

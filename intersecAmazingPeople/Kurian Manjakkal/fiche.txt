@@ -1,6 +1,6 @@
 firstname: Kurian
 lastname: Manjakkal
 position: VP Sales
-n+1: Ingolf Ruh@intersec Com
+n+1: Ingolf Ruh
 img: assets/photos/Manjakkal.Kurian.jpg
 tags: management

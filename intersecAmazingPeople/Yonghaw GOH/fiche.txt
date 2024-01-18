@@ -1,6 +1,6 @@
 firstname: Yonghaw
 lastname: GOH
 position: Pre Sales
-n+1: Ingolf Ruh@intersec Com
+n+1: Ingolf Ruh
 img: assets/photos/Yonghaw_GOH.jpg
 tags: 

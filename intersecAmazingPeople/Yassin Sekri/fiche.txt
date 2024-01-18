@@ -1,6 +1,6 @@
 firstname: Yassin
 lastname: Sekri
 position: Integration Engineer
-n+1: Mohit Maheshwari@intersec Com
+n+1: Mohit Maheshwari
 img: 
 tags: 

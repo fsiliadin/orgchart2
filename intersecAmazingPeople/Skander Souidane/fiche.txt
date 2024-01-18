@@ -1,6 +1,6 @@
 firstname: Skander
 lastname: Souidane
 position: Tiger Program Manager
-n+1: Mohit Maheshwari@intersec Com
+n+1: Mohit Maheshwari
 img: assets/photos/SOUIDANE.Skander.jpg
 tags: 

@@ -1,6 +1,6 @@
 firstname: Mouna
 lastname: Benzaroual
 position: Sales Administration Manager
-n+1: Nicolas Rousseau-dumarcet@intersec Com
+n+1: Nicolas Rousseau-dumarcet
 img: assets/photos/Mouna.Benzaroual.jpg
 tags: 

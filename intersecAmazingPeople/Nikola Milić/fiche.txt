@@ -1,6 +1,6 @@
 firstname: Nikola
 lastname: Milić
 position: Support Engineer
-n+1: Onur Topcu@intersec Com
+n+1: Onur Topcu
 img: 
 tags: 

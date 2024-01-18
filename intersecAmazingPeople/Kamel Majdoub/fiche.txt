@@ -1,6 +1,6 @@
 firstname: Kamel
 lastname: Majdoub
 position: Recruitment Manager
-n+1: Oyo Ndoro@intersec Com
+n+1: Oyo Ndoro
 img: assets/photos/majdoub.kamel.png
 tags: 

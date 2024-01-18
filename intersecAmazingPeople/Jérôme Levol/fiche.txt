@@ -1,6 +1,6 @@
 firstname: Jérôme
 lastname: Levol
 position: Integration Engineer
-n+1: Emilien Coffin@intersec Com
+n+1: Emilien Coffin
 img: assets/photos/Jerome.Levol.jpg
 tags: 

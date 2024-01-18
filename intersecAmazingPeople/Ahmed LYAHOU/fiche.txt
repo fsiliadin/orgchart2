@@ -1,6 +1,6 @@
 firstname: Ahmed
 lastname: LYAHOU
 position: Presales
-n+1: Ingolf Ruh@intersec Com
+n+1: Ingolf Ruh
 img: assets/photos/Ahmed_LYAHOU.jpg
 tags: 

@@ -1,6 +1,6 @@
 firstname: Haytham
 lastname: Beshir
 position: Program Manager
-n+1: Mohit Maheshwari@intersec Com
+n+1: Mohit Maheshwari
 img: assets/photos/beshir.haytham.jpg
 tags: management

@@ -1,6 +1,6 @@
 firstname: Walid
 lastname: Kaddour
 position: Solution Architect (TN)
-n+1: Nicolas Najman@intersec Com
+n+1: Nicolas Najman
 img: assets/photos/Walid_Kaddour.jpg
 tags: 

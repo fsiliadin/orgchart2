@@ -1,6 +1,0 @@
-firstname: CloudOps
-lastname: CloudOps
-position: undefined
-n+1: Clement
-img: undefined
-tags: team

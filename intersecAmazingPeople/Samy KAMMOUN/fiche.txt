@@ -1,6 +1,6 @@
 firstname: Samy
 lastname: KAMMOUN
 position: Recruitment Assistant
-n+1: Kamel Majdoub@intersec Com
+n+1: Kamel Majdoub
 img: assets/photos/Samy.Kammoun.jpg
 tags: 

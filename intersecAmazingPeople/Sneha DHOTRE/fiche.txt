@@ -1,6 +1,6 @@
 firstname: Sneha
 lastname: DHOTRE
 position: Integration Engineer
-n+1: Matthias Granger@intersec Com
+n+1: Matthias Granger
 img: assets/photos/Sneha_DHOTRE.png
 tags: 

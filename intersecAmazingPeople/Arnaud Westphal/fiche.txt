@@ -1,6 +1,6 @@
 firstname: Arnaud
 lastname: Westphal
 position: VP Sales
-n+1: Ingolf Ruh@intersec Com
+n+1: Ingolf Ruh
 img: assets/photos/WESTPHAL.Arnaud.JPG
 tags: management

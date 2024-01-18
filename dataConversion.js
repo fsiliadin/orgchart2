@@ -3,7 +3,7 @@ const path = require('path');
 
 function createTeamFolders(dataArray) {
   // Create "team" folder
-  const teamFolderPath = path.join(__dirname, 'team');
+  const teamFolderPath = path.join(__dirname, 'intersecAmazingPeople');
   if (!fs.existsSync(teamFolderPath)) {
     fs.mkdirSync(teamFolderPath);
   }
@@ -23,7 +23,7 @@ function createTeamFolders(dataArray) {
     const fileContent = `firstname: ${member.name.split(' ')[0]}\n` +
                         `lastname: ${member.name.split(' ').pop()}\n` +
                         `position: ${member.title}\n` +
-                        `n+1: ${member.pid.split('.').map((s) => `${s.charAt(0).toUpperCase() + s.slice(1)}`).join(' ')}\n` +
+                        `n+1: ${member.pid.split('@')[0].split('.').map((s) => `${s.charAt(0).toUpperCase() + s.slice(1)}`).join(' ')}\n` +
                         `img: ${member.img}\n` +
                         `tags: ${(member.tags && member.tags.join(' ')) ?? ''}`;
 
@@ -254,8 +254,6 @@ const teamArray = [
     /* {{{ IT & Cloud */
 
     { id: 'clement', pid: 'ana', name: 'Clément Vandoolaeghe', title: 'Head of Platform Operations', img: 'assets/photos/Clement.Vandoolaeghe.jpg'},
-    { id: 'cloudops', pid: 'clement', name: 'CloudOps', tags: ['team']},
-    { id: 'it', pid: 'clement', name: 'IT', tags: ['team']},
 
     /* IT */
 

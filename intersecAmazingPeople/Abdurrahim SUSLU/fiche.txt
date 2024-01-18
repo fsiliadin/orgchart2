@@ -1,6 +1,6 @@
 firstname: Abdurrahim
 lastname: SUSLU
 position: Regional Sales Manager - Dubai
-n+1: Ahmed Hamza@intersec Com
+n+1: Ahmed Hamza
 img: assets/photos/Abdurrahim_SUSLU.jpg
 tags: 

@@ -27,7 +27,7 @@ app.get('/parsePeople', (req, res) => {
                     const imageFile = files.find(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
                     let imagePath = '';
                     if (imageFile) {
-                        imagePath = path.join(personFolderPath, imageFile).split('orgchart2')[1];
+                        imagePath = path.join(personFolderPath, imageFile).split('orgchart2/')[1];
                     } else {
                       console.log(`No image file found in ${personFolderPath}`);
                     }

@@ -1,6 +1,6 @@
 firstname: Xavier
 lastname: Afyouni
 position: IT Trainer
-n+1: Emilien Coffin@intersec Com
+n+1: Emilien Coffin
 img: assets/photos/Xavier_AFYOUNI.jpg
 tags: 

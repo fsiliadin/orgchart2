@@ -1,6 +1,6 @@
 firstname: Shabab
 lastname: Vadakkangara
 position: Support Engineer (Dubai)
-n+1: Onur Topcu@intersec Com
+n+1: Onur Topcu
 img: assets/photos/Shabab.Vadakkangara.jpg
 tags: 

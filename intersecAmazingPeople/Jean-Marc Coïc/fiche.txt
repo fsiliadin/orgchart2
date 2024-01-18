@@ -1,6 +1,6 @@
 firstname: Jean-Marc
 lastname: Coïc
 position: CTO
-n+1: Yann Chevalier@intersec Com
+n+1: Yann Chevalier
 img: assets/photos/COIC.Jean-Marc.jpg
 tags: management
