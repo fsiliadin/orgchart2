@@ -1,24 +1,28 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { departementColors } from '../utils/colors'
 const props = defineProps(['node'])
 
 let showIntro = ref(false)
-
 </script>
 
 <template>
-    <div class="drawer-content">
-        <div class="modal-card">
+    <div class="drawer-content" v-if="node">
+        <div class="modal-card" :style="`--highlight-color: ${departementColors[node.department]}!important;`">
             <div class="profil">
                 <img :src="node?.img ?? ''">
             </div>
 
             <div class="card-body">
-                <p class="name">{{ node?.firstName ?? "name placeholder" }}</p>
-                <!-- <p class="id">{{ node?.id ?? "missing placeholder" }}</p> -->
+                <p class="name">{{  node?.firstname + " " + node?.lastname }}</p>
+
                 <p class="position">{{ node?.position ?? "no position" }}</p>
 
-                <p class="team">WIP My team</p>
+                <p class="team">
+                    <span class="team-color"/>
+
+                    {{ node.department }}
+                </p>
 
                 <div class="actions">
                     <div class="action slack">
@@ -53,25 +57,44 @@ let showIntro = ref(false)
             </div>
         </div>
 
-        <button @click="() => showIntro = !showIntro" class="hide-show-btn">
-            {{ showIntro ? 'Hide' : 'Show' }} intro pdf
-            
-            <svg v-if="!showIntro" class="arrow down" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
-            </svg>
+        <div class="button-wrapper">
+            <button @click="() => showIntro = !showIntro" class="hide-show-btn">
+                {{ showIntro ? 'Hide' : 'Show' }} intro pdf
+                
+                <svg v-if="!showIntro" class="arrow down" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
+                </svg>
+                
+                <svg v-else class="arrow up" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.0001 4C5.8001 4 5.6001 4.1 5.5001 4.2L2.2001 7.5C1.9001 7.8 1.9001 8.3 2.2001 8.6C2.5001 8.9 3.0001 8.9 3.3001 8.6L6.0001 5.9L8.7001 8.6C9.0001 8.9 9.5001 8.9 9.8001 8.6C10.1001 8.3 10.1001 7.8 9.8001 7.5L6.6001 4.3C6.4001 4.1 6.2001 4 6.0001 4Z"/>
+                </svg>
+            </button>
+        </div>
 
-            <svg v-else class="arrow up" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.0001 4C5.8001 4 5.6001 4.1 5.5001 4.2L2.2001 7.5C1.9001 7.8 1.9001 8.3 2.2001 8.6C2.5001 8.9 3.0001 8.9 3.3001 8.6L6.0001 5.9L8.7001 8.6C9.0001 8.9 9.5001 8.9 9.8001 8.6C10.1001 8.3 10.1001 7.8 9.8001 7.5L6.6001 4.3C6.4001 4.1 6.2001 4 6.0001 4Z"/>
-            </svg>
-        </button>
-
-        <div class="intro" v-if="showIntro">
-            <img class="intro-img" :src="() => node.welcomeSheetUrl ?? ''">
+        <div class="intro" v-if="showIntro && node.welcomeSheetUrl">
+            <img class="intro-img" :src="node.welcomeSheetUrl ?? ''">
         </div>
     </div>
 </template>
 
 <style scoped>
+    .button-wrapper {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hide-show-btn {
+        display: inline-block;
+        background: white;
+        border-radius: var(--border-radius);
+        border: solid var(--border-color) var(--border-width);
+        padding: 8px 24px;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
     .drawer-content {
         display: grid;
         grid-template-columns: 1fr;
@@ -128,6 +151,21 @@ let showIntro = ref(false)
         font-size: 24px;
     }
 
+    .team {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 24px;
+    }
+
+    .team-color {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        background: var(--highlight-color);
+    }
+
     .tags {
         font-weight: 700;
         font-size: 18px;
@@ -141,6 +179,7 @@ let showIntro = ref(false)
     .actions {
         display: flex;
         gap: 15px;
+        margin-bottom: 24px;
     }
 
     .action {
@@ -167,21 +206,25 @@ let showIntro = ref(false)
     }
 
     .action-icon {
+        margin-left: 4px;
         width: 20px;
         fill: white;
     }
 
     .intro {
-        width: 100%;
+        display: flex;
+        align-items: start;
+        width: 80%;
         height: 70vh;
         overflow: hidden;
+        margin: 0 auto;
     }
 
     .intro-img {
         width: 100%;
-        height: 100%;
         border-radius: var(--border-radius);
         overflow: hidden;
         object-fit: contain;
+        object-position: center;
     }
 </style>

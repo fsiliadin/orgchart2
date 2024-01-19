@@ -5,13 +5,14 @@ import { onMounted, ref } from 'vue';
 import { OrgChart } from 'd3-org-chart';
 import alexImage from "../assets/images/alex.png"
 import IntroExampleImage from '../assets/images/intro-example.png'
-import exampleData from '../data.json'
+import exampleData from '../utils/data.json'
 import Legend from './Legend.vue';
+import { departementColors } from '../utils/colors'
 // import * as d3 from 'd3'
 
 // orgChart options
-const nodeWidth = 420
-const nodeHeight = 175
+const nodeWidth = 422
+const nodeHeight = 165
 const childrenMargin = 40
 const compactMarginBetween = 15
 const compactMarginPair = 80
@@ -21,22 +22,11 @@ let searchValue = ref('')
 let searchOptions = ref([])
 let chart;
 
-let departementColors = {
-    '': "#ffffff", 
-    'rd': "#7A9CC6", 
-    'sales': "#FDCA40", 
-    'pdm': "#1D7A8F",
-    'ps': "#4EBF6E", 
-    'accounting': "#F9937D",
-    'it': "#817E9F",
-    'hr': "#AFBA32", 
-    'mkt': "#AA4586"
-}
 
 const usersData = [
     {
-        "firstName": "Alex",
-        "lastName": "De Slavuta",
+        "firstname": "Alex",
+        "lastname": "De Slavuta",
         "img": alexImage,
         "tags": "Ceo,tag1,manager,cto",
         "position": "Chief Executive Officer ",
@@ -46,8 +36,8 @@ const usersData = [
         "department": ""
     },
     {
-        "firstName": "Jean-Marc",
-        "lastName": "Nancy",
+        "firstname": "Jean-Marc",
+        "lastname": "Nancy",
         "img": alexImage,
         "tags": "Ceo,tag1, tag2",
         "position": "CTO ",
@@ -57,8 +47,8 @@ const usersData = [
         "department": "rd"
     },
     {
-        "firstName": "Alexandre",
-        "lastName": " Quincé",
+        "firstname": "Alexandre",
+        "lastname": " Quincé",
         "img": alexImage,
         "tags": "Ceo,tag1, tag2",
         "position": "CTO ",
@@ -68,8 +58,8 @@ const usersData = [
         "department": "sales"
     },
     {
-        "firstName": "Rkia",
-        "lastName": " Hatif",
+        "firstname": "Rkia",
+        "lastname": " Hatif",
         "img": alexImage,
         "tags": "Ceo",
         "position": "CTO ",
@@ -85,7 +75,9 @@ let reelData = []
 async function getData() {
     await fetch("https://localhost:2024/parsePeople").then(async (response) => {
         const people = await response.json()
-        reelData = people
+        console.log(people)
+        // reelData = people
+        // reelData = exampleData
     })
     .catch(() => {
         // reelData = exampleData
@@ -94,12 +86,6 @@ async function getData() {
 
     initChart()
 }
-
-/**
- * selectionner quelqu'un 
- * trouver quelqu'un avec la search bar -> animation vers personne avec zoom et déplacement
- * 
- */
 
  function initChart() {
     chart = new OrgChart()
@@ -116,11 +102,11 @@ async function getData() {
     return `
     <div class="card" style="--highlight-color: ${depColor};">
         <div class="card-img">
-            <img src=" ${ d.data.img}"/>
+            <img src=" ${ d.data.img }"/>
         </div>     
 
         <div class="card-body">
-            <div class="card-name"> ${ d.data.firstName } ${d.data.lastName}</div>
+            <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
             <div class="card-position"> ${ d.data.position } </div>
             <div class="card-infos">
                 <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -132,6 +118,10 @@ async function getData() {
     `;
     })
     .render();
+
+    chart.zoomOut()
+    chart.zoomOut()
+    chart.zoomOut()
 
     function onNodeClick(node) {
         console.log(node.data)
@@ -146,7 +136,7 @@ async function getData() {
 function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
-  const matchingUsers = usersData.filter((user) => user.firstName.includes(searchValue.value) || user.lastName.includes(searchValue.value))
+  const matchingUsers = usersData.filter((user) => user.firstname.includes(searchValue.value) || user.lastname.includes(searchValue.value))
     searchOptions.value = matchingUsers
 }
 
@@ -162,7 +152,7 @@ function unSelectNode() {
 
 function onOptionTap(option) {
     console.log(option)
-    chart.setUpToTheRootHighlighted(option.id).render().fit()
+    chart.setHighlighted(option.id).render().fit()
     searchOptions.value = []
     searchValue.value = ""
 }
@@ -175,13 +165,19 @@ onMounted(() => {
 <template>
     <div class="main">
         <div class="overlay">
-            <div class="search" :class="{active: searchOptions.length}">
+            <div class="search" :class="{active: searchValue.length}">
                 <div class="search-input">
+                    <div class="search-close" v-if="searchOptions.length">
+                        <svg class="search-close-icon" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0001 13.8293L18.0708 20.9C18.446 21.2752 18.9549 21.486 19.4855 21.486C20.0161 21.486 20.5249 21.2752 20.9001 20.9C21.2753 20.5248 21.4861 20.0159 21.4861 19.4853C21.4861 18.9547 21.2753 18.4459 20.9001 18.0707L13.8268 11L20.8988 3.92933C21.0845 3.74356 21.2318 3.52302 21.3322 3.28033C21.4327 3.03763 21.4844 2.77753 21.4843 2.51486C21.4842 2.2522 21.4324 1.99211 21.3319 1.74947C21.2313 1.50682 21.0839 1.28636 20.8981 1.10067C20.7123 0.914978 20.4918 0.767698 20.2491 0.667238C20.0064 0.566777 19.7463 0.515102 19.4837 0.515164C19.221 0.515226 18.9609 0.567023 18.7183 0.667598C18.4756 0.768173 18.2551 0.915557 18.0695 1.10133L11.0001 8.172L3.92946 1.10133C3.74505 0.910228 3.52444 0.757762 3.28048 0.65283C3.03652 0.547899 2.77411 0.492603 2.50855 0.490171C2.24299 0.487739 1.97961 0.538219 1.73377 0.638665C1.48793 0.739111 1.26456 0.887511 1.07669 1.07521C0.888814 1.2629 0.740203 1.48614 0.639526 1.73188C0.538848 1.97762 0.48812 2.24096 0.490302 2.50652C0.492483 2.77208 0.547531 3.03454 0.652232 3.2786C0.756933 3.52265 0.909192 3.74342 1.10012 3.928L8.17346 11L1.10146 18.072C0.910526 18.2566 0.758267 18.4773 0.653566 18.7214C0.548864 18.9655 0.493817 19.2279 0.491635 19.4935C0.489454 19.759 0.540181 20.0224 0.640859 20.2681C0.741537 20.5139 0.890148 20.7371 1.07802 20.9248C1.26589 21.1125 1.48927 21.2609 1.73511 21.3613C1.98094 21.4618 2.24433 21.5123 2.50988 21.5098C2.77544 21.5074 3.03785 21.4521 3.28181 21.3472C3.52577 21.2422 3.74639 21.0898 3.93079 20.8987L11.0001 13.8293Z"/>
+                        </svg>
+                    </div>
+
                     <svg class="icon" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
                         <path d="M23.4167 20.6667H21.9683L21.455 20.1717C23.3138 18.0157 24.3354 15.2633 24.3333 12.4167C24.3333 10.0598 23.6344 7.75581 22.325 5.79612C21.0156 3.83644 19.1545 2.30905 16.977 1.4071C14.7995 0.505158 12.4035 0.269168 10.0918 0.728975C7.78024 1.18878 5.65689 2.32373 3.99032 3.99031C2.32374 5.65689 1.18879 7.78023 0.728981 10.0918C0.269174 12.4034 0.505163 14.7995 1.40711 16.977C2.30905 19.1545 3.83644 21.0156 5.79613 22.325C7.75581 23.6344 10.0598 24.3333 12.4167 24.3333C15.3683 24.3333 18.0817 23.2517 20.1717 21.455L20.6667 21.9683V23.4167L29.8333 32.565L32.565 29.8333L23.4167 20.6667ZM12.4167 20.6667C7.85167 20.6667 4.16667 16.9817 4.16667 12.4167C4.16667 7.85167 7.85167 4.16667 12.4167 4.16667C16.9817 4.16667 20.6667 7.85167 20.6667 12.4167C20.6667 16.9817 16.9817 20.6667 12.4167 20.6667Z"/>
                     </svg>
 
-                    <input class="input" type="search" :value="searchValue" placeholder="Cible à stalker ..." name="" id="" @input="onSearchType">
+                    <input class="input" type="search" :value="searchValue" placeholder="Search" name="" id="" @input="onSearchType">
                 </div>
 
                 <div class="option-list">
@@ -189,7 +185,7 @@ onMounted(() => {
                         <div class="option-image">
                             <img :src="option.img" alt="">
                         </div>
-                        <p class="option-name"> {{ `${option.firstName} ${option.lastName}` }} </p>
+                        <p class="option-name"> {{ `${option.firstname} ${option.lastname}` }} </p>
                     </div>
                 </div>
             </div>
@@ -208,6 +204,26 @@ onMounted(() => {
 .main {
     width: 100%;
     height: 100%;
+}
+
+.node-button-div {
+    transform: translateY(-10px);
+    border-radius: var(--border-radius);
+}
+
+.node-button-div div {
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: var(--border-radius)!important;
+}
+
+.node-button-div svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
 }
 
 .card {
@@ -269,6 +285,7 @@ onMounted(() => {
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 5px;
+    font-family: "Montserrat";
 }
 
 .card-position {
@@ -361,6 +378,20 @@ onMounted(() => {
     box-shadow: var(--shadow);
     border: solid var(--border-color) var(--border-width);
     border-radius: var(--border-radius);
+  }
+
+  .search-close {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .search-close-icon {
+    width: 15px;
+    height: 15px;
+    fill: black;
   }
 
   .search-input .input:focus {

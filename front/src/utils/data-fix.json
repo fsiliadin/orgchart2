@@ -1,0 +1,57 @@
+[
+    {
+        "firstname": "Yann",
+        "lastname": "Chevalier",
+        "position": "CEO",
+        "n+1": "",
+        "img": "intersecAmazingPeople/Abdelmoula El Ousfour/Abdelmoula.Elousfour.jpg",
+        "tags": "",
+        "id": "1",
+        "parentId": "",
+        "department": ""
+    },
+    {
+        "firstname": "Ingolf",
+        "lastname": "Ruh",
+        "position": "CRO",
+        "n+1": "Yann Chevalier",
+        "img": "intersecAmazingPeople/Ingolf Ruh/Ingolf.Ruh.jpg",
+        "tags": "",
+        "id": "2",
+        "parentId": "1",
+        "department": "sales"
+    },
+    {
+        "firstname": "Christophe",
+        "lastname": "Nez",
+        "position": "CRO",
+        "n+1": "Yann Chevalier",
+        "img": "intersecAmazingPeople/Christophe Nez/Christophe.Nez.jpg",
+        "tags": "",
+        "id": "3",
+        "parentId": "1",
+        "department": "mkt"
+    },
+    {
+        "firstname": "Jean-Marc",
+        "lastname": "Coïc",
+        "position": "CTO",
+        "n+1": "Yann Chevalier",
+        "img": "intersecAmazingPeople/Jean-Marc Coïc/Jean-Marc.Coïc.jpg",
+        "tags": "",
+        "id": "4",
+        "parentId": "1",
+        "department": "rd"
+    },
+    {
+        "firstname": "Mohamed",
+        "lastname": "Kahlal",
+        "position": "VP Engineering Delivery",
+        "n+1": "Jean-Marc Coïc",
+        "img": "intersecAmazingPeople/Mohamed Kahlal/Mohamed.Kahlal.jpg",
+        "tags": "",
+        "id": "5",
+        "parentId": "4",
+        "department": "rd"
+    }
+]
