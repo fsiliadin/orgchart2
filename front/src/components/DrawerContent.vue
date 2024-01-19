@@ -66,7 +66,7 @@ let showIntro = ref(false)
         </button>
 
         <div class="intro" v-if="showIntro">
-            <img class="intro-img" :src="node.welcomeSheetUrl">
+            <img class="intro-img" :src="() => node.welcomeSheetUrl ?? ''">
         </div>
     </div>
 </template>

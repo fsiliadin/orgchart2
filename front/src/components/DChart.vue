@@ -6,10 +6,11 @@ import { OrgChart } from 'd3-org-chart';
 import alexImage from "../assets/images/alex.png"
 import IntroExampleImage from '../assets/images/intro-example.png'
 import exampleData from '../data.json'
+import Legend from './Legend.vue';
 // import * as d3 from 'd3'
 
 // orgChart options
-const nodeWidth = 480
+const nodeWidth = 420
 const nodeHeight = 175
 const childrenMargin = 40
 const compactMarginBetween = 15
@@ -121,7 +122,7 @@ async function getData() {
 function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
-  const matchingUsers = usersData.filter((user) => user.name.includes(searchValue.value))
+  const matchingUsers = usersData.filter((user) => user.firstName.includes(searchValue.value) || user.lastName.includes(searchValue.value))
     searchOptions.value = matchingUsers
 }
 
@@ -162,9 +163,9 @@ onMounted(() => {
                 <div class="option-list">
                     <div class="option" v-for="(option, index) in searchOptions" @click="() => onOptionTap(option)">
                         <div class="option-image">
-                            <img :src="option.profileUrl" alt="">
+                            <img :src="option.img" alt="">
                         </div>
-                        <p class="option-name"> {{ option.name }} </p>
+                        <p class="option-name"> {{ `${option.firstName} ${option.lastName}` }} </p>
                     </div>
                 </div>
             </div>
@@ -172,6 +173,8 @@ onMounted(() => {
             <Drawer class="drawer" :open="selectedNode != null" @close="() => unSelectNode()">
                 <DrawerContent :node="selectedNode" />
             </Drawer>
+
+            <Legend />
         </div>
         <div class="d-chart"></div>
     </div>
