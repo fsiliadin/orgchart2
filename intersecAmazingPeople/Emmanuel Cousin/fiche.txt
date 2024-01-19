@@ -1,6 +1,6 @@
 firstname: Emmanuel
 lastname: Cousin
 position: C Developer
-n+1: Rawad
+n+1: rawad
 img: assets/photos/COUSIN.Emmanuel.JPG
 tags: 

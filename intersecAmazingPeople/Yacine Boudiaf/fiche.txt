@@ -1,6 +1,6 @@
 firstname: Yacine
 lastname: Boudiaf
 position: Developer
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Boudiaf.Yacine.jpg
 tags: 

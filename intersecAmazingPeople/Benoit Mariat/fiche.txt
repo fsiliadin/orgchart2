@@ -1,6 +1,6 @@
 firstname: Benoit
 lastname: Mariat
 position: Software Architect
-n+1: Ana
+n+1: jean-marc.coic@intersec.com
 img: assets/photos/Mariat.benoit.jpg
 tags: 

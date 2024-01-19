@@ -1,6 +1,6 @@
 firstname: Mohit
 lastname: Maheshwari
 position: VP Operations
-n+1: Yann Chevalier
+n+1: yann.chevalier@intersec.com
 img: assets/photos/Maheshwari.Mohit.jpg
 tags: management

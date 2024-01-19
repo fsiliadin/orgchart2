@@ -1,6 +1,6 @@
 firstname: Antoine
 lastname: Loheac
 position: C Developer
-n+1: Rawad
+n+1: rawad
 img: assets/photos/loheac.antoine.png
 tags: 

@@ -1,6 +1,6 @@
 firstname: Muyao
 lastname: Chen
 position: C Developer
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Muyao.Chen.jpg
 tags: 

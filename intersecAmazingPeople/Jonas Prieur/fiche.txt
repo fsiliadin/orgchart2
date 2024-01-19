@@ -1,6 +1,6 @@
 firstname: Jonas
 lastname: Prieur
 position: Integration Engineer
-n+1: Simon Ravier
+n+1: simon.ravier@intersec.com
 img: assets/photos/Jonas.PRIEUR.jpg
 tags: 

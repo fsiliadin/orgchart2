@@ -1,6 +1,6 @@
 firstname: Safwan
 lastname: Alwan
 position: C Developer
-n+1: Rawad
+n+1: rawad
 img: assets/photos/Alwane.Safwan.jpg
 tags: 

@@ -1,6 +1,6 @@
 firstname: Onur
 lastname: Topcu
 position: Support Manager
-n+1: Mohit Maheshwari
+n+1: mohit.maheshwari@intersec.com
 img: assets/photos/Topcu.Onur.png
 tags: management

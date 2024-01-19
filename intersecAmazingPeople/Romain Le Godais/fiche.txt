@@ -1,6 +1,6 @@
 firstname: Romain
 lastname: Godais
 position: Software Architect
-n+1: Nassim Mnafeg
+n+1: nassim.mnafeg
 img: assets/photos/legodais.romain.jpg
 tags: 

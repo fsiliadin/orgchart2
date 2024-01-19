@@ -1,6 +1,6 @@
 firstname: Fanyo
 lastname: Siliadin
 position: Frontend Developer
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Fanyo.Siliadin.jpg
 tags: 

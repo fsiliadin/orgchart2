@@ -1,6 +1,6 @@
 firstname: Mohamed
 lastname: Aboelnoor
 position: Integration Engineer (Egypt)
-n+1: Neeraj
+n+1: neeraj
 img: assets/photos/Aboelnoo.Mohamed.png
 tags: 

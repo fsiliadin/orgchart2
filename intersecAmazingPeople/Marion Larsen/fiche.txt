@@ -1,6 +1,6 @@
 firstname: Marion
 lastname: Larsen
 position: Frontend Developer
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Mario.Larsen.jpg
 tags: 

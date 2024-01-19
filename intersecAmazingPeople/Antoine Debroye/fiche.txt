@@ -1,6 +1,6 @@
 firstname: Antoine
 lastname: Debroye
 position: Continuous Integrator
-n+1: Alexis
+n+1: alexis
 img: assets/photos/DEBROYE.Antoine.jpg
 tags: 

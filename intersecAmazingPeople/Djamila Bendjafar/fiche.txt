@@ -1,6 +1,6 @@
 firstname: Djamila
 lastname: Bendjafar
 position: Project Manager
-n+1: Emilien Coffin
+n+1: emilien.coffin@intersec.com
 img: assets/photos/Benjafar.Djamila.jpg
 tags: 

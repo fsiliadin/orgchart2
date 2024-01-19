@@ -1,6 +1,6 @@
 firstname: Nicolas
 lastname: Pauss
 position: Software Architect
-n+1: Alexis
+n+1: alexis
 img: assets/photos/PAUSS.nicolas.JPG
 tags: 

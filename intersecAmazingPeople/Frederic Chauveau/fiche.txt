@@ -1,6 +1,6 @@
 firstname: Frederic
 lastname: Chauveau
 position: C Developer
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Frederic.Chauveau.png
 tags: 

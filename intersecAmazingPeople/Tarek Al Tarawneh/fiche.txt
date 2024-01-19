@@ -1,6 +1,6 @@
 firstname: Tarek
 lastname: Tarawneh
 position: Presales
-n+1: Ingolf Ruh
+n+1: ingolf.ruh@intersec.com
 img: assets/photos/Tarawneh.Tarek.png
 tags: 

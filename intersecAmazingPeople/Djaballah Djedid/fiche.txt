@@ -1,6 +1,6 @@
 firstname: Djaballah
 lastname: Djedid
 position: Developer
-n+1: Nassim Mnafeg
+n+1: nassim.mnafeg
 img: assets/photos/Djaballah_DJEDID.jpg
 tags: 

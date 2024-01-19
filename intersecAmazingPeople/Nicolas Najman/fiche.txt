@@ -1,6 +1,6 @@
 firstname: Nicolas
 lastname: Najman
 position: SA Director
-n+1: Mohit Maheshwari
+n+1: mohit.maheshwari@intersec.com
 img: assets/photos/najman.nicolas.png
 tags: management

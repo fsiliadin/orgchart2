@@ -1,0 +1,6 @@
+firstname: Cedrick
+lastname: Vero
+position: Presales
+n+1: ingolf.ruh@intersec.com
+img: assets/photos/Vero.Cedrick.png
+tags: 

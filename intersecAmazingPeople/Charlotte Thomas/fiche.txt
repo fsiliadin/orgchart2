@@ -1,6 +1,6 @@
 firstname: Charlotte
 lastname: Thomas
 position: Cloud Offering Director
-n+1: Christophe Nez
+n+1: christophe.nez@intersec.com
 img: assets/photos/Charlotte_THOMAS.jpg
 tags: 

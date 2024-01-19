@@ -1,6 +1,6 @@
 firstname: Imen
 lastname: Benabdallah
 position: Continuous Integrator
-n+1: Alexis
+n+1: alexis
 img: assets/photos/Imen_BENABDALLAH.jpg
 tags: 

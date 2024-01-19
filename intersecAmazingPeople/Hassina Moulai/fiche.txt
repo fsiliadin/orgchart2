@@ -1,0 +1,6 @@
+firstname: Hassina
+lastname: Moulai
+position: Developer
+n+1: nassim.mnafeg
+img: assets/photos/Hassina.Moulai.jpg
+tags: 

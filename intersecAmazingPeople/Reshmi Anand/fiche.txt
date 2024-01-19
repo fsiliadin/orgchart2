@@ -1,6 +1,6 @@
 firstname: Reshmi
 lastname: Anand
 position: Integration Engineer
-n+1: Emilien Coffin
+n+1: emilien.coffin@intersec.com
 img: assets/photos/Reshmi.Anand.jpg
 tags: 

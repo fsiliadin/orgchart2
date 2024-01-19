@@ -1,6 +1,6 @@
 firstname: Caroline
 lastname: Dumaitre
 position: Accounting and Financial Manager
-n+1: Nicolas Rousseau-dumarcet
+n+1: nicolas.rousseau-dumarcet@intersec.com
 img: assets/photos/Dumaitre.Caroline.png
 tags: 

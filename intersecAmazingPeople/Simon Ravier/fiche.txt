@@ -1,6 +1,6 @@
 firstname: Simon
 lastname: Ravier
 position: Integration Technical Lead
-n+1: Emilien Coffin
+n+1: mohit.maheshwari@intersec.com
 img: assets/photos/Ravier.Simon.png
 tags: 

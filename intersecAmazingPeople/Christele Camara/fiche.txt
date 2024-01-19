@@ -1,0 +1,6 @@
+firstname: Christele
+lastname: Camara
+position: Technical Documentation Manager
+n+1: kamal
+img: assets/photos/Camara.Christele.jpg
+tags: 

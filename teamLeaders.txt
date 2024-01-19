@@ -1,0 +1,39 @@
+Po: kamal
+Data Science: cuny
+Bogops: jean-marc.coic@intersec.com
+Transverse: kamal
+Engineering: moha
+Palladium: alexis
+Cobalt: nassim.mnafeg
+Telco: rawad
+Doc: christele
+Sa Team: nicolas.najman@intersec.com
+Ps Europe: emilien.coffin@intersec.com
+Ps Eeme Program: haytham.beshir@intersec.com
+Ps Eeme Project: neeraj
+Ps Americas: matthias.granger@intersec.com
+Ps Tiger: mohit.maheshwari@intersec.com
+Ps Support: onur.topcu@intersec.com
+Ps Tq: simon.ravier@intersec.com
+Tunis Team: mohit.maheshwari@intersec.com
+Sales Eu: arnaud.westphal@intersec.com
+Presales Eu: ingolf.ruh@intersec.com
+Sdr: ingolf.ruh@intersec.com
+Sales Eeme: ahmed.hamza@intersec.com
+Presales Eeme: ingolf.ruh@intersec.com
+Sales Americas: ingolf.ruh@intersec.com
+Presales Americas: ingolf.ruh@intersec.com
+Sales Apac: ingolf.ruh@intersec.com
+Presales Apac: ingolf.ruh@intersec.com
+Rd Team: jean-marc.coic@intersec.com
+Sales Team: ingolf.ruh@intersec.com
+Pdm Team: christophe.nez@intersec.com
+Ps Team: mohit.maheshwari@intersec.com
+Accounting: nicolas.rousseau-dumarcet@intersec.com
+Finance: caroline.dumaitre@intersec.com
+It Team: clement
+Hr Team: oyo.ndoro@intersec.com
+Hr Recrutement: oyo.ndoro@intersec.com
+Hr Administration: oyo.ndoro@intersec.com
+Mkt Team: cardona
+Intersec: yann.chevalier@intersec.com
