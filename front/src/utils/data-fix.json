@@ -8,7 +8,8 @@
         "tags": "",
         "id": "1",
         "parentId": "",
-        "department": ""
+        "department": "",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
     },
     {
         "firstname": "Ingolf",
@@ -19,7 +20,8 @@
         "tags": "",
         "id": "2",
         "parentId": "1",
-        "department": "sales"
+        "department": "sales",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
     },
     {
         "firstname": "Christophe",
@@ -30,7 +32,8 @@
         "tags": "",
         "id": "3",
         "parentId": "1",
-        "department": "mkt"
+        "department": "mkt",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
     },
     {
         "firstname": "Jean-Marc",
@@ -41,7 +44,8 @@
         "tags": "",
         "id": "4",
         "parentId": "1",
-        "department": "rd"
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
     },
     {
         "firstname": "Mohamed",
@@ -52,7 +56,8 @@
         "tags": "",
         "id": "5",
         "parentId": "4",
-        "department": "rd"
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
     },
     {
         "firstname": "Alexis",
@@ -63,6 +68,67 @@
         "tags": "",
         "id": "6",
         "parentId": "5",
-        "department": "rd"
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
+    },
+    {
+        "firstname": "Benoit",
+        "lastname": "Mariat",
+        "position": "Software Architect",
+        "n+1": "Ana",
+        "img": "intersecAmazingPeople/Benoit Mariat/Mariat.benoit.jpg",
+        "tags": "",
+        "id": "7",
+        "parentId": "6",
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
+    },
+    {
+        "firstname": "Yacine",
+        "lastname": "Boudiaf",
+        "position": "Developer",
+        "n+1": "Alexis",
+        "img": "intersecAmazingPeople/Yacine Boudiaf/Boudiaf.Yacine.jpg",
+        "tags": "",
+        "id": "8",
+        "parentId": "6",
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
+    },
+    {
+        "firstname": "Arnaud",
+        "lastname": "Westphal",
+        "position": "VP Sales",
+        "n+1": "Ingolf Ruh",
+        "img": "intersecAmazingPeople/Arnaud Westphal/WESTPHAL.Arnaud.JPG",
+        "tags": "management",
+        "id": "9",
+        "parentId": "2",
+        "department": "sales",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
+    },
+    {
+        "firstname": "Alexandre",
+        "lastname": "Quincé",
+        "position": "Sales Development Representative",
+        "n+1": "Ingolf Ruh",
+        "img": "intersecAmazingPeople/Alexandre Quincé/Alexandre.QUINCE.jpg",
+        "tags": "",
+        "id": "10",
+        "parentId": "2",
+        "department": "sales",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png"
+    },
+    {
+        "firstname": "Frederic",
+        "lastname": "Chauveau",
+        "position": "C Developer",
+        "n+1": "Alexis",
+        "img": "intersecAmazingPeople/Frederic Chauveau/Frederic.Chauveau.png",
+        "tags": "",
+        "id": "11",
+        "parentId": "6",
+        "department": "rd",
+        "welcomeSheetUrl": "intersecAmazingPeople/Frederic Chauveau/welcome.png" 
     }
 ]

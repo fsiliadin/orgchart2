@@ -141,7 +141,7 @@ async function getData() {
 function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
-  const matchingUsers = usersData.filter((user) => user.firstname.includes(searchValue.value) || user.lastname.includes(searchValue.value))
+  const matchingUsers = exampleData.filter((user) => user.firstname.includes(searchValue.value) || user.lastname.includes(searchValue.value))
     searchOptions.value = matchingUsers
 }
 
