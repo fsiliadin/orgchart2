@@ -7,7 +7,7 @@ import alexImage from "../assets/images/alex.png"
 // import * as d3 from 'd3'
 
 // orgChart options
-const nodeWidth = 250
+const nodeWidth = 480
 const nodeHeight = 175
 const childrenMargin = 40
 const compactMarginBetween = 15
@@ -82,26 +82,25 @@ onMounted(() => {
     .compactMarginPair(() => compactMarginPair)
     .nodeContent(function (d: any, i, arr, state) {
     return `
-    <div class="card" style="height:${ d.height }px;">
-        <div class="card-head" style="height:${ d.height - 32 }px;">
-        <img class="card-img" src=" ${ d.data.profileUrl }" style="margin-left:${d.width / 2 - 30}px;" />
-
-        <div class="card-id">${ d.data.id }</div>
+    <div class="card">
+        <div class="card-img">
+            <img src=" ${ d.data.profileUrl }"/>
+        </div>     
 
         <div class="card-body">
             <div class="card-name"> ${ d.data.name }</div>
             <div class="card-position"> ${ d.data.positionName } </div>
+            <div class="card-infos"> I </div>
         </div> 
-
-        <div style="display:flex;justify-content:space-between;padding-left:15px;padding-right:15px;">
-            <div > Manages:  ${d.data._directSubordinates} 👤</div>  
-            <div > Oversees: ${d.data._totalSubordinates} 👤</div>
-        </div>
-        </div>     
     </div>
     `;
     })
     .render();
+
+    // <div class="card-sub-people">
+    //         <div> ${d.data._directSubordinates} Sous-fifres directs </div>  
+    //         <div> ${d.data._totalSubordinates} Sous-fifres au total </div>
+    //     </div>
 
     function onNodeClick(node) {
         console.log(node.data)
@@ -110,8 +109,6 @@ onMounted(() => {
         } else {
             unSelectNode()
         }
-        // myDiagram.scale = 1;
-        // myDiagram.commandHandler.scrollToPart(myDiagram.findNodeForKey(key));
       }
 
     //   window.addEventListener('keydown', (key) => {
@@ -185,36 +182,74 @@ function onOptionTap(option) {
 }
 
 .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 420px;
+    height: 160px;
     background: white;
-    padding-top:30px;
-    margin-left:1px;
-    border-radius:2px;
-    overflow:visible;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: solid var(--border-color) var(--border-width);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform .2s;
+    transform-origin: center center;
 }
 
-.card-head {
-    padding-top:0px;
-    background-color:white;
-    border:1px solid lightgray;
+.card:hover {
+    border-color: var(--primary);
+    transform: scale(1.01);
+}
+
+
+/* tag or area */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100px;
+    transform-origin: center center;
+    transform: translate(50%, -50%) rotate(45deg);
+    background: var(--primary);
 }
 
 .card-img {
-    margin-top:-30px;
-    border-radius:100px;
-    width:60px;
-    height:60px;
+    width: 150px;
+    height: 100%;
 }
 
-.card-id {
-    margin-right:10px;
-    margin-top:15px;
-    float:right;
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-body {
     padding:20px;
     padding-top:35px;
-    text-align:center;
+    /* text-align:center; */
+}
+
+.card-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.card-position {
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--subtext-color);
+}
+
+.card-infos {
+    position: absolute;
+
 }
 
 .overlay {
@@ -240,7 +275,6 @@ function onOptionTap(option) {
     height: 100%;
     padding: 36px;
     box-shadow: 3px 3px 12px rgba(0, 0, 0, .3);
-    border-radius: 4px;
     transform: translateX(-50%);
     transition: background-color .2s;
   }
@@ -280,9 +314,25 @@ function onOptionTap(option) {
     width: 100%;
     height: 100%;
     border: 0;
+    line-height: 1;
+    font-size: 28px;
     padding-left: 82px;
+    color: var(--text-color);
+    font-weight: 700;
+    box-shadow: var(--shadow);
     border: solid var(--border-color) var(--border-width);
     border-radius: var(--border-radius);
+  }
+
+  .search-input .input:focus {
+    outline: solid 1px var(--primary);
+    box-shadow: var(--active-shadow);
+  }
+
+  .search-input .input::placeholder {
+    color: var(--placeholder-color);
+    font-weight: 700;
+    font-size: 28px;
   }
 
   .search-input .icon {
