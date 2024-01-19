@@ -78,10 +78,10 @@ function encodeUrl() {
 
 async function getData() {
     await fetch("https://localhost:2024/parsePeople").then(async (response) => {
-        // const people = await response.json()
+        const people = await response.json()
         console.log(people)
-        // reelData = people
-        reelData = exampleData
+        reelData = people
+        // reelData = exampleData
     })
     .catch(() => {
         reelData = exampleData
