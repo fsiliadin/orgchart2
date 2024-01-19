@@ -67,6 +67,13 @@ app.get('/parsePeople', (req, res) => {
     }
 });
 
+app.use(express.static(__dirname));
+
+app.use((req, res, next) => {
+    res.status(404).send('File not found');
+});
+
+
 function setIds(peoples) {
     peoples.forEach(person => {
         const hash = crypto.createHash('sha256');
