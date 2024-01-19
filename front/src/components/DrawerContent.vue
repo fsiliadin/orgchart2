@@ -10,7 +10,7 @@ let showIntro = ref(false)
     <div class="drawer-content" v-if="node">
         <div class="modal-card" :style="`--highlight-color: ${departementColors[node.department]}!important;`">
             <div class="profil">
-                <img :src="node?.img ?? ''">
+                <img :src="encodeURIComponent(node?.img)">
             </div>
 
             <div class="card-body">

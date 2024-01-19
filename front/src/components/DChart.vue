@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 import { OrgChart } from 'd3-org-chart';
 import alexImage from "../assets/images/alex.png"
 import IntroExampleImage from '../assets/images/intro-example.png'
-import exampleData from '../utils/data.json'
+import exampleData from '../utils/data-fix.json'
 import Legend from './Legend.vue';
 import { departementColors } from '../utils/colors'
 // import * as d3 from 'd3'
@@ -72,16 +72,20 @@ const usersData = [
 
 let reelData = []
 
+function encodeUrl() {
+
+}
+
 async function getData() {
     await fetch("https://localhost:2024/parsePeople").then(async (response) => {
-        const people = await response.json()
+        // const people = await response.json()
         console.log(people)
         // reelData = people
-        // reelData = exampleData
+        reelData = exampleData
     })
     .catch(() => {
-        // reelData = exampleData
-        reelData = usersData
+        reelData = exampleData
+        // reelData = usersData
     })
 
     initChart()
@@ -99,10 +103,11 @@ async function getData() {
     .compactMarginPair(() => compactMarginPair)
     .nodeContent(function (d, i, arr, state) {
         const depColor = departementColors[d.data.department]
+
     return `
     <div class="card" style="--highlight-color: ${depColor};">
         <div class="card-img">
-            <img src=" ${ d.data.img }"/>
+            <img src=" ${ encodeURIComponent(d.data.img) }"/>
         </div>     
 
         <div class="card-body">
