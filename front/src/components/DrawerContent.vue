@@ -53,7 +53,7 @@ let showIntro = ref(false)
 
                 <p class="tags">{{ node?.tags ?? "No tags" }}</p>
 
-                <p class="start-date">{{ node?.startDate ?? "start date missing" }}</p>
+                <p class="start-date">{{ node?.startDate ?? "1 year at Intersec" }}</p>
             </div>
         </div>
 
