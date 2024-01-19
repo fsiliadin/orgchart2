@@ -20,11 +20,7 @@ app.get('/', (req, res) => {
 app.get('/parsePeople', (req, res) => {
     const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
     try {
-        fs.readFile(teamLeadersPath, 'utf-8', (err, teamLeaders) => {
-            const teamsArray = teamLeaders.split('\n').map(line => {
-                const [key, value] = line.split(':').map(item => item.trim());
-                return { [key]: value };
-            });
+
             fs.readdir(peopleFolderPath, (error, peopleFolders) => {
                 const peopleData = [];
                 let count = 0;
@@ -55,7 +51,7 @@ app.get('/parsePeople', (req, res) => {
                                 peopleData.push(personData);
                                 count++;
                                 if (count === numberOfPersons) {
-                                    setComputedData(peopleData, teamsArray);
+                                    setComputedData(peopleData);
                                     console.log('data', peopleData);
                                     res.json(peopleData);
                                 }
@@ -67,7 +63,6 @@ app.get('/parsePeople', (req, res) => {
                 }
 
             });
-        });
     } catch (error) {
             console.error(`Error reading people folder: ${error.message}`);
             res.status(500).send('Internal Server Error');
@@ -82,13 +77,12 @@ app.use((req, res, next) => {
 });
 
 
-function setComputedData(peoples, teamsArray) {
+function setComputedData(peoples) {
     peoples.forEach(person => {
         const hash = crypto.createHash('sha256');
         hash.update(`${person.firstname.trim()} ${person.lastname.trim()}`);
         person.id = hash.digest('hex');
 
-        person['n+1'] = teamsArray[person.stpid.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')]
         const hashNplusUn = crypto.createHash('sha256');
         hashNplusUn.update(`${person['n+1'].trim()}`);
         person.parentId = hashNplusUn.digest('hex');
