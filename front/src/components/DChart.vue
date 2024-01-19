@@ -21,39 +21,62 @@ let searchValue = ref('')
 let searchOptions = ref([])
 let chart;
 
+let departementColors = {
+    '': "#ffffff", 
+    'rd': "#7A9CC6", 
+    'sales': "#FDCA40", 
+    'pdm': "#1D7A8F",
+    'ps': "#4EBF6E", 
+    'accounting': "#F9937D",
+    'it': "#817E9F",
+    'hr': "#AFBA32", 
+    'mkt': "#AA4586"
+}
+
 const usersData = [
     {
         "firstName": "Alex",
         "lastName": "De Slavuta",
-        "area": "Corporate",
         "img": alexImage,
         "tags": "Ceo,tag1,manager,cto",
         "position": "Chief Executive Officer ",
         "id": "O-6066",
         "parentId": "",
         "welcomeSheetUrl": IntroExampleImage,
+        "department": ""
     },
     {
-        "firstName": "Davolio",
+        "firstName": "Jean-Marc",
         "lastName": "Nancy",
-        "area": "Corporate",
         "img": alexImage,
         "tags": "Ceo,tag1, tag2",
         "position": "CTO ",
         "id": "O-6067",
         "parentId": "O-6066",
         "welcomeSheetUrl": IntroExampleImage,
+        "department": "rd"
     },
     {
-        "firstName": " Leverling",
-        "lastName": " Janet",
-        "area": "Corporate",
+        "firstName": "Alexandre",
+        "lastName": " Quincé",
         "img": alexImage,
         "tags": "Ceo,tag1, tag2",
         "position": "CTO ",
         "id": "O-6068",
         "parentId": "O-6066",
         "welcomeSheetUrl": IntroExampleImage,
+        "department": "sales"
+    },
+    {
+        "firstName": "Rkia",
+        "lastName": " Hatif",
+        "img": alexImage,
+        "tags": "Ceo",
+        "position": "CTO ",
+        "id": "O-6069",
+        "parentId": "O-6066",
+        "welcomeSheetUrl": IntroExampleImage,
+        "department": "hr"
     },
 ]
 
@@ -89,8 +112,9 @@ async function getData() {
     .compactMarginBetween(() => compactMarginBetween)
     .compactMarginPair(() => compactMarginPair)
     .nodeContent(function (d, i, arr, state) {
+        const depColor = departementColors[d.data.department]
     return `
-    <div class="card">
+    <div class="card" style="--highlight-color: ${depColor};">
         <div class="card-img">
             <img src=" ${ d.data.img}"/>
         </div>     
@@ -187,6 +211,7 @@ onMounted(() => {
 }
 
 .card {
+    --highlight-color: var(--primary);
     position: relative;
     display: flex;
     align-items: center;
@@ -219,7 +244,7 @@ onMounted(() => {
     height: 100px;
     transform-origin: center center;
     transform: translate(50%, -50%) rotate(45deg);
-    background: var(--primary);
+    background: var(--highlight-color);
 }
 
 .card-img {
