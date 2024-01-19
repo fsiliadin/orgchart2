@@ -90,7 +90,11 @@ onMounted(() => {
         <div class="card-body">
             <div class="card-name"> ${ d.data.name }</div>
             <div class="card-position"> ${ d.data.positionName } </div>
-            <div class="card-infos"> I </div>
+            <div class="card-infos">
+                <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 9.08333V13.6667M10 18.25C8.91659 18.25 7.8438 18.0366 6.84286 17.622C5.84193 17.2074 4.93245 16.5997 4.16637 15.8336C3.40029 15.0675 2.7926 14.1581 2.37799 13.1571C1.96339 12.1562 1.75 11.0834 1.75 10C1.75 8.91659 1.96339 7.8438 2.37799 6.84286C2.7926 5.84193 3.40029 4.93245 4.16637 4.16637C4.93245 3.40029 5.84193 2.7926 6.84286 2.37799C7.8438 1.96339 8.91659 1.75 10 1.75C12.188 1.75 14.2865 2.61919 15.8336 4.16637C17.3808 5.71354 18.25 7.81196 18.25 10C18.25 12.188 17.3808 14.2865 15.8336 15.8336C14.2865 17.3808 12.188 18.25 10 18.25ZM10.0458 6.33333V6.425H9.95417V6.33333H10.0458Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
         </div> 
     </div>
     `;
@@ -249,7 +253,16 @@ function onOptionTap(option) {
 
 .card-infos {
     position: absolute;
+    bottom: 11px;
+    right: 21px;
+    width: 17px;
+}
 
+.card-infos-icon {
+    width: 100%;
+    height: 100%;
+    fill: white;
+    stroke: var(--subtext-color);
 }
 
 .overlay {
