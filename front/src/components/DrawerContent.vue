@@ -21,7 +21,6 @@ const props = defineProps(['node'])
     .drawer-content {
         width: 100%;
         max-width: 300px;
-        background: red;
         border-radius: 20px 0 0 20px;   
     }
     .profil {

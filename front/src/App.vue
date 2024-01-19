@@ -10,6 +10,14 @@ import DChart from './components/DChart.vue'
   </div>
 </template>
 
-<style scoped>
+<style>
+:root {
+  --primary: #DE5252;
+  --border-radius : 20px;
+  --search-max-width: 800px;
+  --text-color: black;
+  --border-color: #D7D7D7;
+  --border-width: 1px;
+}
 
 </style>

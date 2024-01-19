@@ -13,18 +13,25 @@ defineEmits(['close'])
 
 <style scoped>
   .drawer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 10000;
+    width: 100%;
+    height: 100%;
     right: 0;
     top: 0;
-    transform: translateX(100%);
-    transition: transform .2s;
-    pointer-events: all;
+    opacity: 0;
+    transition: opacity .2s;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(25px);
   }
 
   .drawer.open {
     pointer-events: all;
-    transform: translateX(0);
+    opacity: 1;
   }
 
   .drawer .close {
