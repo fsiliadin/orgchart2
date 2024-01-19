@@ -15,13 +15,14 @@ defineEmits(['close'])
   .drawer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: absolute;
     z-index: 10000;
     width: 100%;
     height: 100%;
     right: 0;
     top: 0;
+    padding: 30px;
     opacity: 0;
     transition: opacity .2s;
     pointer-events: none;

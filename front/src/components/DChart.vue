@@ -4,6 +4,7 @@ import Drawer from './Drawer.vue'
 import { onMounted, ref } from 'vue';
 import { OrgChart } from 'd3-org-chart';
 import alexImage from "../assets/images/alex.png"
+import IntroExampleImage from '../assets/images/intro-example.png'
 // import * as d3 from 'd3'
 
 // orgChart options
@@ -38,7 +39,7 @@ const usersData: NodeData[] = [
         "positionName": "Chief Executive Officer ",
         "id": "O-6066",
         "parentId": "",
-        // "welcomeSheet": "http://example.com/employee/profile"
+        "welcomeSheetUrl": IntroExampleImage,
     },
     {
         "name": "Davolio Nancy",
@@ -48,7 +49,7 @@ const usersData: NodeData[] = [
         "positionName": "CTO ",
         "id": "O-6067",
         "parentId": "O-6066",
-        // "welcomeSheet": "http://example.com/employee/profile"
+        "welcomeSheetUrl": IntroExampleImage,
     },
     {
         "name": " Leverling Janet",
@@ -58,7 +59,7 @@ const usersData: NodeData[] = [
         "positionName": "CTO ",
         "id": "O-6068",
         "parentId": "O-6066",
-        // "welcomeSheet": "http://example.com/employee/profile"
+        "welcomeSheetUrl": IntroExampleImage,
     },
 ]
 
