@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import DrawerContent from './DrawerContent.vue'
 import Drawer from './Drawer.vue'
 import { onMounted, ref } from 'vue';
@@ -14,23 +14,11 @@ const childrenMargin = 40
 const compactMarginBetween = 15
 const compactMarginPair = 80
 
-let selectedNode = ref< null | NodeData>(null)
-let searchValue = ref<string>('')
-let searchOptions = ref<any[]>([])
+let selectedNode = ref(null)
+let searchValue = ref('')
+let searchOptions = ref([])
 
-interface NodeData {
-    id: any,
-    parentId?: any,
-    name: string,
-    profileUrl: string,
-    welcomeSheetUrl?: string, 
-    area: "Corporate" | "r&d" | "Marketing" | "Sales"
-    tags: string,
-    positionName: string,
-    startDate?: string,
-};
-
-const usersData: NodeData[] = [
+const usersData = [
     {
         "name": "Alex S",
         "area": "Corporate",
@@ -63,15 +51,23 @@ const usersData: NodeData[] = [
     },
 ]
 
+async function getData() {
+  const response = await fetch("https://localhost:2024/parsePeople");
+  const people = await response.json()
+  console.log(people);
+}
+
 /**
  * selectionner quelqu'un 
  * trouver quelqu'un avec la search bar -> animation vers personne avec zoom et déplacement
  * 
  */
 
- let chart: OrgChart | null;
+ let chart;
 
 onMounted(() => {
+    getData()
+    
     chart = new OrgChart()
     .onNodeClick((node) => onNodeClick(node))
     .container('.d-chart')
@@ -81,7 +77,7 @@ onMounted(() => {
     .childrenMargin(() => childrenMargin)
     .compactMarginBetween(() => compactMarginBetween)
     .compactMarginPair(() => compactMarginPair)
-    .nodeContent(function (d: any, i, arr, state) {
+    .nodeContent(function (d, i, arr, state) {
     return `
     <div class="card">
         <div class="card-img">
@@ -102,11 +98,6 @@ onMounted(() => {
     })
     .render();
 
-    // <div class="card-sub-people">
-    //         <div> ${d.data._directSubordinates} Sous-fifres directs </div>  
-    //         <div> ${d.data._totalSubordinates} Sous-fifres au total </div>
-    //     </div>
-
     function onNodeClick(node) {
         console.log(node.data)
         if (!selectedNode.value || selectedNode.value.id != node.data.id) {
@@ -115,17 +106,11 @@ onMounted(() => {
             unSelectNode()
         }
       }
-
-    //   window.addEventListener('keydown', (key) => {
-    //     if (key.code === "Enter" && searchValue.value != null) {
-    //         onSearch
-    //     }
-    //   })
 })
 
 
-function onSearchType(e: Event) {
-  searchValue.value = (e.target as HTMLInputElement)?.value
+function onSearchType(e) {
+  searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
   const matchingUsers = usersData.filter((user) => user.name.includes(searchValue.value))
     searchOptions.value = matchingUsers
