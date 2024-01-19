@@ -10,13 +10,13 @@ let showIntro = ref(false)
     <div class="drawer-content">
         <div class="modal-card">
             <div class="profil">
-                <img :src="node?.profileUrl ?? ''">
+                <img :src="node?.img ?? ''">
             </div>
 
             <div class="card-body">
-                <p class="name">{{ node?.name ?? "name placeholder" }}</p>
+                <p class="name">{{ node?.firstName ?? "name placeholder" }}</p>
                 <!-- <p class="id">{{ node?.id ?? "missing placeholder" }}</p> -->
-                <p class="position">{{ node?.positionName ?? "no position" }}</p>
+                <p class="position">{{ node?.position ?? "no position" }}</p>
 
                 <p class="team">WIP My team</p>
 
