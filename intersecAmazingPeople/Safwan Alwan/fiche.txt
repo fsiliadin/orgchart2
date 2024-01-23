@@ -1,6 +1,6 @@
 firstname: Safwan
 lastname: Alwan
 position: C Developer
-n+1: rawad
+n+1: rawad.zgheib@intersec.com
 img: assets/photos/Alwane.Safwan.jpg
 tags: 

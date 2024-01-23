@@ -1,6 +1,6 @@
 firstname: Killian
 lastname: Goff
 position: Data Scientist
-n+1: cuny
+n+1: pierre-louis.cuny@intersec.com
 img: assets/photos/Killian_LeGoff.jpg
 tags: 

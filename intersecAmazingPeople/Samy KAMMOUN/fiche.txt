@@ -1,6 +1,6 @@
 firstname: Samy
 lastname: KAMMOUN
 position: Recruitment Assistant
-n+1: oyo.ndoro@intersec.com
+n+1: kamel.majdoub@intersec.com
 img: assets/photos/Samy.Kammoun.jpg
 tags: 

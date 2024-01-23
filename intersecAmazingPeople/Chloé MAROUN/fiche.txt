@@ -1,6 +1,0 @@
-firstname: Chloé
-lastname: MAROUN
-position: Presales
-n+1: Ingolf Ruh
-img: assets/photos/Chloe_MAROUN.jpg
-tags: 

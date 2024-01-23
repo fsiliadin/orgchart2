@@ -1,6 +1,6 @@
 firstname: Jeremy
 lastname: Caradec
 position: C Developer
-n+1: rawad
+n+1: rawad.zgheib@intersec.com
 img: assets/photos/Caradec.Jeremy.png
 tags: 

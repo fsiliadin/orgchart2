@@ -1,6 +1,0 @@
-firstname: Cédrick
-lastname: Vero
-position: Presales
-n+1: Ingolf Ruh
-img: assets/photos/Vero.Cedrick.png
-tags: 

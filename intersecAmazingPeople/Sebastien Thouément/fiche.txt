@@ -1,6 +1,0 @@
-firstname: Sebastien
-lastname: Thouément
-position: Software Architect
-n+1: Ana
-img: assets/photos/THOUEMENT.Sebastien.JPG
-tags: 

@@ -1,6 +1,0 @@
-firstname: Alexandre
-lastname: Quincé
-position: Sales Development Representative
-n+1: Ingolf Ruh
-img: assets/photos/Alexandre.QUINCE.jpg
-tags: 

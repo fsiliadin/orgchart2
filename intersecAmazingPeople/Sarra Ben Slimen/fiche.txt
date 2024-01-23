@@ -1,6 +1,6 @@
 firstname: Sarra
 lastname: Slimen
 position: HR Assistant
-n+1: oyo.ndoro@intersec.com
+n+1: rkia.hatif@intersec.com
 img: assets/photos/Sara.Ben.Slimane.jpg
 tags: 

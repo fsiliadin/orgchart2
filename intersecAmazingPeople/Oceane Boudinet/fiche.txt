@@ -1,6 +1,6 @@
 firstname: Oceane
 lastname: Boudinet
 position: Technical Documentation Writer
-n+1: christele
+n+1: christele.camara@intersec.com
 img: assets/photos/Oceane_BOUDINET.jpg
 tags: 

@@ -1,6 +1,6 @@
 firstname: Thomas
 lastname: Graham-Wood
 position: Marketing and Communication Specialist
-n+1: cardona
+n+1: charlotte.cardona@intersec.com
 img: assets/photos/Thomas_GRAHAM-WOOD.jpg
 tags: 

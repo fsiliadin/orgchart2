@@ -1,6 +1,6 @@
 firstname: Marie-Luna
 lastname: Gonzalez
 position: Marketing and Social Networking Apprentice
-n+1: cardona
+n+1: charlotte.cardona@intersec.com
 img: assets/photos/Marie.Luna.Gonzalez.jpg
 tags: 

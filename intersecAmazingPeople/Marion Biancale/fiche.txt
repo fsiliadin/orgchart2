@@ -1,6 +1,6 @@
 firstname: Marion
 lastname: Biancale
 position: Continuous Integrator
-n+1: rawad
+n+1: rawad.zgheib@intersec.com
 img: assets/photos/Biancale.Marion.jpg
 tags: 

@@ -1,6 +1,0 @@
-firstname: Ségolène
-lastname: Tutzo
-position: Frontend Developer
-n+1: Nassim Mnafeg
-img: assets/photos/Segolene_TUTZO.jpg
-tags: 

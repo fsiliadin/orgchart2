@@ -1,6 +1,6 @@
 firstname: Anas
 lastname: Mohamed
 position: Integration Engineer (Egypt)
-n+1: neeraj
+n+1: neeraj.bhatnagar@intersec.com
 img: assets/photos/Anas_Mohamed.jpg
 tags: 

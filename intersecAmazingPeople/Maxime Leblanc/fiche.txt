@@ -1,6 +1,6 @@
 firstname: Maxime
 lastname: Leblanc
 position: C Developer
-n+1: nassim.mnafeg
+n+1: nassim.mnafeg@intersec.com
 img: assets/photos/Maxime_Leblanc.jpg
 tags: 

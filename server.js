@@ -39,7 +39,6 @@ app.get('/parsePeople', (req, res) => {
                         }
                         try {
                             fs.readFile(ficheFilePath, 'utf-8', (err, ficheContent) => {
-                                console.log(ficheContent)
                                 const personData = ficheContent
                                 .split('\n')
                                 .map(line => line.split(': '))
@@ -52,7 +51,6 @@ app.get('/parsePeople', (req, res) => {
                                 count++;
                                 if (count === numberOfPersons) {
                                     setComputedData(peopleData);
-                                    console.log('data', peopleData);
                                     res.json(peopleData);
                                 }
                             });
@@ -80,13 +78,15 @@ app.use((req, res, next) => {
 function setComputedData(peoples) {
     peoples.forEach(person => {
         const hash = crypto.createHash('sha256');
-        hash.update(`${person.firstname.trim()} ${person.lastname.trim()}`);
+        const n1Email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        if (n1Email.includes('coic'))
+            console.log(n1Email)
+        hash.update(n1Email);
         person.id = hash.digest('hex');
 
         const hashNplusUn = crypto.createHash('sha256');
         hashNplusUn.update(`${person['n+1'].trim()}`);
         person.parentId = hashNplusUn.digest('hex');
-
     });
 }
 
