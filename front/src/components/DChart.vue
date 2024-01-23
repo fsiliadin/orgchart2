@@ -89,7 +89,8 @@ async function getData() {
 function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
-  const matchingUsers = exampleData.filter((user) => user.firstname.includes(searchValue.value) || user.lastname.includes(searchValue.value))
+  let searchRegex = new RegExp(searchValue.value, 'i')
+  const matchingUsers = exampleData.filter((user) => searchRegex.test(user.firstname) || searchRegex.test(user.lastname))
   if (matchingUsers.length === 0) {
         return searchOptions.value = []
     } else {
@@ -105,11 +106,6 @@ function onSearchType(e) {
 function focusFirstOption() {
     const firstOption = Array.from(document.querySelectorAll('.option'))[0]
     firstOption.focus()
-}
-
-function onSearch() {
-  console.log(searchValue)
-// document.getElementById('zoomToFit').addEventListener('click', () => myDiagram.commandHandler.zoomToFit());
 }
 
 function unSelectNode() {
@@ -138,7 +134,6 @@ function unfocusOptionByIndex(index) {
 }
 
 function onKeyDown(evt) {
-    console.log(evt)
     if (!searchOptions.value.length) return
     const currentIndexFocus = searchOptions.value.findIndex((option) => option.focus === true)
     switch(evt.key) {
