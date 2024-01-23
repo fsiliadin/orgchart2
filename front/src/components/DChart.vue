@@ -72,9 +72,7 @@ async function getData() {
     })
     .render();
 
-    chart.zoomOut()
-    chart.zoomOut()
-    chart.zoomOut()
+    chart.fit()
 
     function onNodeClick(node) {
         console.log(node.data)
@@ -110,11 +108,11 @@ function focusFirstOption() {
 
 function unSelectNode() {
     selectedNode.value = null
-    console.log('close')
 }
 
 function onOptionTap(option) {
-    chart.setHighlighted(option.id).render().fit()
+    chart.clearHighlighting()
+    chart.setHighlighted(option.id).render()
     searchOptions.value = []
     searchValue.value = ""
 }
