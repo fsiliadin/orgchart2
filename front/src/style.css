@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
-  weight: 700;
+  font-weight: 700;
 }
 
 @font-face {
@@ -28,13 +28,13 @@
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter/static/Inter-Light.ttf") format("truetype");
-  weight: 300;
+  font-weight: 300;
 }
 
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter/static/Inter-Bold.ttf") format("truetype");
-  weight: 700;
+  font-weight: 700;
 }
 
 

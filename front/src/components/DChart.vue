@@ -8,7 +8,6 @@ import IntroExampleImage from '../assets/images/intro-example.png'
 import exampleData from '../utils/data-fix.json'
 import Legend from './Legend.vue';
 import { departementColors } from '../utils/colors'
-// import * as d3 from 'd3'
 
 // orgChart options
 const nodeWidth = 422
@@ -22,55 +21,7 @@ let searchValue = ref('')
 let searchOptions = ref([])
 let chart;
 
-
-const usersData = [
-    {
-        "firstname": "Alex",
-        "lastname": "De Slavuta",
-        "img": alexImage,
-        "tags": "Ceo,tag1,manager,cto",
-        "position": "Chief Executive Officer ",
-        "id": "O-6066",
-        "parentId": "",
-        "welcomeSheetUrl": IntroExampleImage,
-        "department": ""
-    },
-    {
-        "firstname": "Jean-Marc",
-        "lastname": "Nancy",
-        "img": alexImage,
-        "tags": "Ceo,tag1, tag2",
-        "position": "CTO ",
-        "id": "O-6067",
-        "parentId": "O-6066",
-        "welcomeSheetUrl": IntroExampleImage,
-        "department": "rd"
-    },
-    {
-        "firstname": "Alexandre",
-        "lastname": " Quincé",
-        "img": alexImage,
-        "tags": "Ceo,tag1, tag2",
-        "position": "CTO ",
-        "id": "O-6068",
-        "parentId": "O-6066",
-        "welcomeSheetUrl": IntroExampleImage,
-        "department": "sales"
-    },
-    {
-        "firstname": "Rkia",
-        "lastname": " Hatif",
-        "img": alexImage,
-        "tags": "Ceo",
-        "position": "CTO ",
-        "id": "O-6069",
-        "parentId": "O-6066",
-        "welcomeSheetUrl": IntroExampleImage,
-        "department": "hr"
-    },
-]
-
-let reelData = []
+let usersData = []
 
 function encodeUrl() {
 
@@ -79,13 +30,10 @@ function encodeUrl() {
 async function getData() {
     await fetch("https://localhost:2024/parsePeople").then(async (response) => {
         const people = await response.json()
-        console.log(people)
-        reelData = people
-        // reelData = exampleData
+        usersData = people
     })
     .catch(() => {
-        reelData = exampleData
-        // reelData = usersData
+        usersData = exampleData
     })
 
     initChart()
@@ -95,7 +43,7 @@ async function getData() {
     chart = new OrgChart()
     .onNodeClick((node) => onNodeClick(node))
     .container('.d-chart')
-    .data(reelData)
+    .data(usersData)
     .nodeWidth(() => nodeWidth)
     .nodeHeight(() => nodeHeight)
     .childrenMargin(() => childrenMargin)
@@ -124,9 +72,7 @@ async function getData() {
     })
     .render();
 
-    chart.zoomOut()
-    chart.zoomOut()
-    chart.zoomOut()
+    chart.fit()
 
     function onNodeClick(node) {
         console.log(node.data)
@@ -141,29 +87,76 @@ async function getData() {
 function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
-  const matchingUsers = exampleData.filter((user) => user.firstname.includes(searchValue.value) || user.lastname.includes(searchValue.value))
-    searchOptions.value = matchingUsers
+  let searchRegex = new RegExp(searchValue.value, 'i')
+  const matchingUsers = exampleData.filter((user) => searchRegex.test(user.firstname) || searchRegex.test(user.lastname))
+  if (matchingUsers.length === 0) {
+        return searchOptions.value = []
+    } else {
+        searchOptions.value = matchingUsers.map((user) => {
+            let item = user
+            item.focus = false
+            return item
+        })
+        searchOptions.value[0].focus = true
+    }
 }
 
-function onSearch() {
-  console.log(searchValue)
-// document.getElementById('zoomToFit').addEventListener('click', () => myDiagram.commandHandler.zoomToFit());
+function focusFirstOption() {
+    const firstOption = Array.from(document.querySelectorAll('.option'))[0]
+    firstOption.focus()
 }
 
 function unSelectNode() {
     selectedNode.value = null
-    console.log('close')
 }
 
 function onOptionTap(option) {
-    console.log(option)
-    chart.setHighlighted(option.id).render().fit()
+    chart.clearHighlighting()
+    chart.setHighlighted(option.id).render()
     searchOptions.value = []
     searchValue.value = ""
 }
 
+function focusOptionByIndex(index) {
+    searchOptions.value.forEach((item, itemIndex) => {
+        if (itemIndex !== index) {
+            item.focus = false
+        } else if(item.focus !== true) {
+            item.focus = true
+        }
+    })
+}
+
+function unfocusOptionByIndex(index) {
+    searchOptions.value.forEach((option) => option.focus = false)
+}
+
+function onKeyDown(evt) {
+    if (!searchOptions.value.length) return
+    const currentIndexFocus = searchOptions.value.findIndex((option) => option.focus === true)
+    switch(evt.key) {
+        case 'ArrowDown':
+            if (currentIndexFocus + 1 < searchOptions.value.length) {
+                focusOptionByIndex(currentIndexFocus + 1);
+            } else {
+                focusOptionByIndex(0)
+            }
+            break;
+        case 'ArrowUp':
+            if (currentIndexFocus - 1 >= 0) {
+                focusOptionByIndex(currentIndexFocus - 1);
+            } else {
+                focusOptionByIndex(searchOptions.value.length -1)
+            }
+            break;
+        case 'Enter':
+            onOptionTap(searchOptions.value[currentIndexFocus])
+    }
+}
+
 onMounted(() => {
     getData()
+    document.addEventListener('keydown', onKeyDown)
 })
 </script>
 
@@ -186,7 +179,15 @@ onMounted(() => {
                 </div>
 
                 <div class="option-list">
-                    <div class="option" v-for="(option, index) in searchOptions" @click="() => onOptionTap(option)">
+                    <div
+                        v-for="(option, index) in searchOptions"
+                        @click="() => onOptionTap(option)"
+                        @mouseover="() => focusOptionByIndex(index)"
+                        @mouseleave="() => unfocusOptionByIndex(index)"
+                        class="option"
+                        :class="{ focus: option.focus }"
+                        :tabindex="index"
+                    >
                         <div class="option-image">
                             <img :src="option.img" alt="">
                         </div>
@@ -434,6 +435,7 @@ onMounted(() => {
     align-items: center;
     overflow: hidden;
     gap: 26px;
+    height: 92px;
     background: white;
     border-radius: var(--border-radius);
     transform-origin: center center;
@@ -459,12 +461,12 @@ onMounted(() => {
     color: var(--text-color);
   }
 
-  .option:hover {
+  .option.focus {
     transform: scale(1.01);
     background: var(--primary);
   }
 
-  .option:hover .option-name {
+  .option.focus .option-name {
     color: white;
   }
 </style>

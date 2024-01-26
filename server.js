@@ -51,6 +51,7 @@ app.get('/parsePeople', (req, res) => {
                                 count++;
                                 if (count === numberOfPersons) {
                                     setComputedData(peopleData);
+                                    testIdMatching(peopleData)
                                     res.json(peopleData);
                                 }
                             });
@@ -74,6 +75,17 @@ app.use((req, res, next) => {
   res.status(404).send('File not found');
 });
 
+function testIdMatching(peopleData) {
+    const missMatchNumber = peopleData.reduce((acc, value) => {
+        const hasMatch = peopleData.some(item => item.id === value.parentId)
+        if (hasMatch) {
+            return acc
+        } else {
+            return acc + 1
+        }
+    }, 0)
+    console.log(`Nb of parentId with no matching id: ${missMatchNumber} / ${ peopleData.length }`)
+}
 
 function setComputedData(peoples) {
     peoples.forEach(person => {
