@@ -1,6 +1,0 @@
-firstname: Naveen
-lastname: KUMAR
-position: Solution Architect - DUBAI
-n+1: neeraj.bhatnagar@intersec.com
-img: assets/photos/Naveen_KUMAR.jpg
-tags: 

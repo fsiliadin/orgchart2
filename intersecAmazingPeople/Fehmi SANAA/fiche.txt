@@ -1,6 +1,0 @@
-firstname: Fehmi
-lastname: SANAA
-position: Regional Sales Manager - Dubai
-n+1: ahmed.hamza@intersec.com
-img: assets/photos/Fehmi_SANAA.jpg
-tags: 

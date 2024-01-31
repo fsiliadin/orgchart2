@@ -1,0 +1,6 @@
+firstname: Oyo
+lastname: Ndoro
+position: VP Talent
+n+1: yann.chevalier@intersec.com
+img: assets/photos/NDORO.Oyo.jpg
+tags: management

@@ -28,6 +28,14 @@ const teamsArray = require('./teamsArray');
   });
 })();
 
+function parseComposedNames(name, joinChar) {
+  const composedName = name.split('-').length > 1;
+  if(!composedName) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  } else {
+    return name.split('-').map((s) => `${s.charAt(0).toUpperCase() + s.slice(1)}`).join(joinChar);
+  }
+}
 
 function createWorkersFolder(dataArray) {
 
@@ -45,33 +53,33 @@ function createWorkersFolder(dataArray) {
     }
 
     // Loop through the array and create folders and text files
-    dataArray.forEach(member => {
-      if (!member || !member.stpid) {
+    dataArray.forEach(worker => {
+      if (!worker || !worker.stpid) {
         return;
       }
-      const memberFolderName = member.name;
-      const memberFolderPath = path.join(teamFolderPath, memberFolderName);
 
-      // Create member folder
-      if (!fs.existsSync(memberFolderPath)) {
-        fs.mkdirSync(memberFolderPath);
+      // Set proper value to name from id which represent the worker email
+      worker.name = worker.id.split('@')[0].split('.').map((name) => {
+        return parseComposedNames(name, '-')
+      }).join(' ')
+
+      const workerFolderPath = path.join(teamFolderPath, worker.name);
+
+      // Create worker folder
+      if (!fs.existsSync(workerFolderPath)) {
+        fs.mkdirSync(workerFolderPath);
       }
 
-      let stpidParsed ;
+      // stpid represent the team the worker belongs to
+      const stpidParsed = parseComposedNames(worker.stpid, ' ');
 
-      if(member.stpid.split('-').length === 1) {
-        stpidParsed = member.stpid.charAt(0).toUpperCase() + member.stpid.slice(1);
-      } else {
-        stpidParsed = member.stpid.split('-').map((s) => `${s.charAt(0).toUpperCase() + s.slice(1)}`).join(' ');
-      }
-
-      const ficheFilePath = path.join(memberFolderPath, 'fiche.txt');
-      const fileContent = `firstname: ${member.name.split(' ')[0]}\n` +
-                          `lastname: ${member.name.split(' ').pop()}\n` +
-                          `position: ${member.title}\n` +
+      const ficheFilePath = path.join(workerFolderPath, 'fiche.txt');
+      const fileContent = `firstname: ${worker.name.split(' ')[0]}\n` +
+                          `lastname: ${worker.name.split(' ').pop()}\n` +
+                          `position: ${worker.title}\n` +
                           `n+1: ${teams[stpidParsed]}\n` +
-                          `img: ${member.img}\n` +
-                          `tags: ${(member.tags && member.tags.join(' ')) ?? ''}`;
+                          `img: ${worker.img}\n` +
+                          `tags: ${(worker.tags && worker.tags.join(' ')) ?? ''}`;
 
 
       fs.writeFileSync(ficheFilePath, fileContent);
@@ -321,14 +329,17 @@ const workers = [
     /* }}} */
     /* {{{ Accounting */
 
-    { id: 'nicolas.rousseau-dumarcet@intersec.com', pid: 'yann.chevalier@intersec.com', stpid: 'intersec', tags: ['management'], name: 'Nicolas Rousseau Dumarcet', title: 'CFO', img: 'assets/photos/Nicolas.Rousseau-Dumarcet.jpg'},
+    { id: 'nicolas.rousseau-dumarcet@intersec.com', pid: 'yann.chevalier@intersec.com', stpid: 'intersec', tags: ['management'], name: 'Nicolas Rousseau-dumarcet', title: 'CFO', img: 'assets/photos/Nicolas.Rousseau-Dumarcet.jpg'},
     { id: 'caroline.dumaitre@intersec.com', pid: 'nicolas.rousseau-dumarcet@intersec.com', stpid: 'accounting', name: 'Caroline Dumaitre', title: 'Accounting and Financial Manager', img: 'assets/photos/Dumaitre.Caroline.png' },
     { id: 'isabelle.granger@intersec.com', pid: 'caroline.dumaitre@intersec.com', stpid: 'finance', name: 'Isabelle Granger', title: 'General Accountant', img: 'assets/photos/Granger.Isabelle.jpeg' },
     { id: 'sanh.nguyen@intersec.com', pid: 'nicolas.rousseau-dumarcet@intersec.com', stpid: 'accounting', name: 'Sanh Nguyen', title: 'Senior FP&A Analyst', img: 'assets/photos/Sanh_NGUYEN.jpg' },
     { id: 'mouna.benzaroual@intersec.com', pid: 'nicolas.rousseau-dumarcet@intersec.com', stpid: 'accounting', name: 'Mouna Benzaroual', title: 'Sales Administration Manager', img: 'assets/photos/Mouna.Benzaroual.jpg' },
 
     /* }}} */
-];
+].map(worker => {
+  worker.id = worker.name.toLowerCase().split(' ').join('.')+'@intersec.com'
+  return worker;
+});
 
 // Call the function with your array
 createWorkersFolder(workers);
