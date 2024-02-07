@@ -29,7 +29,7 @@ async function getData() {
     await fetch(apiUrl + "/parsePeople").then(async (response) => {
         const people = await response.json()
 
-        people.filter((item) => people.some((people) => item.parentId === people.id))
+        // people.filter((item) => people.some((people) => item.parentId === people.id))
         
         usersData = people
     })
@@ -89,7 +89,7 @@ function onSearchType(e) {
   searchValue.value = e.target?.value
   if (searchValue.value.length === 0) return searchOptions.value = []
   let searchRegex = new RegExp(searchValue.value, 'i')
-  const matchingUsers = exampleData.filter((user) => searchRegex.test(user.firstname) || searchRegex.test(user.lastname))
+  const matchingUsers = usersData.filter((user) => searchRegex.test(user.firstname) || searchRegex.test(user.lastname))
   if (matchingUsers.length === 0) {
         return searchOptions.value = []
     } else {
