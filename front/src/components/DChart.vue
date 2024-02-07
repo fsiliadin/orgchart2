@@ -23,13 +23,18 @@ let chart;
 
 let usersData = []
 
+const apiUrl = 'https://localhost:2024'
+
 function encodeUrl() {
 
 }
 
 async function getData() {
-    await fetch("https://localhost:2024/parsePeople").then(async (response) => {
+    await fetch(apiUrl + "/parsePeople").then(async (response) => {
         const people = await response.json()
+
+        people.filter((item) => people.some((people) => item.parentId === people.id))
+        
         usersData = people
     })
     .catch(() => {

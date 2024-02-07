@@ -5,6 +5,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 const app = express();
+
 const PORT = 2024;
 
 const credentials = {
@@ -12,6 +13,15 @@ const credentials = {
     cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
 };
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    if ('OPTIONS' == req.method) {
+        res.sendStatus(200);
+      }
+      else {
+        next();
+      }
+})
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -88,16 +98,27 @@ function testIdMatching(peopleData) {
     console.log(`Nb of parentId with no matching id: ${missMatchNumber} / ${ peopleData.length }`)
 }
 
+// function setComputedData(peoples) {
+//     peoples.forEach(person => {
+//         const hash = crypto.createHash('sha256');
+//         const n1Email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+//         if (n1Email.includes('coic'))
+//             console.log(n1Email)
+//         hash.update(n1Email);
+//         person.id = hash.digest('hex');
+
+//         const hashNplusUn = crypto.createHash('sha256');
+//         hashNplusUn.update(`${person['n+1'].trim()}`);
+//         person.parentId = hashNplusUn.digest('hex');
+//     });
+// }
+
 function setComputedData(peoples) {
     peoples.forEach(person => {
-        const hash = crypto.createHash('sha256');
-        hash.update(`${person.firstname.trim()} ${person.lastname.trim()}`);
-        person.id = hash.digest('hex');
+        person.email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        person.id = person.email
 
-        const hashNplusUn = crypto.createHash('sha256');
-        hashNplusUn.update(`${person['n+1'].trim()}`);
-        person.parentId = hashNplusUn.digest('hex');
-
+        person.parentId = person['n+1'];
     });
 }
 
