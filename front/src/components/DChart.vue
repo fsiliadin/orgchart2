@@ -25,10 +25,6 @@ let usersData = []
 
 const apiUrl = 'https://localhost:2024'
 
-function encodeUrl() {
-
-}
-
 async function getData() {
     await fetch(apiUrl + "/parsePeople").then(async (response) => {
         const people = await response.json()
