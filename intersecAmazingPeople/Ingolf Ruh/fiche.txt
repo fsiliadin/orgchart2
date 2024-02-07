@@ -4,3 +4,4 @@ position: CRO
 n+1: yann.chevalier@intersec.com
 img: assets/photos/RUH.Ingolf.jpg
 tags: management
+department: sales

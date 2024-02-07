@@ -3,4 +3,5 @@ lastname: Fauquette
 position: DevOps Engineer
 n+1: jean-marc.coic@intersec.com
 img: assets/photos/Fauquette.Aline.jpg
+department: rd
 tags: 

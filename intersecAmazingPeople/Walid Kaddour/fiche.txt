@@ -4,3 +4,4 @@ position: Solution Architect (TN)
 n+1: nicolas.najman@intersec.com
 img: assets/photos/Walid_Kaddour.jpg
 tags: 
+department: ps

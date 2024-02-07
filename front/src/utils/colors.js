@@ -9,3 +9,7 @@ export const departementColors = {
     'hr': "#AFBA32", 
     'mkt': "#AA4586"
 }
+
+export const teamColors = {
+    'Product Owner':  "#817E9F"
+}

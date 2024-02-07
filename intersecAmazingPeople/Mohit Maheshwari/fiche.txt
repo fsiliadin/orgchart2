@@ -4,3 +4,4 @@ position: VP Operations
 n+1: yann.chevalier@intersec.com
 img: assets/photos/Maheshwari.Mohit.jpg
 tags: management
+department: ps

@@ -4,3 +4,4 @@ position: Project Manager & Regional TL
 n+1: mohit.maheshwari@intersec.com
 img: assets/photos/granger.matthias.jpg
 tags: management
+department: ps

@@ -4,3 +4,4 @@ position: Project Manager
 n+1: emilien.coffin@intersec.com
 img: assets/photos/Alexandre.Prengere.jpg
 tags: 
+department: ps

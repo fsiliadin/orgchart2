@@ -1,6 +1,8 @@
 firstname: Ahmed
 lastname: Majdouba
+email: ahmed.majdouba@intersec.com
 position: Support Engineer
 n+1: onur.topcu@intersec.com
 img: assets/photos/Ahmed_BENMAJDOUBA.jpg
 tags: 
+department: ps

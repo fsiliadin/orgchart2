@@ -4,3 +4,4 @@ position: Marketing & Communication Director
 n+1: yann.chevalier@intersec.com
 img: assets/photos/Cardona.Charlotte.png
 tags: management
+department: mkt

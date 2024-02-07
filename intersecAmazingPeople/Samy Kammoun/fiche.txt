@@ -4,3 +4,4 @@ position: Recruitment Assistant
 n+1: kamel.majdoub@intersec.com
 img: assets/photos/Samy.Kammoun.jpg
 tags: 
+department: hr

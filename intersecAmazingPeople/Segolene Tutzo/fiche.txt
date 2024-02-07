@@ -4,3 +4,4 @@ position: Frontend Developer
 n+1: nassim.mnafeg@intersec.com
 img: assets/photos/Segolene_TUTZO.jpg
 tags: 
+department: rd

@@ -4,3 +4,4 @@ position: Accounting and Financial Manager
 n+1: nicolas.dumarcet@intersec.com
 img: assets/photos/Dumaitre.Caroline.png
 tags: 
+department: accounting 

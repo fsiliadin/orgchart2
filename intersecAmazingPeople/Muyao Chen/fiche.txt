@@ -4,3 +4,4 @@ position: C Developer
 n+1: alexis.brasy@intersec.com
 img: assets/photos/Muyao.Chen.jpg
 tags: 
+department: rd

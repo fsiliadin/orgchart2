@@ -1,6 +1,6 @@
 firstname: Vincent
 lastname: Mas
 position: Product Owner
-n+1: kamal.fadlaoui@intersec.com
+n+1: product.owner@intersec.com
 img: assets/photos/Mas.Vincent.png
 tags: 

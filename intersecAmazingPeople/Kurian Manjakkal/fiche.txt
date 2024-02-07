@@ -4,3 +4,4 @@ position: VP Sales
 n+1: ingolf.ruh@intersec.com
 img: assets/photos/Manjakkal.Kurian.jpg
 tags: management
+department: sales

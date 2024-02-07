@@ -5,16 +5,16 @@ import { onMounted, ref } from 'vue';
 import { OrgChart } from 'd3-org-chart';
 import alexImage from "../assets/images/alex.png"
 import IntroExampleImage from '../assets/images/intro-example.png'
-import exampleData from '../utils/data-fix.json'
+import mockData from '../utils/mock.json'
 import Legend from './Legend.vue';
-import { departementColors } from '../utils/colors'
+import { departementColors, teamColors } from '../utils/colors'
 
 // orgChart options
 const nodeWidth = 422
 const nodeHeight = 165
-const childrenMargin = 40
-const compactMarginBetween = 15
-const compactMarginPair = 80
+const childrenMargin = 150
+const compactMarginBetween = 30
+const compactMarginPair = 50
 
 let selectedNode = ref(null)
 let searchValue = ref('')
@@ -22,19 +22,19 @@ let searchOptions = ref([])
 let chart;
 
 let usersData = []
+let isMock = false
 
 const apiUrl = 'https://localhost:2024'
 
 async function getData() {
     await fetch(apiUrl + "/parsePeople").then(async (response) => {
         const people = await response.json()
-
-        // people.filter((item) => people.some((people) => item.parentId === people.id))
-        
+    
         usersData = people
     })
     .catch(() => {
-        usersData = exampleData
+        usersData = mockData
+        isMock = true
     })
 
     initChart()
@@ -52,11 +52,19 @@ async function getData() {
     .compactMarginPair(() => compactMarginPair)
     .nodeContent(function (d, i, arr, state) {
         const depColor = departementColors[d.data.department]
+    if (d.data.type && d.data.type === "equipe") {
+        const teamColor = teamColors[d.data.firstname]
 
-    return `
+        return `
+        <div class="card team" style="--highlight-color: ${teamColor};">
+            <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
+        </div>
+        `
+    }
+    else return `
     <div class="card" style="--highlight-color: ${depColor};">
         <div class="card-img">
-            <img src=" ${ encodeURIComponent(d.data.img) }"/>
+            <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
         </div>     
 
         <div class="card-body">
@@ -213,6 +221,10 @@ onMounted(() => {
     height: 100%;
 }
 
+.svg-chart-container {
+    height: 100vh!important;
+}
+
 .node-button-div {
     transform: translateY(-10px);
     border-radius: var(--border-radius);
@@ -256,7 +268,6 @@ onMounted(() => {
     transform: scale(1.01);
 }
 
-
 /* tag or area */
 .card::after {
     content: '';
@@ -282,6 +293,7 @@ onMounted(() => {
 }
 
 .card-body {
+    flex: 1;
     padding:20px;
     padding-top:35px;
     /* text-align:center; */
@@ -313,6 +325,22 @@ onMounted(() => {
     height: 100%;
     fill: white;
     stroke: var(--subtext-color);
+}
+
+.card.team {
+    background: var(--highlight-color);
+}
+
+.card.team .card-name {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.card.team::after {
+    display: none;
 }
 
 .overlay {

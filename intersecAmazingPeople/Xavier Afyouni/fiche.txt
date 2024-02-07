@@ -4,3 +4,4 @@ position: IT Trainer
 n+1: emilien.coffin@intersec.com
 img: assets/photos/Xavier_AFYOUNI.jpg
 tags: 
+department: ps

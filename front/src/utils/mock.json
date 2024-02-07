@@ -2,68 +2,85 @@
     {
         "firstname": "Abdurrahim",
         "lastname": "Suslu",
+        "email": "abdurrahim.suslu@intersec.com",
         "position": "Regional Sales Manager - Dubai",
         "n+1": "ahmed.hamza@intersec.com",
         "img": "intersecAmazingPeople/Abdurrahim Suslu/Abdurrahim_SUSLU.jpg",
         "tags": "",
-        "email": "abdurrahim.suslu@intersec.com",
+        "department": "sales",
         "id": "abdurrahim.suslu@intersec.com",
         "parentId": "ahmed.hamza@intersec.com"
     },
     {
         "firstname": "Adel",
         "lastname": "Amri",
+        "email": "adel.amri@intersec.com",
         "position": "Solution Architect",
         "n+1": "nicolas.najman@intersec.com",
         "img": "intersecAmazingPeople/Adel Amri/Adel.Amri.jpg",
         "tags": "",
-        "email": "adel.amri@intersec.com",
+        "department": "ps",
         "id": "adel.amri@intersec.com",
         "parentId": "nicolas.najman@intersec.com"
     },
     {
         "firstname": "Ahmed",
-        "lastname": "Hamza",
-        "position": "VP Sales",
-        "n+1": "ingolf.ruh@intersec.com",
-        "img": "intersecAmazingPeople/Ahmed Hamza/HAMZA.Ahmed.jpg",
-        "tags": "management",
-        "email": "ahmed.hamza@intersec.com",
-        "id": "ahmed.hamza@intersec.com",
-        "parentId": "ingolf.ruh@intersec.com"
-    },
-    {
-        "firstname": "Ahmed",
         "lastname": "Majdouba",
+        "email": "ahmed.majdouba@intersec.com",
         "position": "Support Engineer",
         "n+1": "onur.topcu@intersec.com",
         "img": "intersecAmazingPeople/Ahmed Ben Majdouba/Ahmed_BENMAJDOUBA.jpg",
         "tags": "",
-        "email": "ahmed.majdouba@intersec.com",
+        "department": "ps",
         "id": "ahmed.majdouba@intersec.com",
         "parentId": "onur.topcu@intersec.com"
     },
     {
-        "firstname": "Alexandre",
-        "lastname": "Prengere",
-        "position": "Project Manager",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Alexandre Prengere/Alexandre.Prengere.jpg",
-        "tags": "",
-        "email": "alexandre.prengere@intersec.com",
-        "id": "alexandre.prengere@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
-    },
-    {
         "firstname": "Ahmed",
         "lastname": "Lyahou",
+        "email": "ahmed.lyahou@intersec.com",
         "position": "Presales",
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Ahmed Lyahou/Ahmed_LYAHOU.jpg",
         "tags": "",
-        "email": "ahmed.lyahou@intersec.com",
+        "department": "sales",
         "id": "ahmed.lyahou@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
+        "firstname": "Abdelmoula",
+        "lastname": "Ousfour",
+        "email": "abdelmoula.ousfour@intersec.com",
+        "position": "Solution Architect",
+        "n+1": "nicolas.najman@intersec.com",
+        "img": "intersecAmazingPeople/Abdelmoula El Ousfour/Abdelmoula.Elousfour.jpg",
+        "tags": "",
+        "department": "ps",
+        "id": "abdelmoula.ousfour@intersec.com",
+        "parentId": "nicolas.najman@intersec.com"
+    },
+    {
+        "firstname": "Ahmed",
+        "lastname": "Hamza",
+        "email": "ahmed.hamza@intersec.com",
+        "position": "VP Sales",
+        "n+1": "ingolf.ruh@intersec.com",
+        "img": "intersecAmazingPeople/Ahmed Hamza/HAMZA.Ahmed.jpg",
+        "tags": "management",
+        "department": "sales",
+        "id": "ahmed.hamza@intersec.com",
+        "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
+        "firstname": "Alex",
+        "lastname": "de Slavuta",
+        "position": "UX/UI Designer",
+        "email": "alex.de.slavuta@intersec.com",
+        "n+1": "product.owner@intersec.com",
+        "img": "intersecAmazingPeople/Alex de Slavuta/Alex.Slavutskyi.jpg",
+        "tags": "",
+        "id": "alex.de.slavuta@intersec.com",
+        "parentId": "product.owner@intersec.com"
     },
     {
         "firstname": "Alexandre",
@@ -72,6 +89,7 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Alexandre Quince/alex.jpg",
         "tags": "",
+        "department": "sales",
         "email": "alexandre.quince@intersec.com",
         "id": "alexandre.quince@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
@@ -83,6 +101,7 @@
         "n+1": "simon.ravier@intersec.com",
         "img": "intersecAmazingPeople/Alexandre Riquier/Alexandre_Riquier.jpg",
         "tags": "",
+        "department": "ps",
         "email": "alexandre.riquier@intersec.com",
         "id": "alexandre.riquier@intersec.com",
         "parentId": "simon.ravier@intersec.com"
@@ -94,20 +113,69 @@
         "n+1": "mohamed.kahlal@intersec.com",
         "img": "intersecAmazingPeople/Alexis Brasy/Brasy.Alexis.jpg",
         "tags": "",
+        "department": "rd",
         "email": "alexis.brasy@intersec.com",
         "id": "alexis.brasy@intersec.com",
         "parentId": "mohamed.kahlal@intersec.com"
     },
     {
-        "firstname": "Alex",
-        "lastname": "Slavutskyi",
-        "position": "UX/UI Designer",
-        "n+1": "kamal.fadlaoui@intersec.com",
-        "img": "intersecAmazingPeople/Alex Slavutskyi/Alex.Slavutskyi.jpg",
+        "firstname": "Alexandre",
+        "lastname": "Prengere",
+        "position": "Project Manager",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Alexandre Prengere/Alexandre.Prengere.jpg",
         "tags": "",
-        "email": "alex.slavutskyi@intersec.com",
-        "id": "alex.slavutskyi@intersec.com",
-        "parentId": "kamal.fadlaoui@intersec.com"
+        "department": "ps",
+        "email": "alexandre.prengere@intersec.com",
+        "id": "alexandre.prengere@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Ali",
+        "lastname": "Houssni",
+        "position": "Presales",
+        "n+1": "ingolf.ruh@intersec.com",
+        "img": "intersecAmazingPeople/Ali Houssni/Houssni.Ali.jpg",
+        "tags": "",
+        "department": "sales",
+        "email": "ali.houssni@intersec.com",
+        "id": "ali.houssni@intersec.com",
+        "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
+        "firstname": "Aline",
+        "lastname": "Fauquette",
+        "position": "DevOps Engineer",
+        "n+1": "jean-marc.coic@intersec.com",
+        "img": "intersecAmazingPeople/Aline Fauquette/Fauquette.Aline.jpg",
+        "department": "rd",
+        "tags": "",
+        "email": "aline.fauquette@intersec.com",
+        "id": "aline.fauquette@intersec.com",
+        "parentId": "jean-marc.coic@intersec.com"
+    },
+    {
+        "firstname": "Amira",
+        "lastname": "Bouali",
+        "position": "Developer",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Amira Hadjer Bouali/Bouali.Amira.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "amira.bouali@intersec.com",
+        "id": "amira.bouali@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
+    },
+    {
+        "firstname": "Amer",
+        "lastname": "Bdeoui",
+        "position": "Product Owner",
+        "n+1": "product.owner@intersec.com",
+        "img": "intersecAmazingPeople/Amer Bdeoui/Bdoui.Amer.png",
+        "tags": "",
+        "email": "amer.bdeoui@intersec.com",
+        "id": "amer.bdeoui@intersec.com",
+        "parentId": "product.owner@intersec.com"
     },
     {
         "firstname": "Anand",
@@ -121,15 +189,16 @@
         "parentId": "haytham.beshir@intersec.com"
     },
     {
-        "firstname": "Amira",
-        "lastname": "Bouali",
-        "position": "Developer",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Amira Hadjer Bouali/Bouali.Amira.jpg",
+        "firstname": "Aneep",
+        "lastname": "Srivastava",
+        "position": "Solution Architect",
+        "n+1": "nicolas.najman@intersec.com",
+        "img": "intersecAmazingPeople/Aneep Srivastava/Srivastava.Aneep.png",
         "tags": "",
-        "email": "amira.bouali@intersec.com",
-        "id": "amira.bouali@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
+        "department": "ps",
+        "email": "aneep.srivastava@intersec.com",
+        "id": "aneep.srivastava@intersec.com",
+        "parentId": "nicolas.najman@intersec.com"
     },
     {
         "firstname": "Anas",
@@ -138,42 +207,10 @@
         "n+1": "neeraj.bhatnagar@intersec.com",
         "img": "intersecAmazingPeople/Anas Mohamed/Anas_Mohamed.jpg",
         "tags": "",
+        "department": "ps",
         "email": "anas.mohamed@intersec.com",
         "id": "anas.mohamed@intersec.com",
         "parentId": "neeraj.bhatnagar@intersec.com"
-    },
-    {
-        "firstname": "Aneep",
-        "lastname": "Srivastava",
-        "position": "Solution Architect",
-        "n+1": "nicolas.najman@intersec.com",
-        "img": "intersecAmazingPeople/Aneep Srivastava/Srivastava.Aneep.png",
-        "tags": "",
-        "email": "aneep.srivastava@intersec.com",
-        "id": "aneep.srivastava@intersec.com",
-        "parentId": "nicolas.najman@intersec.com"
-    },
-    {
-        "firstname": "Antoine",
-        "lastname": "Debroye",
-        "position": "Continuous Integrator",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Antoine Debroye/DEBROYE.Antoine.jpg",
-        "tags": "",
-        "email": "antoine.debroye@intersec.com",
-        "id": "antoine.debroye@intersec.com",
-        "parentId": "alexis.brasy@intersec.com"
-    },
-    {
-        "firstname": "Ali",
-        "lastname": "Houssni",
-        "position": "Presales",
-        "n+1": "ingolf.ruh@intersec.com",
-        "img": "intersecAmazingPeople/Ali Houssni/Houssni.Ali.jpg",
-        "tags": "",
-        "email": "ali.houssni@intersec.com",
-        "id": "ali.houssni@intersec.com",
-        "parentId": "ingolf.ruh@intersec.com"
     },
     {
         "firstname": "Anne-Laurence",
@@ -182,20 +219,34 @@
         "n+1": "oyo.ndoro@intersec.com",
         "img": "intersecAmazingPeople/Anne-Laurence Zanclan/ZANCLAN.Anne-Laurence.jpg",
         "tags": "",
+        "department": "hr",
         "email": "anne-laurence.zanclan@intersec.com",
         "id": "anne-laurence.zanclan@intersec.com",
         "parentId": "oyo.ndoro@intersec.com"
     },
     {
-        "firstname": "Aline",
-        "lastname": "Fauquette",
-        "position": "DevOps Engineer",
-        "n+1": "jean-marc.coic@intersec.com",
-        "img": "intersecAmazingPeople/Aline Fauquette/Fauquette.Aline.jpg",
+        "firstname": "Antoine",
+        "lastname": "Debroye",
+        "position": "Continuous Integrator",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Antoine Debroye/DEBROYE.Antoine.jpg",
         "tags": "",
-        "email": "aline.fauquette@intersec.com",
-        "id": "aline.fauquette@intersec.com",
-        "parentId": "jean-marc.coic@intersec.com"
+        "department": "rd",
+        "email": "antoine.debroye@intersec.com",
+        "id": "antoine.debroye@intersec.com",
+        "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Antoine",
+        "lastname": "Loheac",
+        "position": "C Developer",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Antoine Loheac/loheac.antoine.png",
+        "tags": "",
+        "department": "rd",
+        "email": "antoine.loheac@intersec.com",
+        "id": "antoine.loheac@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Arnaud",
@@ -204,6 +255,7 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Arnaud Westphal/WESTPHAL.Arnaud.JPG",
         "tags": "management",
+        "department": "sales",
         "email": "arnaud.westphal@intersec.com",
         "id": "arnaud.westphal@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
@@ -214,21 +266,11 @@
         "position": "Software Architect",
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Benoit Mariat/Mariat.benoit.jpg",
+        "department": "rd",
         "tags": "",
         "email": "benoit.mariat@intersec.com",
         "id": "benoit.mariat@intersec.com",
         "parentId": "jean-marc.coic@intersec.com"
-    },
-    {
-        "firstname": "Caroline",
-        "lastname": "Dumaitre",
-        "position": "Accounting and Financial Manager",
-        "n+1": "nicolas.dumarcet@intersec.com",
-        "img": "intersecAmazingPeople/Caroline Dumaitre/Dumaitre.Caroline.png",
-        "tags": "",
-        "email": "caroline.dumaitre@intersec.com",
-        "id": "caroline.dumaitre@intersec.com",
-        "parentId": "nicolas.dumarcet@intersec.com"
     },
     {
         "firstname": "Braulio",
@@ -237,31 +279,22 @@
         "n+1": "nicolas.najman@intersec.com",
         "img": "intersecAmazingPeople/Braulio Castillo/Castillo.Braulio.jpg",
         "tags": "",
+        "department": "ps",
         "email": "braulio.castillo@intersec.com",
         "id": "braulio.castillo@intersec.com",
         "parentId": "nicolas.najman@intersec.com"
     },
     {
-        "firstname": "Charlotte",
-        "lastname": "Cardona",
-        "position": "Marketing & Communication Director",
-        "n+1": "yann.chevalier@intersec.com",
-        "img": "intersecAmazingPeople/Charlotte Cardona/Cardona.Charlotte.png",
-        "tags": "management",
-        "email": "charlotte.cardona@intersec.com",
-        "id": "charlotte.cardona@intersec.com",
-        "parentId": "yann.chevalier@intersec.com"
-    },
-    {
-        "firstname": "Chiheb",
-        "lastname": "Bestaoui",
-        "position": "Integration Engineer",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Chiheb Bestaoui/chiheb_bestaoui.jpg",
+        "firstname": "Caroline",
+        "lastname": "Dumaitre",
+        "position": "Accounting and Financial Manager",
+        "n+1": "nicolas.dumarcet@intersec.com",
+        "img": "intersecAmazingPeople/Caroline Dumaitre/Dumaitre.Caroline.png",
         "tags": "",
-        "email": "chiheb.bestaoui@intersec.com",
-        "id": "chiheb.bestaoui@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
+        "department": "accounting",
+        "email": "caroline.dumaitre@intersec.com",
+        "id": "caroline.dumaitre@intersec.com",
+        "parentId": "nicolas.dumarcet@intersec.com"
     },
     {
         "firstname": "Cedrick",
@@ -270,6 +303,7 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Cedrick Vero/Vero.Cedrick.png",
         "tags": "",
+        "department": "sales",
         "email": "cedrick.vero@intersec.com",
         "id": "cedrick.vero@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
@@ -281,9 +315,22 @@
         "n+1": "christophe.nez@intersec.com",
         "img": "intersecAmazingPeople/Charlotte Thomas/Charlotte_THOMAS.jpg",
         "tags": "",
+        "department": "pdm",
         "email": "charlotte.thomas@intersec.com",
         "id": "charlotte.thomas@intersec.com",
         "parentId": "christophe.nez@intersec.com"
+    },
+    {
+        "firstname": "Chiheb",
+        "lastname": "Bestaoui",
+        "position": "Integration Engineer",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Chiheb Bestaoui/chiheb_bestaoui.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "chiheb.bestaoui@intersec.com",
+        "id": "chiheb.bestaoui@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Chloe",
@@ -292,9 +339,22 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Chloe Maroun/chloe.jpg",
         "tags": "",
+        "department": "sales",
         "email": "chloe.maroun@intersec.com",
         "id": "chloe.maroun@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
+        "firstname": "Charlotte",
+        "lastname": "Cardona",
+        "position": "Marketing & Communication Director",
+        "n+1": "yann.chevalier@intersec.com",
+        "img": "intersecAmazingPeople/Charlotte Cardona/Cardona.Charlotte.png",
+        "tags": "management",
+        "department": "mkt",
+        "email": "charlotte.cardona@intersec.com",
+        "id": "charlotte.cardona@intersec.com",
+        "parentId": "yann.chevalier@intersec.com"
     },
     {
         "firstname": "Christele",
@@ -325,6 +385,7 @@
         "n+1": "yann.chevalier@intersec.com",
         "img": "intersecAmazingPeople/Christophe Nez/NEZ.christophe.png",
         "tags": "management",
+        "department": "pdm",
         "email": "christophe.nez@intersec.com",
         "id": "christophe.nez@intersec.com",
         "parentId": "yann.chevalier@intersec.com"
@@ -336,6 +397,7 @@
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Clement Vandoolaeghe/Clem.jpg",
         "tags": "",
+        "department": "it",
         "email": "clement.vandoolaeghe@intersec.com",
         "id": "clement.vandoolaeghe@intersec.com",
         "parentId": "jean-marc.coic@intersec.com"
@@ -347,75 +409,10 @@
         "n+1": "matthias.granger@intersec.com",
         "img": "intersecAmazingPeople/Curtis Jameson/Jameson.Curtis.png",
         "tags": "",
+        "department": "ps",
         "email": "curtis.jameson@intersec.com",
         "id": "curtis.jameson@intersec.com",
         "parentId": "matthias.granger@intersec.com"
-    },
-    {
-        "firstname": "Dihia",
-        "lastname": "Salhi",
-        "position": "Continuous Integrator",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Dihia Salhi/Dihia_SALHI.jpg",
-        "tags": "",
-        "email": "dihia.salhi@intersec.com",
-        "id": "dihia.salhi@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "David",
-        "lastname": "Fontmartin",
-        "position": "Solution Architect",
-        "n+1": "nicolas.najman@intersec.com",
-        "img": "intersecAmazingPeople/David Fontmartin/FONTMARTIN.David.jpg",
-        "tags": "",
-        "email": "david.fontmartin@intersec.com",
-        "id": "david.fontmartin@intersec.com",
-        "parentId": "nicolas.najman@intersec.com"
-    },
-    {
-        "firstname": "Daosavanh",
-        "lastname": "Thepsouvanh",
-        "position": "Continuous Integrator",
-        "n+1": "nassim.mnafeg@intersec.com",
-        "img": "intersecAmazingPeople/Daosavanh Thepsouvanh/Daosavanh.Thepsouvanh.jpg",
-        "tags": "",
-        "email": "daosavanh.thepsouvanh@intersec.com",
-        "id": "daosavanh.thepsouvanh@intersec.com",
-        "parentId": "nassim.mnafeg@intersec.com"
-    },
-    {
-        "firstname": "Dimitri",
-        "lastname": "Rivoire",
-        "position": "Frontend Developer",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Dimitri Rivoire/Dimitri_RIVOIRE.jpg",
-        "tags": "",
-        "email": "dimitri.rivoire@intersec.com",
-        "id": "dimitri.rivoire@intersec.com",
-        "parentId": "alexis.brasy@intersec.com"
-    },
-    {
-        "firstname": "Djaballah",
-        "lastname": "Djedid",
-        "position": "Developer",
-        "n+1": "nassim.mnafeg@intersec.com",
-        "img": "intersecAmazingPeople/Djaballah Djedid/Djaballah_DJEDID.jpg",
-        "tags": "",
-        "email": "djaballah.djedid@intersec.com",
-        "id": "djaballah.djedid@intersec.com",
-        "parentId": "nassim.mnafeg@intersec.com"
-    },
-    {
-        "firstname": "Djamel-Eddine",
-        "lastname": "Belghoul",
-        "position": "Integration Engineer",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Djamel-Eddine Belghoul/Djamel.Eddine.Belghoul.jpg",
-        "tags": "",
-        "email": "djamel-eddine.belghoul@intersec.com",
-        "id": "djamel-eddine.belghoul@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Damien",
@@ -424,8 +421,93 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Damien Lemenager/Lemenager.Damien.jpg",
         "tags": "",
+        "department": "rd",
         "email": "damien.lemenager@intersec.com",
         "id": "damien.lemenager@intersec.com",
+        "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Daosavanh",
+        "lastname": "Thepsouvanh",
+        "position": "Continuous Integrator",
+        "n+1": "nassim.mnafeg@intersec.com",
+        "img": "intersecAmazingPeople/Daosavanh Thepsouvanh/Daosavanh.Thepsouvanh.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "daosavanh.thepsouvanh@intersec.com",
+        "id": "daosavanh.thepsouvanh@intersec.com",
+        "parentId": "nassim.mnafeg@intersec.com"
+    },
+    {
+        "firstname": "David",
+        "lastname": "Fontmartin",
+        "position": "Solution Architect",
+        "n+1": "nicolas.najman@intersec.com",
+        "img": "intersecAmazingPeople/David Fontmartin/FONTMARTIN.David.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "david.fontmartin@intersec.com",
+        "id": "david.fontmartin@intersec.com",
+        "parentId": "nicolas.najman@intersec.com"
+    },
+    {
+        "firstname": "Dihia",
+        "lastname": "Salhi",
+        "position": "Continuous Integrator",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Dihia Salhi/Dihia_SALHI.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "dihia.salhi@intersec.com",
+        "id": "dihia.salhi@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
+    },
+    {
+        "firstname": "Dimitri",
+        "lastname": "Rivoire",
+        "position": "Frontend Developer",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Dimitri Rivoire/Dimitri_RIVOIRE.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "dimitri.rivoire@intersec.com",
+        "id": "dimitri.rivoire@intersec.com",
+        "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Djamel-Eddine",
+        "lastname": "Belghoul",
+        "position": "Integration Engineer",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Djamel-Eddine Belghoul/Djamel.Eddine.Belghoul.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "djamel-eddine.belghoul@intersec.com",
+        "id": "djamel-eddine.belghoul@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Djamila",
+        "lastname": "Bendjafar",
+        "position": "Project Manager",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Djamila Bendjafar/Benjafar.Djamila.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "djamila.bendjafar@intersec.com",
+        "id": "djamila.bendjafar@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Djamel-Eddine",
+        "lastname": "Meharga",
+        "position": "Developer",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Djamel-Eddine Meharga/Meharga.Djamel.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "djamel-eddine.meharga@intersec.com",
+        "id": "djamel-eddine.meharga@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
     },
     {
@@ -435,19 +517,21 @@
         "n+1": "onur.topcu@intersec.com",
         "img": "intersecAmazingPeople/Djibril Faty/FATY.Djibril.jpg",
         "tags": "",
+        "department": "ps",
         "email": "djibril.faty@intersec.com",
         "id": "djibril.faty@intersec.com",
         "parentId": "onur.topcu@intersec.com"
     },
     {
-        "firstname": "Djamila",
-        "lastname": "Bendjafar",
-        "position": "Project Manager",
+        "firstname": "Elie",
+        "lastname": "Hamawi",
+        "position": "Integration Engineer",
         "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Djamila Bendjafar/Benjafar.Djamila.jpg",
+        "img": "intersecAmazingPeople/Elie El Hamawi/Elie.ElHamawi.jpg",
         "tags": "",
-        "email": "djamila.bendjafar@intersec.com",
-        "id": "djamila.bendjafar@intersec.com",
+        "department": "ps",
+        "email": "elie.hamawi@intersec.com",
+        "id": "elie.hamawi@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
     },
     {
@@ -457,20 +541,10 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Elie Duleu/Elie.Duleu.jpg",
         "tags": "",
+        "department": "rd",
         "email": "elie.duleu@intersec.com",
         "id": "elie.duleu@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "Elie",
-        "lastname": "Hamawi",
-        "position": "Integration Engineer",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Elie El Hamawi/Elie.ElHamawi.jpg",
-        "tags": "",
-        "email": "elie.hamawi@intersec.com",
-        "id": "elie.hamawi@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Emilien",
@@ -479,6 +553,7 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Emilien Coffin/COFFIN.Emilien.JPG",
         "tags": "management",
+        "department": "ps",
         "email": "emilien.coffin@intersec.com",
         "id": "emilien.coffin@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
@@ -489,32 +564,23 @@
         "position": "DevOps Engineer",
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Fabien Marchand/MARCHAND.Fabien.jpg",
+        "department": "rd",
         "tags": "",
         "email": "fabien.marchand@intersec.com",
         "id": "fabien.marchand@intersec.com",
         "parentId": "jean-marc.coic@intersec.com"
     },
     {
-        "firstname": "Fanyo",
-        "lastname": "Siliadin",
-        "position": "Frontend Developer",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Fanyo Siliadin/Fanyo.Siliadin.jpg",
+        "firstname": "Emmanuel",
+        "lastname": "Cousin",
+        "position": "C Developer",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Emmanuel Cousin/COUSIN.Emmanuel.JPG",
         "tags": "",
-        "email": "fanyo.siliadin@intersec.com",
-        "id": "fanyo.siliadin@intersec.com",
-        "parentId": "alexis.brasy@intersec.com"
-    },
-    {
-        "firstname": "Fehmi",
-        "lastname": "Sanaa",
-        "position": "Regional Sales Manager - Dubai",
-        "n+1": "ahmed.hamza@intersec.com",
-        "img": "intersecAmazingPeople/Fehmi Sanaa/Fehmi_SANAA.jpg",
-        "tags": "",
-        "email": "fehmi.sanaa@intersec.com",
-        "id": "fehmi.sanaa@intersec.com",
-        "parentId": "ahmed.hamza@intersec.com"
+        "department": "rd",
+        "email": "emmanuel.cousin@intersec.com",
+        "id": "emmanuel.cousin@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Filip",
@@ -523,9 +589,22 @@
         "n+1": "emilien.coffin@intersec.com",
         "img": "intersecAmazingPeople/Filip Biljic/Filip.Biljic.jpg",
         "tags": "",
+        "department": "ps",
         "email": "filip.biljic@intersec.com",
         "id": "filip.biljic@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Fehmi",
+        "lastname": "Sanaa",
+        "position": "Regional Sales Manager - Dubai",
+        "n+1": "ahmed.hamza@intersec.com",
+        "img": "intersecAmazingPeople/Fehmi Sanaa/Fehmi_SANAA.jpg",
+        "tags": "",
+        "department": "sales",
+        "email": "fehmi.sanaa@intersec.com",
+        "id": "fehmi.sanaa@intersec.com",
+        "parentId": "ahmed.hamza@intersec.com"
     },
     {
         "firstname": "Frederic",
@@ -534,8 +613,21 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Frederic Chauveau/Frederic.Chauveau.png",
         "tags": "",
+        "department": "rd",
         "email": "frederic.chauveau@intersec.com",
         "id": "frederic.chauveau@intersec.com",
+        "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Fanyo",
+        "lastname": "Siliadin",
+        "position": "Frontend Developer",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Fanyo Siliadin/Fanyo.Siliadin.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "fanyo.siliadin@intersec.com",
+        "id": "fanyo.siliadin@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
     },
     {
@@ -545,8 +637,21 @@
         "n+1": "nassim.mnafeg@intersec.com",
         "img": "intersecAmazingPeople/Frederic Tutzo/fred.jpg",
         "tags": "",
+        "department": "rd",
         "email": "frederic.tutzo@intersec.com",
         "id": "frederic.tutzo@intersec.com",
+        "parentId": "nassim.mnafeg@intersec.com"
+    },
+    {
+        "firstname": "Guillaume",
+        "lastname": "Chevallerau",
+        "position": "Software Architect",
+        "n+1": "nassim.mnafeg@intersec.com",
+        "img": "intersecAmazingPeople/Guillaume Chevallerau/chevallereau.guillaume.png",
+        "tags": "",
+        "department": "rd",
+        "email": "guillaume.chevallerau@intersec.com",
+        "id": "guillaume.chevallerau@intersec.com",
         "parentId": "nassim.mnafeg@intersec.com"
     },
     {
@@ -556,20 +661,10 @@
         "n+1": "matthias.granger@intersec.com",
         "img": "intersecAmazingPeople/Gabriel Terrien/terrien.gabriel.jpg",
         "tags": "",
+        "department": "ps",
         "email": "gabriel.terrien@intersec.com",
         "id": "gabriel.terrien@intersec.com",
         "parentId": "matthias.granger@intersec.com"
-    },
-    {
-        "firstname": "Guillaume",
-        "lastname": "Chevallerau",
-        "position": "Software Architect",
-        "n+1": "nassim.mnafeg@intersec.com",
-        "img": "intersecAmazingPeople/Guillaume Chevallerau/chevallereau.guillaume.png",
-        "tags": "",
-        "email": "guillaume.chevallerau@intersec.com",
-        "id": "guillaume.chevallerau@intersec.com",
-        "parentId": "nassim.mnafeg@intersec.com"
     },
     {
         "firstname": "Guillaume",
@@ -578,20 +673,10 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Guillaume Renaud/Guillaume.Renaud.jpg",
         "tags": "",
+        "department": "rd",
         "email": "guillaume.renaud@intersec.com",
         "id": "guillaume.renaud@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "Hassina",
-        "lastname": "Moulai",
-        "position": "Developer",
-        "n+1": "nassim.mnafeg@intersec.com",
-        "img": "intersecAmazingPeople/Hassina Moulai/Hassina.Moulai.jpg",
-        "tags": "",
-        "email": "hassina.moulai@intersec.com",
-        "id": "hassina.moulai@intersec.com",
-        "parentId": "nassim.mnafeg@intersec.com"
     },
     {
         "firstname": "Haytham",
@@ -600,9 +685,22 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Haytham Beshir/beshir.haytham.jpg",
         "tags": "management",
+        "department": "ps",
         "email": "haytham.beshir@intersec.com",
         "id": "haytham.beshir@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
+    },
+    {
+        "firstname": "Hassina",
+        "lastname": "Moulai",
+        "position": "Developer",
+        "n+1": "nassim.mnafeg@intersec.com",
+        "img": "intersecAmazingPeople/Hassina Moulai/Hassina.Moulai.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "hassina.moulai@intersec.com",
+        "id": "hassina.moulai@intersec.com",
+        "parentId": "nassim.mnafeg@intersec.com"
     },
     {
         "firstname": "Imad",
@@ -611,6 +709,7 @@
         "n+1": "nicolas.najman@intersec.com",
         "img": "intersecAmazingPeople/Imad Zidane/Imad_ZIDANE.jpg",
         "tags": "",
+        "department": "ps",
         "email": "imad.zidane@intersec.com",
         "id": "imad.zidane@intersec.com",
         "parentId": "nicolas.najman@intersec.com"
@@ -622,6 +721,7 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Imen Benabdallah/Imen_BENABDALLAH.jpg",
         "tags": "",
+        "department": "rd",
         "email": "imen.benabdallah@intersec.com",
         "id": "imen.benabdallah@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
@@ -633,6 +733,7 @@
         "n+1": "yann.chevalier@intersec.com",
         "img": "intersecAmazingPeople/Ingolf Ruh/RUH.Ingolf.jpg",
         "tags": "management",
+        "department": "sales",
         "email": "ingolf.ruh@intersec.com",
         "id": "ingolf.ruh@intersec.com",
         "parentId": "yann.chevalier@intersec.com"
@@ -644,31 +745,10 @@
         "n+1": "caroline.dumaitre@intersec.com",
         "img": "intersecAmazingPeople/Isabelle Granger/Granger.Isabelle.jpeg",
         "tags": "",
+        "department": "accounting",
         "email": "isabelle.granger@intersec.com",
         "id": "isabelle.granger@intersec.com",
         "parentId": "caroline.dumaitre@intersec.com"
-    },
-    {
-        "firstname": "Jean",
-        "lastname": "Huber",
-        "position": "Project Manager",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Jean Huber/Jean.Huber.png",
-        "tags": "",
-        "email": "jean.huber@intersec.com",
-        "id": "jean.huber@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
-    },
-    {
-        "firstname": "Jean-Marc",
-        "lastname": "Coic",
-        "position": "CTO",
-        "n+1": "yann.chevalier@intersec.com",
-        "img": "intersecAmazingPeople/Jean-Marc Coic/COIC.Jean-Marc.jpg",
-        "tags": "management",
-        "email": "jean-marc.coic@intersec.com",
-        "id": "jean-marc.coic@intersec.com",
-        "parentId": "yann.chevalier@intersec.com"
     },
     {
         "firstname": "Jeremy",
@@ -677,9 +757,46 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Jeremy Caradec/Caradec.Jeremy.png",
         "tags": "",
+        "department": "rd",
         "email": "jeremy.caradec@intersec.com",
         "id": "jeremy.caradec@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
+    },
+    {
+        "firstname": "Jean",
+        "lastname": "Huber",
+        "position": "Project Manager",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Jean Huber/Jean.Huber.png",
+        "tags": "",
+        "department": "ps",
+        "email": "jean.huber@intersec.com",
+        "id": "jean.huber@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Jonathan",
+        "lastname": "Squirawski",
+        "position": "Software Architect",
+        "n+1": "jean-marc.coic@intersec.com",
+        "img": "intersecAmazingPeople/Jonathan Squirawski/Jonathan_Squirawski.jpg",
+        "department": "rd",
+        "tags": "",
+        "email": "jonathan.squirawski@intersec.com",
+        "id": "jonathan.squirawski@intersec.com",
+        "parentId": "jean-marc.coic@intersec.com"
+    },
+    {
+        "firstname": "Jean-Marc",
+        "lastname": "Coic",
+        "position": "CTO",
+        "n+1": "yann.chevalier@intersec.com",
+        "img": "intersecAmazingPeople/Jean-Marc Coic/COIC.Jean-Marc.jpg",
+        "tags": "management",
+        "department": "rd",
+        "email": "jean-marc.coic@intersec.com",
+        "id": "jean-marc.coic@intersec.com",
+        "parentId": "yann.chevalier@intersec.com"
     },
     {
         "firstname": "Jonas",
@@ -688,6 +805,7 @@
         "n+1": "simon.ravier@intersec.com",
         "img": "intersecAmazingPeople/Jonas Prieur/Jonas.PRIEUR.jpg",
         "tags": "",
+        "department": "ps",
         "email": "jonas.prieur@intersec.com",
         "id": "jonas.prieur@intersec.com",
         "parentId": "simon.ravier@intersec.com"
@@ -699,31 +817,10 @@
         "n+1": "emilien.coffin@intersec.com",
         "img": "intersecAmazingPeople/Jerome Levol/Jerome.Levol.jpg",
         "tags": "",
+        "department": "ps",
         "email": "jerome.levol@intersec.com",
         "id": "jerome.levol@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
-    },
-    {
-        "firstname": "Kamal",
-        "lastname": "Fadlaoui",
-        "position": "VP Engineering",
-        "n+1": "jean-marc.coic@intersec.com",
-        "img": "intersecAmazingPeople/Kamal Fadlaoui/Fadlaoui.Kamal.jpg",
-        "tags": "management",
-        "email": "kamal.fadlaoui@intersec.com",
-        "id": "kamal.fadlaoui@intersec.com",
-        "parentId": "jean-marc.coic@intersec.com"
-    },
-    {
-        "firstname": "Jonathan",
-        "lastname": "Squirawski",
-        "position": "Software Architect",
-        "n+1": "jean-marc.coic@intersec.com",
-        "img": "intersecAmazingPeople/Jonathan Squirawski/Jonathan_Squirawski.jpg",
-        "tags": "",
-        "email": "jonathan.squirawski@intersec.com",
-        "id": "jonathan.squirawski@intersec.com",
-        "parentId": "jean-marc.coic@intersec.com"
     },
     {
         "firstname": "Kamel",
@@ -732,6 +829,7 @@
         "n+1": "oyo.ndoro@intersec.com",
         "img": "intersecAmazingPeople/Kamel Majdoub/majdoub.kamel.png",
         "tags": "",
+        "department": "hr",
         "email": "kamel.majdoub@intersec.com",
         "id": "kamel.majdoub@intersec.com",
         "parentId": "oyo.ndoro@intersec.com"
@@ -743,6 +841,7 @@
         "n+1": "clement.vandoolaeghe@intersec.com",
         "img": "intersecAmazingPeople/Kevin Champion/Kevin_Champion.jpg",
         "tags": "",
+        "department": "it",
         "email": "kevin.champion@intersec.com",
         "id": "kevin.champion@intersec.com",
         "parentId": "clement.vandoolaeghe@intersec.com"
@@ -754,20 +853,10 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Kurian Manjakkal/Manjakkal.Kurian.jpg",
         "tags": "management",
+        "department": "sales",
         "email": "kurian.manjakkal@intersec.com",
         "id": "kurian.manjakkal@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
-    },
-    {
-        "firstname": "Emmanuel",
-        "lastname": "Cousin",
-        "position": "C Developer",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Emmanuel Cousin/COUSIN.Emmanuel.JPG",
-        "tags": "",
-        "email": "emmanuel.cousin@intersec.com",
-        "id": "emmanuel.cousin@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Killian",
@@ -787,6 +876,7 @@
         "n+1": "emilien.coffin@intersec.com",
         "img": "intersecAmazingPeople/Latifa Chalouati/Latifa_Chalouati.jpg",
         "tags": "",
+        "department": "ps",
         "email": "latifa.chalouati@intersec.com",
         "id": "latifa.chalouati@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
@@ -798,20 +888,10 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "",
         "tags": "",
+        "department": "ps",
         "email": "mahdi.said@intersec.com",
         "id": "mahdi.said@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
-    },
-    {
-        "firstname": "Maja",
-        "lastname": "Lazarevska",
-        "position": "Project Manager",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Maja Lazarevska/Lazarevska.Maja.jpg",
-        "tags": "",
-        "email": "maja.lazarevska@intersec.com",
-        "id": "maja.lazarevska@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Marie-Luna",
@@ -820,9 +900,46 @@
         "n+1": "charlotte.cardona@intersec.com",
         "img": "intersecAmazingPeople/Marie-Luna Gonzalez/Marie.Luna.Gonzalez.jpg",
         "tags": "",
+        "department": "mkt",
         "email": "marie-luna.gonzalez@intersec.com",
         "id": "marie-luna.gonzalez@intersec.com",
         "parentId": "charlotte.cardona@intersec.com"
+    },
+    {
+        "firstname": "Mario",
+        "lastname": "Larsen",
+        "position": "Frontend Developer",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Mario Larsen/Mario.Larsen.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "mario.larsen@intersec.com",
+        "id": "mario.larsen@intersec.com",
+        "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Maja",
+        "lastname": "Lazarevska",
+        "position": "Project Manager",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Maja Lazarevska/Lazarevska.Maja.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "maja.lazarevska@intersec.com",
+        "id": "maja.lazarevska@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
+    },
+    {
+        "firstname": "Kamal",
+        "lastname": "Fadlaoui",
+        "email": "kamal.fadlaoui@intersec.com",
+        "position": "VP Engineering",
+        "n+1": "jean-marc.coic@intersec.com",
+        "img": "intersecAmazingPeople/Kamal Fadlaoui/Fadlaoui.Kamal.jpg",
+        "department": "rd",
+        "tags": "management",
+        "id": "kamal.fadlaoui@intersec.com",
+        "parentId": "jean-marc.coic@intersec.com"
     },
     {
         "firstname": "Marion",
@@ -831,19 +948,32 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Marion Biancale/Biancale.Marion.jpg",
         "tags": "",
+        "department": "rd",
         "email": "marion.biancale@intersec.com",
         "id": "marion.biancale@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
     },
     {
-        "firstname": "Marion",
-        "lastname": "Larsen",
-        "position": "Frontend Developer",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Marion Larsen/Mario.Larsen.jpg",
+        "firstname": "Marwane",
+        "lastname": "Akram",
+        "position": "Product Owner",
+        "n+1": "product.owner@intersec.com",
+        "img": "intersecAmazingPeople/Marwane Akram/AKRAM.Marwane.jpg",
         "tags": "",
-        "email": "marion.larsen@intersec.com",
-        "id": "marion.larsen@intersec.com",
+        "email": "marwane.akram@intersec.com",
+        "id": "marwane.akram@intersec.com",
+        "parentId": "product.owner@intersec.com"
+    },
+    {
+        "firstname": "Mathieu",
+        "lastname": "Haydar",
+        "position": "Continuous Integrator",
+        "n+1": "alexis.brasy@intersec.com",
+        "img": "intersecAmazingPeople/Mathieu Abou Haydar/Mathieu_ABOU-HAYDAR.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "mathieu.haydar@intersec.com",
+        "id": "mathieu.haydar@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
     },
     {
@@ -853,42 +983,10 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Mathieu Vallet/Vallet.Mathieu.jpg",
         "tags": "",
+        "department": "rd",
         "email": "mathieu.vallet@intersec.com",
         "id": "mathieu.vallet@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "Marwane",
-        "lastname": "Akram",
-        "position": "Product Owner",
-        "n+1": "kamal.fadlaoui@intersec.com",
-        "img": "intersecAmazingPeople/Marwane Akram/AKRAM.Marwane.jpg",
-        "tags": "",
-        "email": "marwane.akram@intersec.com",
-        "id": "marwane.akram@intersec.com",
-        "parentId": "kamal.fadlaoui@intersec.com"
-    },
-    {
-        "firstname": "Mathieu",
-        "lastname": "Haydar",
-        "position": "Continuous Integrator",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Mathieu Abou Haydar/Mathieu_ABOU-HAYDAR.jpg",
-        "tags": "",
-        "email": "mathieu.haydar@intersec.com",
-        "id": "mathieu.haydar@intersec.com",
-        "parentId": "alexis.brasy@intersec.com"
-    },
-    {
-        "firstname": "Matthias",
-        "lastname": "Granger",
-        "position": "Project Manager & Regional TL",
-        "n+1": "mohit.maheshwari@intersec.com",
-        "img": "intersecAmazingPeople/Matthias Granger/granger.matthias.jpg",
-        "tags": "management",
-        "email": "matthias.granger@intersec.com",
-        "id": "matthias.granger@intersec.com",
-        "parentId": "mohit.maheshwari@intersec.com"
     },
     {
         "firstname": "Maxime",
@@ -897,9 +995,22 @@
         "n+1": "nassim.mnafeg@intersec.com",
         "img": "intersecAmazingPeople/Maxime Leblanc/Maxime_Leblanc.jpg",
         "tags": "",
+        "department": "rd",
         "email": "maxime.leblanc@intersec.com",
         "id": "maxime.leblanc@intersec.com",
         "parentId": "nassim.mnafeg@intersec.com"
+    },
+    {
+        "firstname": "Matthias",
+        "lastname": "Granger",
+        "position": "Project Manager & Regional TL",
+        "n+1": "mohit.maheshwari@intersec.com",
+        "img": "intersecAmazingPeople/Matthias Granger/granger.matthias.jpg",
+        "tags": "management",
+        "department": "ps",
+        "email": "matthias.granger@intersec.com",
+        "id": "matthias.granger@intersec.com",
+        "parentId": "mohit.maheshwari@intersec.com"
     },
     {
         "firstname": "Matthieu",
@@ -908,6 +1019,7 @@
         "n+1": "clement.vandoolaeghe@intersec.com",
         "img": "intersecAmazingPeople/Matthieu Michelet/matthieu_michelet.jpg",
         "tags": "",
+        "department": "it",
         "email": "matthieu.michelet@intersec.com",
         "id": "matthieu.michelet@intersec.com",
         "parentId": "clement.vandoolaeghe@intersec.com"
@@ -919,6 +1031,7 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Meryam Azaiez/Meryam_Azaiez.jpg",
         "tags": "",
+        "department": "ps",
         "email": "meryam.azaiez@intersec.com",
         "id": "meryam.azaiez@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
@@ -941,6 +1054,7 @@
         "n+1": "neeraj.bhatnagar@intersec.com",
         "img": "intersecAmazingPeople/Mohamed Aboelnoor/Aboelnoo.Mohamed.png",
         "tags": "",
+        "department": "ps",
         "email": "mohamed.aboelnoor@intersec.com",
         "id": "mohamed.aboelnoor@intersec.com",
         "parentId": "neeraj.bhatnagar@intersec.com"
@@ -952,6 +1066,7 @@
         "n+1": "nicolas.najman@intersec.com",
         "img": "intersecAmazingPeople/Mohamed Yousuf Sulaiman/Mohamed.Yousuf.jpg",
         "tags": "",
+        "department": "ps",
         "email": "mohamed.sulaiman@intersec.com",
         "id": "mohamed.sulaiman@intersec.com",
         "parentId": "nicolas.najman@intersec.com"
@@ -962,6 +1077,7 @@
         "position": "VP Engineering Delivery",
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Mohamed Kahlal/KAHLAL.mohamed.png",
+        "department": "rd",
         "tags": "management",
         "email": "mohamed.kahlal@intersec.com",
         "id": "mohamed.kahlal@intersec.com",
@@ -974,20 +1090,10 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Mohammed Abbas/Mohamed.Abas.jpg",
         "tags": "",
+        "department": "sales",
         "email": "mohammed.abbas@intersec.com",
         "id": "mohammed.abbas@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
-    },
-    {
-        "firstname": "Mohit",
-        "lastname": "Maheshwari",
-        "position": "VP Operations",
-        "n+1": "yann.chevalier@intersec.com",
-        "img": "intersecAmazingPeople/Mohit Maheshwari/Maheshwari.Mohit.jpg",
-        "tags": "management",
-        "email": "mohit.maheshwari@intersec.com",
-        "id": "mohit.maheshwari@intersec.com",
-        "parentId": "yann.chevalier@intersec.com"
     },
     {
         "firstname": "Muyao",
@@ -996,9 +1102,22 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Muyao Chen/Muyao.Chen.jpg",
         "tags": "",
+        "department": "rd",
         "email": "muyao.chen@intersec.com",
         "id": "muyao.chen@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Mohit",
+        "lastname": "Maheshwari",
+        "position": "VP Operations",
+        "n+1": "yann.chevalier@intersec.com",
+        "img": "intersecAmazingPeople/Mohit Maheshwari/Maheshwari.Mohit.jpg",
+        "tags": "management",
+        "department": "ps",
+        "email": "mohit.maheshwari@intersec.com",
+        "id": "mohit.maheshwari@intersec.com",
+        "parentId": "yann.chevalier@intersec.com"
     },
     {
         "firstname": "Mouna",
@@ -1007,31 +1126,10 @@
         "n+1": "nicolas.dumarcet@intersec.com",
         "img": "intersecAmazingPeople/Mouna Benzaroual/Mouna.Benzaroual.jpg",
         "tags": "",
+        "department": "accounting",
         "email": "mouna.benzaroual@intersec.com",
         "id": "mouna.benzaroual@intersec.com",
         "parentId": "nicolas.dumarcet@intersec.com"
-    },
-    {
-        "firstname": "Nadia",
-        "lastname": "Traore",
-        "position": "Project Manager",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Nadia Traore/nadia.jpg",
-        "tags": "",
-        "email": "nadia.traore@intersec.com",
-        "id": "nadia.traore@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
-    },
-    {
-        "firstname": "Naveen",
-        "lastname": "Kumar",
-        "position": "Solution Architect - DUBAI",
-        "n+1": "neeraj.bhatnagar@intersec.com",
-        "img": "intersecAmazingPeople/Naveen Kumar/Naveen_KUMAR.jpg",
-        "tags": "",
-        "email": "naveen.kumar@intersec.com",
-        "id": "naveen.kumar@intersec.com",
-        "parentId": "neeraj.bhatnagar@intersec.com"
     },
     {
         "firstname": "Nahin",
@@ -1040,9 +1138,22 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Nahin Musarrat/Nahin.Musarrat.png",
         "tags": "",
+        "department": "ps",
         "email": "nahin.musarrat@intersec.com",
         "id": "nahin.musarrat@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
+    },
+    {
+        "firstname": "Nadia",
+        "lastname": "Traore",
+        "position": "Project Manager",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Nadia Traore/nadia.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "nadia.traore@intersec.com",
+        "id": "nadia.traore@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Nassim",
@@ -1051,31 +1162,34 @@
         "n+1": "mohamed.kahlal@intersec.com",
         "img": "intersecAmazingPeople/Nassim Mnafeg/Nassim_MNAFEG.jpg",
         "tags": "",
+        "department": "rd",
         "email": "nassim.mnafeg@intersec.com",
         "id": "nassim.mnafeg@intersec.com",
         "parentId": "mohamed.kahlal@intersec.com"
     },
     {
-        "firstname": "Nawaal",
-        "lastname": "Mamadou",
-        "position": "Support Engineer",
-        "n+1": "onur.topcu@intersec.com",
-        "img": "intersecAmazingPeople/Nawaal Mamadou/MAMADOU.Nawaal.jpg",
+        "firstname": "Djaballah",
+        "lastname": "Djedid",
+        "position": "Developer",
+        "n+1": "nassim.mnafeg@intersec.com",
+        "img": "intersecAmazingPeople/Djaballah Djedid/Djaballah_DJEDID.jpg",
         "tags": "",
-        "email": "nawaal.mamadou@intersec.com",
-        "id": "nawaal.mamadou@intersec.com",
-        "parentId": "onur.topcu@intersec.com"
+        "department": "rd",
+        "email": "djaballah.djedid@intersec.com",
+        "id": "djaballah.djedid@intersec.com",
+        "parentId": "nassim.mnafeg@intersec.com"
     },
     {
-        "firstname": "Djamel-Eddine",
-        "lastname": "Meharga",
-        "position": "Developer",
-        "n+1": "alexis.brasy@intersec.com",
-        "img": "intersecAmazingPeople/Djamel-Eddine Meharga/Meharga.Djamel.jpg",
+        "firstname": "Naveen",
+        "lastname": "Kumar",
+        "position": "Solution Architect - DUBAI",
+        "n+1": "neeraj.bhatnagar@intersec.com",
+        "img": "intersecAmazingPeople/Naveen Kumar/Naveen_KUMAR.jpg",
         "tags": "",
-        "email": "djamel-eddine.meharga@intersec.com",
-        "id": "djamel-eddine.meharga@intersec.com",
-        "parentId": "alexis.brasy@intersec.com"
+        "department": "ps",
+        "email": "naveen.kumar@intersec.com",
+        "id": "naveen.kumar@intersec.com",
+        "parentId": "neeraj.bhatnagar@intersec.com"
     },
     {
         "firstname": "Neeraj",
@@ -1084,31 +1198,10 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Neeraj Bhatnagar/Neeraj_BHATNAGAR.jpg",
         "tags": "management",
+        "department": "ps",
         "email": "neeraj.bhatnagar@intersec.com",
         "id": "neeraj.bhatnagar@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
-    },
-    {
-        "firstname": "Antoine",
-        "lastname": "Loheac",
-        "position": "C Developer",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Antoine Loheac/loheac.antoine.png",
-        "tags": "",
-        "email": "antoine.loheac@intersec.com",
-        "id": "antoine.loheac@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "Amer",
-        "lastname": "Bdeoui",
-        "position": "Product Owner",
-        "n+1": "kamal.fadlaoui@intersec.com",
-        "img": "intersecAmazingPeople/Amer Bdeoui/Bdoui.Amer.png",
-        "tags": "",
-        "email": "amer.bdeoui@intersec.com",
-        "id": "amer.bdeoui@intersec.com",
-        "parentId": "kamal.fadlaoui@intersec.com"
     },
     {
         "firstname": "Nicolas",
@@ -1116,10 +1209,23 @@
         "position": "DevOps Engineer",
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Angevelle/ANGEVELLE.Nicolas.JPG",
+        "department": "rd",
         "tags": "",
         "email": "nicolas.angevelle@intersec.com",
         "id": "nicolas.angevelle@intersec.com",
         "parentId": "jean-marc.coic@intersec.com"
+    },
+    {
+        "firstname": "Nicolas",
+        "lastname": "Delaunay",
+        "position": "Regional Sales Manager",
+        "n+1": "arnaud.westphal@intersec.com",
+        "img": "intersecAmazingPeople/Nicolas Delaunay/Delaunay.Nicolas.jpg",
+        "tags": "",
+        "department": "sales",
+        "email": "nicolas.delaunay@intersec.com",
+        "id": "nicolas.delaunay@intersec.com",
+        "parentId": "arnaud.westphal@intersec.com"
     },
     {
         "firstname": "Nicolas",
@@ -1128,6 +1234,7 @@
         "n+1": "arnaud.westphal@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Haddad/haddad.Nicolas.jpg",
         "tags": "",
+        "department": "sales",
         "email": "nicolas.haddad@intersec.com",
         "id": "nicolas.haddad@intersec.com",
         "parentId": "arnaud.westphal@intersec.com"
@@ -1139,6 +1246,7 @@
         "n+1": "onur.topcu@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Legrand/LEGRAND.Nicolas.JPG",
         "tags": "",
+        "department": "ps",
         "email": "nicolas.legrand@intersec.com",
         "id": "nicolas.legrand@intersec.com",
         "parentId": "onur.topcu@intersec.com"
@@ -1150,6 +1258,7 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Najman/najman.nicolas.png",
         "tags": "management",
+        "department": "ps",
         "email": "nicolas.najman@intersec.com",
         "id": "nicolas.najman@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
@@ -1161,19 +1270,21 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Pauss/PAUSS.nicolas.JPG",
         "tags": "",
+        "department": "rd",
         "email": "nicolas.pauss@intersec.com",
         "id": "nicolas.pauss@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
     },
     {
         "firstname": "Nicolas",
-        "lastname": "Rousseau-Dumarcet",
+        "lastname": "Dumarcet",
         "position": "CFO",
         "n+1": "yann.chevalier@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Rousseau-Dumarcet/Nicolas.Rousseau-Dumarcet.jpg",
         "tags": "management",
-        "email": "nicolas.rousseau-dumarcet@intersec.com",
-        "id": "nicolas.rousseau-dumarcet@intersec.com",
+        "department": "accounting",
+        "email": "nicolas.dumarcet@intersec.com",
+        "id": "nicolas.dumarcet@intersec.com",
         "parentId": "yann.chevalier@intersec.com"
     },
     {
@@ -1183,6 +1294,7 @@
         "n+1": "clement.vandoolaeghe@intersec.com",
         "img": "intersecAmazingPeople/Nicolas Sery/Nicolas.Sery.jpg",
         "tags": "",
+        "department": "it",
         "email": "nicolas.sery@intersec.com",
         "id": "nicolas.sery@intersec.com",
         "parentId": "clement.vandoolaeghe@intersec.com"
@@ -1194,6 +1306,7 @@
         "n+1": "onur.topcu@intersec.com",
         "img": "",
         "tags": "",
+        "department": "ps",
         "email": "nikola.milic@intersec.com",
         "id": "nikola.milic@intersec.com",
         "parentId": "onur.topcu@intersec.com"
@@ -1216,6 +1329,7 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Onur Topcu/Topcu.Onur.png",
         "tags": "management",
+        "department": "ps",
         "email": "onur.topcu@intersec.com",
         "id": "onur.topcu@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
@@ -1226,21 +1340,11 @@
         "position": "Data Science Team Lead",
         "n+1": "jean-marc.coic@intersec.com",
         "img": "intersecAmazingPeople/Pierre-Louis Cuny/CUNY.Pierre-Louis.jpg",
+        "department": "rd",
         "tags": "",
         "email": "pierre-louis.cuny@intersec.com",
         "id": "pierre-louis.cuny@intersec.com",
         "parentId": "jean-marc.coic@intersec.com"
-    },
-    {
-        "firstname": "Nicolas",
-        "lastname": "Delaunay",
-        "position": "Regional Sales Manager",
-        "n+1": "arnaud.westphal@intersec.com",
-        "img": "intersecAmazingPeople/Nicolas Delaunay/Delaunay.Nicolas.jpg",
-        "tags": "",
-        "email": "nicolas.delaunay@intersec.com",
-        "id": "nicolas.delaunay@intersec.com",
-        "parentId": "arnaud.westphal@intersec.com"
     },
     {
         "firstname": "Preeti",
@@ -1254,12 +1358,25 @@
         "parentId": "haytham.beshir@intersec.com"
     },
     {
+        "firstname": "Oyo",
+        "lastname": "Ndoro",
+        "position": "VP Talent",
+        "n+1": "yann.chevalier@intersec.com",
+        "img": "intersecAmazingPeople/Oyo Ndoro/NDORO.Oyo.jpg",
+        "tags": "management",
+        "department": "hr",
+        "email": "oyo.ndoro@intersec.com",
+        "id": "oyo.ndoro@intersec.com",
+        "parentId": "yann.chevalier@intersec.com"
+    },
+    {
         "firstname": "Rawad",
         "lastname": "Zgheib",
         "position": "Team Leader",
         "n+1": "mohamed.kahlal@intersec.com",
         "img": "intersecAmazingPeople/Rawad Zgheib/Rawad_Zgheib.png",
         "tags": "",
+        "department": "rd",
         "email": "rawad.zgheib@intersec.com",
         "id": "rawad.zgheib@intersec.com",
         "parentId": "mohamed.kahlal@intersec.com"
@@ -1271,6 +1388,7 @@
         "n+1": "emilien.coffin@intersec.com",
         "img": "intersecAmazingPeople/Reshmi Anand/Reshmi.Anand.jpg",
         "tags": "",
+        "department": "ps",
         "email": "reshmi.anand@intersec.com",
         "id": "reshmi.anand@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
@@ -1282,6 +1400,7 @@
         "n+1": "oyo.ndoro@intersec.com",
         "img": "intersecAmazingPeople/Rkia Hatif/hatif.rkia.png",
         "tags": "",
+        "department": "hr",
         "email": "rkia.hatif@intersec.com",
         "id": "rkia.hatif@intersec.com",
         "parentId": "oyo.ndoro@intersec.com"
@@ -1293,20 +1412,10 @@
         "n+1": "nassim.mnafeg@intersec.com",
         "img": "intersecAmazingPeople/Romain Le Godais/legodais.romain.jpg",
         "tags": "",
+        "department": "rd",
         "email": "romain.godais@intersec.com",
         "id": "romain.godais@intersec.com",
         "parentId": "nassim.mnafeg@intersec.com"
-    },
-    {
-        "firstname": "Safwan",
-        "lastname": "Alwan",
-        "position": "C Developer",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Safwan Alwan/Alwane.Safwan.jpg",
-        "tags": "",
-        "email": "safwan.alwan@intersec.com",
-        "id": "safwan.alwan@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Samy",
@@ -1315,9 +1424,22 @@
         "n+1": "kamel.majdoub@intersec.com",
         "img": "intersecAmazingPeople/Samy Kammoun/Samy.Kammoun.jpg",
         "tags": "",
+        "department": "hr",
         "email": "samy.kammoun@intersec.com",
         "id": "samy.kammoun@intersec.com",
         "parentId": "kamel.majdoub@intersec.com"
+    },
+    {
+        "firstname": "Safwan",
+        "lastname": "Alwan",
+        "position": "C Developer",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Safwan Alwan/Alwane.Safwan.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "safwan.alwan@intersec.com",
+        "id": "safwan.alwan@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Sanh",
@@ -1326,19 +1448,21 @@
         "n+1": "nicolas.dumarcet@intersec.com",
         "img": "intersecAmazingPeople/Sanh Nguyen/Sanh_NGUYEN.jpg",
         "tags": "",
+        "department": "accounting",
         "email": "sanh.nguyen@intersec.com",
         "id": "sanh.nguyen@intersec.com",
         "parentId": "nicolas.dumarcet@intersec.com"
     },
     {
         "firstname": "Sarra",
-        "lastname": "Slimen",
+        "lastname": "Ben Slimene",
         "position": "HR Assistant",
         "n+1": "rkia.hatif@intersec.com",
-        "img": "intersecAmazingPeople/Sarra Ben Slimen/Sara.Ben.Slimane.jpg",
+        "img": "intersecAmazingPeople/Sarra Ben Slimene/Sara.Ben.Slimane.jpg",
         "tags": "",
-        "email": "sarra.slimen@intersec.com",
-        "id": "sarra.slimen@intersec.com",
+        "department": "hr",
+        "email": "sarra.ben slimene@intersec.com",
+        "id": "sarra.ben slimene@intersec.com",
         "parentId": "rkia.hatif@intersec.com"
     },
     {
@@ -1348,41 +1472,21 @@
         "n+1": "christophe.nez@intersec.com",
         "img": "intersecAmazingPeople/Sebastien Synold/Sebastien_SYNOLD.jpg",
         "tags": "",
+        "department": "pdm",
         "email": "sebastien.synold@intersec.com",
         "id": "sebastien.synold@intersec.com",
         "parentId": "christophe.nez@intersec.com"
     },
     {
-        "firstname": "Segolene",
-        "lastname": "Tutzo",
-        "position": "Frontend Developer",
-        "n+1": "nassim.mnafeg@intersec.com",
-        "img": "intersecAmazingPeople/Segolene Tutzo/Segolene_TUTZO.jpg",
-        "tags": "",
-        "email": "segolene.tutzo@intersec.com",
-        "id": "segolene.tutzo@intersec.com",
-        "parentId": "nassim.mnafeg@intersec.com"
-    },
-    {
-        "firstname": "Sebastien",
-        "lastname": "Thouement",
-        "position": "Software Architect",
-        "n+1": "jean-marc.coic@intersec.com",
-        "img": "intersecAmazingPeople/Sebastien Thouement/seb.jpg",
-        "tags": "",
-        "email": "sebastien.thouement@intersec.com",
-        "id": "sebastien.thouement@intersec.com",
-        "parentId": "jean-marc.coic@intersec.com"
-    },
-    {
-        "firstname": "Shabab",
-        "lastname": "Vadakkangara",
-        "position": "Support Engineer (Dubai)",
+        "firstname": "Nawaal",
+        "lastname": "Mamadou",
+        "position": "Support Engineer",
         "n+1": "onur.topcu@intersec.com",
-        "img": "intersecAmazingPeople/Shabab Vadakkangara/Shabab.Vadakkangara.jpg",
+        "img": "intersecAmazingPeople/Nawaal Mamadou/MAMADOU.Nawaal.jpg",
         "tags": "",
-        "email": "shabab.vadakkangara@intersec.com",
-        "id": "shabab.vadakkangara@intersec.com",
+        "department": "ps",
+        "email": "nawaal.mamadou@intersec.com",
+        "id": "nawaal.mamadou@intersec.com",
         "parentId": "onur.topcu@intersec.com"
     },
     {
@@ -1392,9 +1496,22 @@
         "n+1": "clement.vandoolaeghe@intersec.com",
         "img": "intersecAmazingPeople/Simon Bree/Bree.simon.jpg",
         "tags": "",
+        "department": "it",
         "email": "simon.bree@intersec.com",
         "id": "simon.bree@intersec.com",
         "parentId": "clement.vandoolaeghe@intersec.com"
+    },
+    {
+        "firstname": "Segolene",
+        "lastname": "Tutzo",
+        "position": "Frontend Developer",
+        "n+1": "nassim.mnafeg@intersec.com",
+        "img": "intersecAmazingPeople/Segolene Tutzo/Segolene_TUTZO.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "segolene.tutzo@intersec.com",
+        "id": "segolene.tutzo@intersec.com",
+        "parentId": "nassim.mnafeg@intersec.com"
     },
     {
         "firstname": "Simon",
@@ -1403,9 +1520,22 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "intersecAmazingPeople/Simon Ravier/Ravier.Simon.png",
         "tags": "",
+        "department": "ps",
         "email": "simon.ravier@intersec.com",
         "id": "simon.ravier@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
+    },
+    {
+        "firstname": "Shabab",
+        "lastname": "Vadakkangara",
+        "position": "Support Engineer (Dubai)",
+        "n+1": "onur.topcu@intersec.com",
+        "img": "intersecAmazingPeople/Shabab Vadakkangara/Shabab.Vadakkangara.jpg",
+        "tags": "",
+        "department": "ps",
+        "email": "shabab.vadakkangara@intersec.com",
+        "id": "shabab.vadakkangara@intersec.com",
+        "parentId": "onur.topcu@intersec.com"
     },
     {
         "firstname": "Simone",
@@ -1414,6 +1544,7 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Simone Moreno/MORENO.Simone.jpg",
         "tags": "",
+        "department": "rd",
         "email": "simone.moreno@intersec.com",
         "id": "simone.moreno@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
@@ -1425,6 +1556,7 @@
         "n+1": "emilien.coffin@intersec.com",
         "img": "intersecAmazingPeople/Sirine Ibrahim/Ibrahim.Sirine.png",
         "tags": "",
+        "department": "ps",
         "email": "sirine.ibrahim@intersec.com",
         "id": "sirine.ibrahim@intersec.com",
         "parentId": "emilien.coffin@intersec.com"
@@ -1441,12 +1573,25 @@
         "parentId": "mohit.maheshwari@intersec.com"
     },
     {
+        "firstname": "Souad",
+        "lastname": "Touil",
+        "position": "Regional Sales Director",
+        "n+1": "arnaud.westphal@intersec.com",
+        "img": "intersecAmazingPeople/Souad Touil/TOUIL.Souad.JPG",
+        "tags": "",
+        "department": "sales",
+        "email": "souad.touil@intersec.com",
+        "id": "souad.touil@intersec.com",
+        "parentId": "arnaud.westphal@intersec.com"
+    },
+    {
         "firstname": "Sneha",
         "lastname": "Dhotre",
         "position": "Integration Engineer",
         "n+1": "matthias.granger@intersec.com",
         "img": "intersecAmazingPeople/Sneha Dhotre/Sneha_DHOTRE.png",
         "tags": "",
+        "department": "ps",
         "email": "sneha.dhotre@intersec.com",
         "id": "sneha.dhotre@intersec.com",
         "parentId": "matthias.granger@intersec.com"
@@ -1458,20 +1603,10 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Stephane Jutras/steph.jpg",
         "tags": "",
+        "department": "sales",
         "email": "stephane.jutras@intersec.com",
         "id": "stephane.jutras@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
-    },
-    {
-        "firstname": "Souad",
-        "lastname": "Touil",
-        "position": "Regional Sales Director",
-        "n+1": "arnaud.westphal@intersec.com",
-        "img": "intersecAmazingPeople/Souad Touil/TOUIL.Souad.JPG",
-        "tags": "",
-        "email": "souad.touil@intersec.com",
-        "id": "souad.touil@intersec.com",
-        "parentId": "arnaud.westphal@intersec.com"
     },
     {
         "firstname": "Stephane",
@@ -1480,6 +1615,7 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Stephane Richard/steph.jpg",
         "tags": "",
+        "department": "rd",
         "email": "stephane.richard@intersec.com",
         "id": "stephane.richard@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
@@ -1491,9 +1627,32 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Tarek Al Tarawneh/Tarawneh.Tarek.png",
         "tags": "",
+        "department": "sales",
         "email": "tarek.tarawneh@intersec.com",
         "id": "tarek.tarawneh@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
+        "firstname": "Sebastien",
+        "lastname": "Thouement",
+        "position": "Software Architect",
+        "n+1": "jean-marc.coic@intersec.com",
+        "img": "intersecAmazingPeople/Sebastien Thouement/seb.jpg",
+        "department": "rd",
+        "tags": "",
+        "email": "sebastien.thouement@intersec.com",
+        "id": "sebastien.thouement@intersec.com",
+        "parentId": "jean-marc.coic@intersec.com"
+    },
+    {
+        "type": "equipe",
+        "firstname": "Product Owner",
+        "lastname": "",
+        "email": "product.owner@intersec.com",
+        "n+1": "kamal.fadlaoui@intersec.com",
+        "img": "",
+        "id": "product.owner@intersec.com",
+        "parentId": "kamal.fadlaoui@intersec.com"
     },
     {
         "firstname": "Thomas",
@@ -1502,6 +1661,7 @@
         "n+1": "charlotte.cardona@intersec.com",
         "img": "intersecAmazingPeople/Thomas Graham-Wood/Thomas_GRAHAM-WOOD.jpg",
         "tags": "",
+        "department": "mkt",
         "email": "thomas.graham-wood@intersec.com",
         "id": "thomas.graham-wood@intersec.com",
         "parentId": "charlotte.cardona@intersec.com"
@@ -1513,20 +1673,10 @@
         "n+1": "arnaud.westphal@intersec.com",
         "img": "intersecAmazingPeople/Thomas Marquis/Marquis.Thomas.jpg",
         "tags": "",
+        "department": "sales",
         "email": "thomas.marquis@intersec.com",
         "id": "thomas.marquis@intersec.com",
         "parentId": "arnaud.westphal@intersec.com"
-    },
-    {
-        "firstname": "Tom",
-        "lastname": "Mcewan",
-        "position": "Regional Sales Manager",
-        "n+1": "ingolf.ruh@intersec.com",
-        "img": "intersecAmazingPeople/Tom Mcewan/mcewan.Tom.JPG",
-        "tags": "",
-        "email": "tom.mcewan@intersec.com",
-        "id": "tom.mcewan@intersec.com",
-        "parentId": "ingolf.ruh@intersec.com"
     },
     {
         "firstname": "Victorien",
@@ -1535,31 +1685,33 @@
         "n+1": "onur.topcu@intersec.com",
         "img": "",
         "tags": "",
+        "department": "ps",
         "email": "victorien.serre@intersec.com",
         "id": "victorien.serre@intersec.com",
         "parentId": "onur.topcu@intersec.com"
     },
     {
+        "firstname": "Tom",
+        "lastname": "Mcewan",
+        "position": "Regional Sales Manager",
+        "n+1": "ingolf.ruh@intersec.com",
+        "img": "intersecAmazingPeople/Tom Mcewan/mcewan.Tom.JPG",
+        "tags": "",
+        "department": "sales",
+        "email": "tom.mcewan@intersec.com",
+        "id": "tom.mcewan@intersec.com",
+        "parentId": "ingolf.ruh@intersec.com"
+    },
+    {
         "firstname": "Vincent",
         "lastname": "Mas",
         "position": "Product Owner",
-        "n+1": "kamal.fadlaoui@intersec.com",
+        "n+1": "product.owner@intersec.com",
         "img": "intersecAmazingPeople/Vincent Mas/Mas.Vincent.png",
         "tags": "",
         "email": "vincent.mas@intersec.com",
         "id": "vincent.mas@intersec.com",
-        "parentId": "kamal.fadlaoui@intersec.com"
-    },
-    {
-        "firstname": "Xavier",
-        "lastname": "Afyouni",
-        "position": "IT Trainer",
-        "n+1": "emilien.coffin@intersec.com",
-        "img": "intersecAmazingPeople/Xavier Afyouni/Xavier_AFYOUNI.jpg",
-        "tags": "",
-        "email": "xavier.afyouni@intersec.com",
-        "id": "xavier.afyouni@intersec.com",
-        "parentId": "emilien.coffin@intersec.com"
+        "parentId": "product.owner@intersec.com"
     },
     {
         "firstname": "Walid",
@@ -1568,20 +1720,22 @@
         "n+1": "nicolas.najman@intersec.com",
         "img": "intersecAmazingPeople/Walid Kaddour/Walid_Kaddour.jpg",
         "tags": "",
+        "department": "ps",
         "email": "walid.kaddour@intersec.com",
         "id": "walid.kaddour@intersec.com",
         "parentId": "nicolas.najman@intersec.com"
     },
     {
         "firstname": "Xavier",
-        "lastname": "Chantry",
-        "position": "Software Architect",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Xavier Chantry/CHANTRY.xavier.JPG",
+        "lastname": "Afyouni",
+        "position": "IT Trainer",
+        "n+1": "emilien.coffin@intersec.com",
+        "img": "intersecAmazingPeople/Xavier Afyouni/Xavier_AFYOUNI.jpg",
         "tags": "",
-        "email": "xavier.chantry@intersec.com",
-        "id": "xavier.chantry@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
+        "department": "ps",
+        "email": "xavier.afyouni@intersec.com",
+        "id": "xavier.afyouni@intersec.com",
+        "parentId": "emilien.coffin@intersec.com"
     },
     {
         "firstname": "Yacine",
@@ -1590,9 +1744,22 @@
         "n+1": "alexis.brasy@intersec.com",
         "img": "intersecAmazingPeople/Yacine Boudiaf/Boudiaf.Yacine.jpg",
         "tags": "",
+        "department": "rd",
         "email": "yacine.boudiaf@intersec.com",
         "id": "yacine.boudiaf@intersec.com",
         "parentId": "alexis.brasy@intersec.com"
+    },
+    {
+        "firstname": "Xavier",
+        "lastname": "Chantry",
+        "position": "Software Architect",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Xavier Chantry/CHANTRY.xavier.JPG",
+        "tags": "",
+        "department": "rd",
+        "email": "xavier.chantry@intersec.com",
+        "id": "xavier.chantry@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Yann",
@@ -1606,26 +1773,28 @@
         "parentId": ""
     },
     {
-        "firstname": "Yann",
-        "lastname": "Kagan",
-        "position": "Software Architect",
-        "n+1": "rawad.zgheib@intersec.com",
-        "img": "intersecAmazingPeople/Yann Kagan/Kagan.Yann.jpg",
-        "tags": "",
-        "email": "yann.kagan@intersec.com",
-        "id": "yann.kagan@intersec.com",
-        "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
         "firstname": "Yannick",
         "lastname": "Li",
         "position": "C Developer",
         "n+1": "nassim.mnafeg@intersec.com",
         "img": "intersecAmazingPeople/Yannick Li/Li.Yannick.jpg",
         "tags": "",
+        "department": "rd",
         "email": "yannick.li@intersec.com",
         "id": "yannick.li@intersec.com",
         "parentId": "nassim.mnafeg@intersec.com"
+    },
+    {
+        "firstname": "Yann",
+        "lastname": "Kagan",
+        "position": "Software Architect",
+        "n+1": "rawad.zgheib@intersec.com",
+        "img": "intersecAmazingPeople/Yann Kagan/Kagan.Yann.jpg",
+        "tags": "",
+        "department": "rd",
+        "email": "yann.kagan@intersec.com",
+        "id": "yann.kagan@intersec.com",
+        "parentId": "rawad.zgheib@intersec.com"
     },
     {
         "firstname": "Yassin",
@@ -1634,6 +1803,7 @@
         "n+1": "mohit.maheshwari@intersec.com",
         "img": "",
         "tags": "",
+        "department": "ps",
         "email": "yassin.sekri@intersec.com",
         "id": "yassin.sekri@intersec.com",
         "parentId": "mohit.maheshwari@intersec.com"
@@ -1642,12 +1812,12 @@
         "firstname": "Yohann",
         "lastname": "Balawender",
         "position": "Product Owner",
-        "n+1": "kamal.fadlaoui@intersec.com",
+        "n+1": "product.owner@intersec.com",
         "img": "intersecAmazingPeople/Yohann Balawender/Balawander.Yohann.jpg",
         "tags": "",
         "email": "yohann.balawender@intersec.com",
         "id": "yohann.balawender@intersec.com",
-        "parentId": "kamal.fadlaoui@intersec.com"
+        "parentId": "product.owner@intersec.com"
     },
     {
         "firstname": "Yonghaw",
@@ -1656,6 +1826,7 @@
         "n+1": "ingolf.ruh@intersec.com",
         "img": "intersecAmazingPeople/Yonghaw Goh/Yonghaw_GOH.jpg",
         "tags": "",
+        "department": "sales",
         "email": "yonghaw.goh@intersec.com",
         "id": "yonghaw.goh@intersec.com",
         "parentId": "ingolf.ruh@intersec.com"
@@ -1667,30 +1838,9 @@
         "n+1": "rawad.zgheib@intersec.com",
         "img": "intersecAmazingPeople/Yossef Rostaqi/Rostaqi.Yossef.jpg",
         "tags": "",
+        "department": "rd",
         "email": "yossef.rostaqi@intersec.com",
         "id": "yossef.rostaqi@intersec.com",
         "parentId": "rawad.zgheib@intersec.com"
-    },
-    {
-        "firstname": "Oyo",
-        "lastname": "Ndoro",
-        "position": "VP Talent",
-        "n+1": "yann.chevalier@intersec.com",
-        "img": "intersecAmazingPeople/Oyo Ndoro/NDORO.Oyo.jpg",
-        "tags": "management",
-        "email": "oyo.ndoro@intersec.com",
-        "id": "oyo.ndoro@intersec.com",
-        "parentId": "yann.chevalier@intersec.com"
-    },
-    {
-        "firstname": "Abdelmoula",
-        "lastname": "Ousfour",
-        "position": "Solution Architect",
-        "n+1": "nicolas.najman@intersec.com",
-        "img": "intersecAmazingPeople/Abdelmoula El Ousfour/Abdelmoula.Elousfour.jpg",
-        "tags": "",
-        "email": "abdelmoula.ousfour@intersec.com",
-        "id": "abdelmoula.ousfour@intersec.com",
-        "parentId": "nicolas.najman@intersec.com"
     }
 ]

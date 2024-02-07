@@ -4,3 +4,4 @@ position: Sales Development Representative
 n+1: ingolf.ruh@intersec.com
 img: assets/photos/Alexandre.QUINCE.jpg
 tags: 
+department: sales

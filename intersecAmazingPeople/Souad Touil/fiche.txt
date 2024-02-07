@@ -4,3 +4,4 @@ position: Regional Sales Director
 n+1: arnaud.westphal@intersec.com
 img: assets/photos/TOUIL.Souad.JPG
 tags: 
+department: sales

@@ -49,10 +49,12 @@ app.get('/parsePeople', (req, res) => {
                         }
                         try {
                             fs.readFile(ficheFilePath, 'utf-8', (err, ficheContent) => {
+                                console.log(ficheFilePath)
                                 const personData = ficheContent
                                 .split('\n')
                                 .map(line => line.split(': '))
                                 .reduce((acc, [key, value]) => {
+                                        console.log(`${key} : ${value}`)
                                         acc[key.toLowerCase()] = value.trim();
                                         return acc;
                                 }, {});
@@ -80,49 +82,11 @@ app.get('/parsePeople', (req, res) => {
     }
 });
 
-function showPeopleWithoutBosses(peopleData) {
-    setComputedData(peopleData);
-        const idSet = new Set();
-
-        // Iterate over the elements to populate the Set
-        peopleData.forEach(element => {
-            idSet.add(element.id);
-        });
-
-        // Array to store elements with parentId not matched by any id
-        const unmatchedElements = [];
-
-        // Check each element's parentId
-        peopleData.forEach(element => {
-        if (!idSet.has(element.parentId)) {
-            unmatchedElements.push(element);
-        }
-        });
-
-        // Output unmatched elements
-        console.log("Elements with parentId not matched by any id:");
-        console.log(unmatchedElements);
-}
-
-
 app.use(express.static(__dirname));
 
 app.use((req, res, next) => {
   res.status(404).send('File not found');
 });
-
-// function setComputedData(peoples) {
-//     peoples.forEach(person => {
-//         const hash = crypto.createHash('sha256');
-//         const n1Email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
-//         hash.update(n1Email);
-//         person.id = hash.digest('hex');
-
-//         const hashNplusUn = crypto.createHash('sha256');
-//         hashNplusUn.update(`${person['n+1'].trim()}`);
-//         person.parentId = hashNplusUn.digest('hex');
-//     })
-// }
 
 function testIdMatching(peopleData) {
     const missMatchNumber = peopleData.reduce((acc, value) => {
@@ -138,7 +102,9 @@ function testIdMatching(peopleData) {
 
 function setComputedData(peoples) {
     peoples.forEach(person => {
-        person.email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        if(!person.email) {
+            person.email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        }
         person.id = person.email
 
         person.parentId = person['n+1'];

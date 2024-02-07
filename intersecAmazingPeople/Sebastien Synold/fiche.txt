@@ -4,3 +4,4 @@ position: Product Manager
 n+1: christophe.nez@intersec.com
 img: assets/photos/Sebastien_SYNOLD.jpg
 tags: 
+department: pdm
