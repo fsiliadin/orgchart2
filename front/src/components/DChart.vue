@@ -10,8 +10,9 @@ import Legend from './Legend.vue';
 import { departementColors, teamColors } from '../utils/colors'
 
 // orgChart options
-const nodeWidth = 422
-const nodeHeight = 165
+const nodeButtonWidth = 60
+const nodeWidth = 430
+const nodeHeight = 160
 const childrenMargin = 150
 const compactMarginBetween = 30
 const compactMarginPair = 50
@@ -45,11 +46,23 @@ async function getData() {
     .onNodeClick((node) => onNodeClick(node))
     .container('.d-chart')
     .data(usersData)
+    .nodeButtonWidth(() => nodeButtonWidth)
     .nodeWidth(() => nodeWidth)
     .nodeHeight(() => nodeHeight)
     .childrenMargin(() => childrenMargin)
     .compactMarginBetween(() => compactMarginBetween)
     .compactMarginPair(() => compactMarginPair)
+    .buttonContent(({node, state}) => {
+        return `
+            <div class="pill-button">
+                <p class="pill-button-text"> ${ node.data._directSubordinatesPaging } </p>
+
+                <svg class="pill-button-icon ${node.children ? 'down' : 'up'}" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
+                </svg>
+            </div>
+        `
+    })
     .nodeContent(function (d, i, arr, state) {
         const depColor = departementColors[d.data.department]
     if (d.data.type && d.data.type === "equipe") {
@@ -62,20 +75,26 @@ async function getData() {
         `
     }
     else return `
-    <div class="card" style="--highlight-color: ${depColor};">
-        <div class="card-img">
+    <div class="card" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
+        <div class="card-background">
             <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
-        </div>     
+        </div>
 
-        <div class="card-body">
-            <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
-            <div class="card-position"> ${ d.data.position } </div>
-            <div class="card-infos">
-                <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 9.08333V13.6667M10 18.25C8.91659 18.25 7.8438 18.0366 6.84286 17.622C5.84193 17.2074 4.93245 16.5997 4.16637 15.8336C3.40029 15.0675 2.7926 14.1581 2.37799 13.1571C1.96339 12.1562 1.75 11.0834 1.75 10C1.75 8.91659 1.96339 7.8438 2.37799 6.84286C2.7926 5.84193 3.40029 4.93245 4.16637 4.16637C4.93245 3.40029 5.84193 2.7926 6.84286 2.37799C7.8438 1.96339 8.91659 1.75 10 1.75C12.188 1.75 14.2865 2.61919 15.8336 4.16637C17.3808 5.71354 18.25 7.81196 18.25 10C18.25 12.188 17.3808 14.2865 15.8336 15.8336C14.2865 17.3808 12.188 18.25 10 18.25ZM10.0458 6.33333V6.425H9.95417V6.33333H10.0458Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <div class="card-content">
+            <div class="card-img">
+                <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
             </div>
-        </div> 
+                
+            <div class="card-body">
+                <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
+                <div class="card-position"> ${ d.data.position } </div>
+                <div class="card-infos">
+                    <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 9.08333V13.6667M10 18.25C8.91659 18.25 7.8438 18.0366 6.84286 17.622C5.84193 17.2074 4.93245 16.5997 4.16637 15.8336C3.40029 15.0675 2.7926 14.1581 2.37799 13.1571C1.96339 12.1562 1.75 11.0834 1.75 10C1.75 8.91659 1.96339 7.8438 2.37799 6.84286C2.7926 5.84193 3.40029 4.93245 4.16637 4.16637C4.93245 3.40029 5.84193 2.7926 6.84286 2.37799C7.8438 1.96339 8.91659 1.75 10 1.75C12.188 1.75 14.2865 2.61919 15.8336 4.16637C17.3808 5.71354 18.25 7.81196 18.25 10C18.25 12.188 17.3808 14.2865 15.8336 15.8336C14.2865 17.3808 12.188 18.25 10 18.25ZM10.0458 6.33333V6.425H9.95417V6.33333H10.0458Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div> 
+        </div>
     </div>
     `;
     })
@@ -84,7 +103,6 @@ async function getData() {
     chart.fit()
 
     function onNodeClick(node) {
-        console.log(node.data)
         if (!selectedNode.value || selectedNode.value.id != node.data.id) {
             return selectedNode.value = node.data
         } else {
@@ -92,6 +110,21 @@ async function getData() {
         }
       }
  }
+
+function formatSelectedRectangle(employee) {
+    const nodes = Array.from(document.querySelectorAll('.node'))
+    const map = new Map()
+
+    nodes.forEach(item => {
+        const rect = item.querySelector('.node-rect')
+        const id = item.querySelector('.card').dataset.id
+        map.set(id, rect)
+    })
+    
+    const rectToUpdate = map.get(employee.id)
+    rectToUpdate.setAttribute("rx", 15)
+    rectToUpdate.style.stroke = departementColors[employee.department] ?? "#DE5252"
+}
 
 function onSearchType(e) {
   searchValue.value = e.target?.value
@@ -124,6 +157,7 @@ function onOptionTap(option) {
     chart.setHighlighted(option.id).render()
     searchOptions.value = []
     searchValue.value = ""
+    formatSelectedRectangle(option)
 }
 
 function focusOptionByIndex(index) {
@@ -216,6 +250,9 @@ onMounted(() => {
 </template>
 
 <style>
+rect {
+    border-radius: 20px!important;
+}
 .main {
     width: 100%;
     height: 100%;
@@ -230,42 +267,82 @@ onMounted(() => {
     border-radius: var(--border-radius);
 }
 
-.node-button-div div {
-    width: 50px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    border-radius: var(--border-radius)!important;
+.node-button-foreign-object {
+    overflow: visible;
+    transform: translateX(-10px);
 }
 
-.node-button-div svg {
+.pill-button {
+    display: flex;
+    gap: 3px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: rgba(240, 240, 240, 1);
+    border: solid 1px rgba(215, 215, 215, 1)!important;
+}
+
+.pill-button-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pill-button-icon {
     width: 15px;
     height: 15px;
-    margin-right: 5px;
+    transform-origin: center center;
+}
+
+.pill-button-icon.up {
+    transform: rotate(180deg);
 }
 
 .card {
     --highlight-color: var(--primary);
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 420px;
-    height: 160px;
-    background: white;
+    /* width: 420px; */
+    height: 156px;
     border-radius: var(--border-radius);
     overflow: hidden;
-    border: solid var(--border-color) var(--border-width);
     box-shadow: var(--shadow);
     cursor: pointer;
     transition: transform .2s;
     transform-origin: center center;
+    margin-top: 1px;
+}
+
+.card-background {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}
+
+.card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 40%;
+    transform: scale(1.3);
+}
+
+.card-content {
+    border: solid var(--border-color) var(--border-width);
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    height: 154px;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(12px);
 }
 
 .card:hover {
-    border-color: var(--primary);
-    transform: scale(1.01);
+    /* border-color: var(--primary); */
+    transform: scale(1.02);
 }
 
 /* tag or area */
@@ -277,7 +354,7 @@ onMounted(() => {
     width: 300px;
     height: 100px;
     transform-origin: center center;
-    transform: translate(50%, -50%) rotate(45deg);
+    transform: translate(55%, -55%) rotate(45deg);
     background: var(--highlight-color);
 }
 
@@ -294,8 +371,7 @@ onMounted(() => {
 
 .card-body {
     flex: 1;
-    padding:20px;
-    padding-top:35px;
+    padding-top: 35px 20px 40px;
     /* text-align:center; */
 }
 
@@ -318,6 +394,13 @@ onMounted(() => {
     bottom: 11px;
     right: 21px;
     width: 17px;
+    transform-origin: center center;
+    transform: scale(0);
+    transition: transform .4s cubic-bezier(0.1, 1.71, 0.46, 0.74);
+}
+
+.card:hover .card-infos {
+    transform: scale(1);
 }
 
 .card-infos-icon {
@@ -327,14 +410,10 @@ onMounted(() => {
     stroke: var(--subtext-color);
 }
 
-.card.team {
-    background: var(--highlight-color);
-}
-
 .card.team .card-name {
     text-align: center;
     text-transform: uppercase;
-    color: white;
+    color: var(--highlight-color);
     width: 100%;
     padding: 20px;
 }
