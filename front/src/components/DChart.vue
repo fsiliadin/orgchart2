@@ -20,7 +20,9 @@ const compactMarginPair = 50
 let selectedNode = ref(null)
 let searchValue = ref('')
 let searchOptions = ref([])
+let searchInput = ref(null)
 let chart;
+let pauseSearch = ref(false)
 
 let usersData = []
 let isMock = true
@@ -125,7 +127,10 @@ function formatSelectedRectangle(employee) {
 }
 
 function onSearchType(e) {
-  searchValue.value = e.target?.value
+    pauseSearch.value = false
+    if (e) {
+        searchValue.value = e.target?.value
+    }
   if (searchValue.value.length === 0) return searchOptions.value = []
   let searchRegex = new RegExp(searchValue.value, 'i')
   const matchingUsers = usersData.filter((user) => searchRegex.test(user.firstname) || searchRegex.test(user.lastname))
@@ -153,8 +158,7 @@ function unSelectNode() {
 function onOptionTap(option) {
     chart.clearHighlighting()
     chart.setHighlighted(option.id).render()
-    searchOptions.value = []
-    searchValue.value = ""
+    clearSearch()
 
     if (option.type === "equipe") {
         setTimeout(() => {
@@ -164,6 +168,11 @@ function onOptionTap(option) {
     } else {
         formatSelectedRectangle(option)
     }
+}
+
+function clearSearch() {
+    searchValue.value = ""
+    searchOptions.value = []
 }
 
 function highlightChildren(parentId) {
@@ -196,9 +205,12 @@ function unfocusOptionByIndex(index) {
 }
 
 function onKeyDown(evt) {
-    if (!searchOptions.value.length) return
     const currentIndexFocus = searchOptions.value.findIndex((option) => option.focus === true)
     switch(evt.key) {
+        case 'Escape':
+            pauseSearch.value = true
+            searchOptions.value = []
+            break;
         case 'ArrowDown':
             if (currentIndexFocus + 1 < searchOptions.value.length) {
                 focusOptionByIndex(currentIndexFocus + 1);
@@ -214,22 +226,53 @@ function onKeyDown(evt) {
             }
             break;
         case 'Enter':
-            onOptionTap(searchOptions.value[currentIndexFocus])
+                if (!searchOptions.value.length) return
+                onOptionTap(searchOptions.value[currentIndexFocus])
+            break;
+        default:
+            searchInput.value.focus()
     }
+}
+
+function onInputClick() {
+    pauseSearch.value = false
+    onSearchType()
+}
+
+function focusSearchInput() {
+    searchInput.value.focus()
+}
+
+function searchClickOut(e) {
+    const target = e.target
+    if (searchValue.value.length && pauseSearch.value === false) {
+        if (!target.closest('.input')) {
+            pauseSearch.value = true
+            searchOptions.value = []
+        }
+    }
+
+    // if(!target.closest('.search').length) {
+    //     console.log('test')
+    // }        
 }
 
 onMounted(() => {
     getData()
     document.addEventListener('keydown', onKeyDown)
+
+    document.addEventListener('click', (e) => searchClickOut(e))
+
+    focusSearchInput()
 })
 </script>
 
 <template>
     <div class="main">
         <div class="overlay">
-            <div class="search" :class="{active: searchValue.length}">
+            <div class="search" :class="{active: searchValue.length && pauseSearch === false }">
                 <div class="search-input">
-                    <div class="search-close" v-if="searchOptions.length">
+                    <div class="search-close" v-if="searchOptions.length" @click="clearSearch">
                         <svg class="search-close-icon" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0001 13.8293L18.0708 20.9C18.446 21.2752 18.9549 21.486 19.4855 21.486C20.0161 21.486 20.5249 21.2752 20.9001 20.9C21.2753 20.5248 21.4861 20.0159 21.4861 19.4853C21.4861 18.9547 21.2753 18.4459 20.9001 18.0707L13.8268 11L20.8988 3.92933C21.0845 3.74356 21.2318 3.52302 21.3322 3.28033C21.4327 3.03763 21.4844 2.77753 21.4843 2.51486C21.4842 2.2522 21.4324 1.99211 21.3319 1.74947C21.2313 1.50682 21.0839 1.28636 20.8981 1.10067C20.7123 0.914978 20.4918 0.767698 20.2491 0.667238C20.0064 0.566777 19.7463 0.515102 19.4837 0.515164C19.221 0.515226 18.9609 0.567023 18.7183 0.667598C18.4756 0.768173 18.2551 0.915557 18.0695 1.10133L11.0001 8.172L3.92946 1.10133C3.74505 0.910228 3.52444 0.757762 3.28048 0.65283C3.03652 0.547899 2.77411 0.492603 2.50855 0.490171C2.24299 0.487739 1.97961 0.538219 1.73377 0.638665C1.48793 0.739111 1.26456 0.887511 1.07669 1.07521C0.888814 1.2629 0.740203 1.48614 0.639526 1.73188C0.538848 1.97762 0.48812 2.24096 0.490302 2.50652C0.492483 2.77208 0.547531 3.03454 0.652232 3.2786C0.756933 3.52265 0.909192 3.74342 1.10012 3.928L8.17346 11L1.10146 18.072C0.910526 18.2566 0.758267 18.4773 0.653566 18.7214C0.548864 18.9655 0.493817 19.2279 0.491635 19.4935C0.489454 19.759 0.540181 20.0224 0.640859 20.2681C0.741537 20.5139 0.890148 20.7371 1.07802 20.9248C1.26589 21.1125 1.48927 21.2609 1.73511 21.3613C1.98094 21.4618 2.24433 21.5123 2.50988 21.5098C2.77544 21.5074 3.03785 21.4521 3.28181 21.3472C3.52577 21.2422 3.74639 21.0898 3.93079 20.8987L11.0001 13.8293Z"/>
                         </svg>
@@ -239,23 +282,27 @@ onMounted(() => {
                         <path d="M23.4167 20.6667H21.9683L21.455 20.1717C23.3138 18.0157 24.3354 15.2633 24.3333 12.4167C24.3333 10.0598 23.6344 7.75581 22.325 5.79612C21.0156 3.83644 19.1545 2.30905 16.977 1.4071C14.7995 0.505158 12.4035 0.269168 10.0918 0.728975C7.78024 1.18878 5.65689 2.32373 3.99032 3.99031C2.32374 5.65689 1.18879 7.78023 0.728981 10.0918C0.269174 12.4034 0.505163 14.7995 1.40711 16.977C2.30905 19.1545 3.83644 21.0156 5.79613 22.325C7.75581 23.6344 10.0598 24.3333 12.4167 24.3333C15.3683 24.3333 18.0817 23.2517 20.1717 21.455L20.6667 21.9683V23.4167L29.8333 32.565L32.565 29.8333L23.4167 20.6667ZM12.4167 20.6667C7.85167 20.6667 4.16667 16.9817 4.16667 12.4167C4.16667 7.85167 7.85167 4.16667 12.4167 4.16667C16.9817 4.16667 20.6667 7.85167 20.6667 12.4167C20.6667 16.9817 16.9817 20.6667 12.4167 20.6667Z"/>
                     </svg>
 
-                    <input class="input" type="search" :value="searchValue" placeholder="Search" name="" id="" @input="onSearchType">
+                    <input ref="searchInput" class="input" type="search" :value="searchValue" placeholder="Search" name="" id="" @input="onSearchType" @click="onInputClick">
                 </div>
 
                 <div class="option-list">
-                    <div
-                        v-for="(option, index) in searchOptions"
-                        @click="() => onOptionTap(option)"
-                        @mouseover="() => focusOptionByIndex(index)"
-                        @mouseleave="() => unfocusOptionByIndex(index)"
-                        class="option"
-                        :class="{ focus: option.focus }"
-                        :tabindex="index"
-                    >
-                        <div class="option-image">
-                            <img :src="option.img" alt="">
+                    <div class="option-list-wrapper">
+                        <div
+                            v-for="(option, index) in searchOptions"
+                            @click="() => onOptionTap(option)"
+                            @mouseover="() => focusOptionByIndex(index)"
+                            @mouseleave="() => unfocusOptionByIndex(index)"
+                            class="option"
+                            :class="{ focus: option.focus }"
+                            :tabindex="index"
+                        >
+                            <div class="option-image">
+                                <p  v-if="option.type === 'equipe'">Team</p>
+                                <img v-else :src="isMock ? alexImage : option.img">
+                            </div>
+
+                            <p class="option-name"> {{ `${option.firstname} ${option.lastname}` }} </p>
                         </div>
-                        <p class="option-name"> {{ `${option.firstname} ${option.lastname}` }} </p>
                     </div>
                 </div>
             </div>
@@ -468,7 +515,6 @@ rect {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 26px;
     top: 0;
     left: 50%;
     width: 100%;
@@ -505,9 +551,14 @@ rect {
     position: relative;
     display: flex;
     align-items: center;
-    height: 92px;
-    width: 100%;
+    height: 60px;
+    width: 500px;
     max-width: var(--search-max-width);
+  }
+
+  .search.active .search-input {
+    width: 100%;
+    height: 92px;
   }
 
   .search-input .input {
@@ -539,7 +590,8 @@ rect {
   }
 
   .search-input .input:focus {
-    outline: solid 1px var(--primary);
+    outline: none;
+    border: solid var(--primary) var(--border-width);
     box-shadow: var(--active-shadow);
   }
 
@@ -550,8 +602,8 @@ rect {
   }
 
   .search-input .icon {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
     fill: var(--text-color);
     position: absolute;
     left: 30px;
@@ -559,13 +611,26 @@ rect {
     transform: translateY(-50%);
   }
 
+  .search.active .search-input .icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .option-list {
+    flex: 1;
     position: relative;
+    width: 100%;
+    overflow-y: scroll;
+    padding-top: 26px;
+  }
+
+  .option-list-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
     width: 100%;
     max-width: var(--search-max-width);
+    margin: 0 auto;
   }
 
   .option {
@@ -576,12 +641,17 @@ rect {
     height: 92px;
     background: white;
     border-radius: var(--border-radius);
+    border: solid 1px rgba(215, 215, 215, 1);
     transform-origin: center center;
     transition: transform .1s, background-color .2s;
     cursor: pointer;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   }
 
   .option-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 92px;
     overflow: hidden;
@@ -593,6 +663,12 @@ rect {
     object-fit: cover;
   }
 
+  .option-image p {
+    font-size: 24px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
   .option-name {
     font-size: 24px;
     font-weight: 700;
@@ -602,6 +678,12 @@ rect {
   .option.focus {
     transform: scale(1.01);
     background: var(--primary);
+    box-shadow: 0 0 40px rgba(222, 82, 82, 0.05);
+  }
+
+  .option.focus .option-image p {
+    color: white;
+    font-weight: 700;
   }
 
   .option.focus .option-name {
