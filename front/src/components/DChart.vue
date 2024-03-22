@@ -66,8 +66,6 @@ async function getData() {
     .nodeContent(function (d, i, arr, state) {
         const depColor = departementColors[d.data.department]
     if (d.data.type && d.data.type === "equipe") {
-        // const teamColor = teamColors[d.data.firstname]
-
         return `
         <div class="card team" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
             <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
@@ -157,8 +155,30 @@ function onOptionTap(option) {
     chart.setHighlighted(option.id).render()
     searchOptions.value = []
     searchValue.value = ""
-    formatSelectedRectangle(option)
-    console.log(option)
+
+    if (option.type === "equipe") {
+        setTimeout(() => {
+            highlightChildren(option.id)
+            formatSelectedRectangle(option)
+        }, 300)
+    } else {
+        formatSelectedRectangle(option)
+    }
+}
+
+function highlightChildren(parentId) {
+    const child = usersData.find((item) => item["n+1"] === parentId)
+    if (child) {
+        const sub = usersData.find((item) => item["n+1"] === child.id)
+        if (sub) {
+            chart.setExpanded(sub.id)
+            chart.setCentered(child.id).render()
+        } else {
+            chart.setExpanded(child.id).render()
+        }
+        return
+    }
+    return
 }
 
 function focusOptionByIndex(index) {
@@ -412,6 +432,12 @@ rect {
     height: 100%;
     fill: white;
     stroke: var(--subtext-color);
+}
+
+.card.team {
+    border: solid var(--border-color) var(--border-width);
+    border-radius: var(--border-radius);
+    background: white;
 }
 
 .card.team .card-name {
