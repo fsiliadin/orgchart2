@@ -7,7 +7,7 @@ import alexImage from "../assets/images/alex.png"
 import IntroExampleImage from '../assets/images/intro-example.png'
 import mockData from '../utils/mock.json'
 import Legend from './Legend.vue';
-import { departementColors, teamColors } from '../utils/colors'
+import { departementColors } from '../utils/colors'
 
 // orgChart options
 const nodeButtonWidth = 60
@@ -23,7 +23,7 @@ let searchOptions = ref([])
 let chart;
 
 let usersData = []
-let isMock = false
+let isMock = true
 
 const apiUrl = 'https://localhost:2024'
 
@@ -66,10 +66,10 @@ async function getData() {
     .nodeContent(function (d, i, arr, state) {
         const depColor = departementColors[d.data.department]
     if (d.data.type && d.data.type === "equipe") {
-        const teamColor = teamColors[d.data.firstname]
+        // const teamColor = teamColors[d.data.firstname]
 
         return `
-        <div class="card team" style="--highlight-color: ${teamColor};">
+        <div class="card team" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
             <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
         </div>
         `
@@ -158,6 +158,7 @@ function onOptionTap(option) {
     searchOptions.value = []
     searchValue.value = ""
     formatSelectedRectangle(option)
+    console.log(option)
 }
 
 function focusOptionByIndex(index) {
@@ -299,6 +300,8 @@ rect {
 }
 
 .card {
+    display: flex;
+    align-items: center;
     --highlight-color: var(--primary);
     position: relative;
     /* width: 420px; */
@@ -334,6 +337,7 @@ rect {
     position: relative;
     display: flex;
     height: 154px;
+    width: 100%;
     align-items: center;
     gap: 12px;
     background-color: rgba(255, 255, 255, .9);

@@ -1,0 +1,6 @@
+type: equipe
+firstname: palladium
+lastname: 
+email: palladium@intersec.com
+department: rd
+n+1: mohamed.kahlal@intersec.com
