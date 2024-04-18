@@ -101,8 +101,8 @@ app.use((req, res, next) => {
 function setComputedData(peoples) {
     peoples.forEach(person => {
         const hash = crypto.createHash('sha256');
-        const n1Email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
-        hash.update(n1Email);
+        person.email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        hash.update(person.email);
         person.id = hash.digest('hex');
 
         const hashNplusUn = crypto.createHash('sha256');
