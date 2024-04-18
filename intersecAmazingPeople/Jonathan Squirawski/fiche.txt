@@ -3,5 +3,4 @@ lastname: Squirawski
 position: Software Architect
 n+1: jean-marc.coic@intersec.com
 img: assets/photos/Jonathan_Squirawski.jpg
-department: rd
 tags: 

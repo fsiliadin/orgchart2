@@ -4,4 +4,3 @@ position: System administrator
 n+1: clement.vandoolaeghe@intersec.com
 img: assets/photos/Nicolas.Sery.jpg
 tags: 
-department: it

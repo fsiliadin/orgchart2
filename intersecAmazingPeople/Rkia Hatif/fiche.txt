@@ -4,4 +4,3 @@ position: Payroll and Administrative Manager
 n+1: oyo.ndoro@intersec.com
 img: assets/photos/hatif.rkia.png
 tags: 
-department: hr

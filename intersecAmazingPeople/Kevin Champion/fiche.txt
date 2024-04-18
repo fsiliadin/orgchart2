@@ -4,4 +4,3 @@ position: IT Manager
 n+1: clement.vandoolaeghe@intersec.com
 img: assets/photos/Kevin_Champion.jpg
 tags: 
-department: it

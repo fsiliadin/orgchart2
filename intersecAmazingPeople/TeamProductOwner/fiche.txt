@@ -1,5 +1,0 @@
-type: equipe
-firstname: Product Owner
-lastname: 
-email: product.owner@intersec.com
-n+1: kamal.fadlaoui@intersec.com

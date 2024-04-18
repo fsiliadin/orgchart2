@@ -1,6 +1,6 @@
 firstname: Yann
 lastname: Chevalier
 position: CEO
-n+1: 
+n+1: God
 img: assets/photos/CHEVALIER.Yann.jpg
 tags: management

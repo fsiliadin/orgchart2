@@ -4,4 +4,3 @@ position: Site Reliability Engineer
 n+1: clement.vandoolaeghe@intersec.com
 img: assets/photos/matthieu_michelet.jpg
 tags: 
-department: it

@@ -1,8 +1,6 @@
 firstname: Abdurrahim
 lastname: Suslu
-email: abdurrahim.suslu@intersec.com
 position: Regional Sales Manager - Dubai
 n+1: ahmed.hamza@intersec.com
 img: assets/photos/Abdurrahim_SUSLU.jpg
 tags: 
-department: sales

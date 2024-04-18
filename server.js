@@ -5,7 +5,6 @@ const path = require('path');
 const crypto = require('crypto');
 
 const app = express();
-
 const PORT = 2024;
 
 const credentials = {
@@ -13,15 +12,6 @@ const credentials = {
     cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
 };
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    if ('OPTIONS' == req.method) {
-        res.sendStatus(200);
-      }
-      else {
-        next();
-      }
-})
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -30,7 +20,6 @@ app.get('/', (req, res) => {
 app.get('/parsePeople', (req, res) => {
     const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
     try {
-
             fs.readdir(peopleFolderPath, (error, peopleFolders) => {
                 const peopleData = [];
                 let count = 0;
@@ -45,27 +34,23 @@ app.get('/parsePeople', (req, res) => {
                         if (imageFile) {
                             imagePath = path.join(personFolderPath, imageFile).split('orgchart2/')[1];
                         } else {
-                        console.log(`No image file found in ${personFolderPath}`);
+                            console.log(`No image file found in ${personFolderPath}`);
                         }
                         try {
                             fs.readFile(ficheFilePath, 'utf-8', (err, ficheContent) => {
-                                console.log(ficheFilePath)
                                 const personData = ficheContent
                                 .split('\n')
                                 .map(line => line.split(': '))
                                 .reduce((acc, [key, value]) => {
-                                        console.log(`${key} : ${value}`)
-                                        acc[key.toLowerCase()] = value.trim();
-                                        return acc;
+                                    acc[key.toLowerCase()] = value.trim();
+                                    return acc;
                                 }, {});
                                 personData.img = imagePath;
                                 peopleData.push(personData);
                                 count++;
                                 if (count === numberOfPersons) {
                                     // should return only Yann Chevalier
-                                    // showPeopleWithoutBosses(peopleData)
-                                    setComputedData(peopleData);
-                                    testIdMatching(peopleData)
+                                    showPeopleWithoutBosses(peopleData)
                                     res.json(peopleData);
                                 }
                             });
@@ -77,10 +62,35 @@ app.get('/parsePeople', (req, res) => {
 
             });
     } catch (error) {
-            console.error(`Error reading people folder: ${error.message}`);
-            res.status(500).send('Internal Server Error');
+        console.error(`Error reading people folder: ${error.message}`);
+        res.status(500).send('Internal Server Error');
     }
 });
+
+function showPeopleWithoutBosses(peopleData) {
+    setComputedData(peopleData);
+    const idSet = new Set();
+
+    // Iterate over the elements to populate the Set
+    peopleData.forEach(element => {
+        idSet.add(element.id);
+    });
+
+    // Array to store elements with parentId not matched by any id
+    const unmatchedElements = [];
+
+    // Check each element's parentId
+    peopleData.forEach(element => {
+        if (!idSet.has(element.parentId)) {
+            unmatchedElements.push(element);
+        }
+    });
+
+    // Output unmatched elements
+    console.log("Elements with parentId not matched by any id:");
+    console.log(unmatchedElements);
+}
+
 
 app.use(express.static(__dirname));
 
@@ -88,30 +98,30 @@ app.use((req, res, next) => {
   res.status(404).send('File not found');
 });
 
-function testIdMatching(peopleData) {
-    const missMatchNumber = peopleData.reduce((acc, value) => {
-        const hasMatch = peopleData.some(item => item.id === value.parentId)
-        if (hasMatch) {
-            return acc
-        } else {
-            return acc + 1
-        }
-    }, 0)
-    console.log(`Nb of parentId with no matching id: ${missMatchNumber} / ${ peopleData.length }`)
-}
-
 function setComputedData(peoples) {
     peoples.forEach(person => {
-        if(!person.email) {
-            person.email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
-        }
-        person.id = person.email
+        const hash = crypto.createHash('sha256');
+        const n1Email = `${person.firstname.trim().toLowerCase()}.${person.lastname.trim().toLowerCase()}@intersec.com`
+        hash.update(n1Email);
+        person.id = hash.digest('hex');
 
-        person.parentId = person['n+1'];
+        const hashNplusUn = crypto.createHash('sha256');
+        hashNplusUn.update(`${person['n+1'].trim()}`);
+        person.parentId = hashNplusUn.digest('hex');
     });
 }
 
 const httpsServer = https.createServer(credentials, app);
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    if ('OPTIONS' == req.method) {
+        res.sendStatus(200);
+    } else {
+        next();
+    }
+})
+
 
 httpsServer.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

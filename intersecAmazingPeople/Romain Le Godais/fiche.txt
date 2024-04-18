@@ -4,4 +4,3 @@ position: Software Architect
 n+1: nassim.mnafeg@intersec.com
 img: assets/photos/legodais.romain.jpg
 tags: 
-department: rd

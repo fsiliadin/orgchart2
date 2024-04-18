@@ -1,6 +1,6 @@
 firstname: Yohann
 lastname: Balawender
 position: Product Owner
-n+1: product.owner@intersec.com
+n+1: kamal.fadlaoui@intersec.com
 img: assets/photos/Balawander.Yohann.jpg
 tags: 

@@ -54,7 +54,7 @@ function createWorkersFolder(dataArray) {
 
     // Loop through the array and create folders and text files
     dataArray.forEach(worker => {
-      if (!worker || !worker.stpid) {
+      if (!worker || worker.stpid === undefined) {
         return;
       }
 
@@ -77,7 +77,7 @@ function createWorkersFolder(dataArray) {
       const fileContent = `firstname: ${worker.name.split(' ')[0]}\n` +
                           `lastname: ${worker.name.split(' ').pop()}\n` +
                           `position: ${worker.title}\n` +
-                          `n+1: ${teams[stpidParsed]}\n` +
+                          `n+1: ${teams[stpidParsed] ?? 'God'}\n` +
                           `img: ${worker.img}\n` +
                           `tags: ${(worker.tags && worker.tags.join(' ')) ?? ''}`;
 

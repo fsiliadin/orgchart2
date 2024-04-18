@@ -4,4 +4,3 @@ position: Integration Engineer
 n+1: emilien.coffin@intersec.com
 img: assets/photos/Filip.Biljic.jpg
 tags: 
-department: ps

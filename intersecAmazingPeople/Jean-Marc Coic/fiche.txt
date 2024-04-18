@@ -4,4 +4,3 @@ position: CTO
 n+1: yann.chevalier@intersec.com
 img: assets/photos/COIC.Jean-Marc.jpg
 tags: management
-department: rd

@@ -4,4 +4,3 @@ position: Integration Engineer
 n+1: mohit.maheshwari@intersec.com
 img: 
 tags: 
-department: ps

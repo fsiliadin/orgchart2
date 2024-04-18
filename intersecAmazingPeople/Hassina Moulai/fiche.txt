@@ -4,4 +4,3 @@ position: Developer
 n+1: nassim.mnafeg@intersec.com
 img: assets/photos/Hassina.Moulai.jpg
 tags: 
-department: rd

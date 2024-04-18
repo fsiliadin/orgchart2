@@ -1,0 +1,6 @@
+firstname: Alex
+lastname: Slavutskyi
+position: UX/UI Designer
+n+1: kamal.fadlaoui@intersec.com
+img: assets/photos/Alex.Slavutskyi.jpg
+tags: 

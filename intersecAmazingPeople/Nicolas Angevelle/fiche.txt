@@ -3,5 +3,4 @@ lastname: Angevelle
 position: DevOps Engineer
 n+1: jean-marc.coic@intersec.com
 img: assets/photos/ANGEVELLE.Nicolas.JPG
-department: rd
 tags: 

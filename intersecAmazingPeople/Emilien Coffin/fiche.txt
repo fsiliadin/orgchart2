@@ -4,4 +4,3 @@ position: Leader of Integration Process
 n+1: mohit.maheshwari@intersec.com
 img: assets/photos/COFFIN.Emilien.JPG
 tags: management
-department: ps
