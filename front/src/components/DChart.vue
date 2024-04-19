@@ -23,6 +23,7 @@ let searchOptions = ref([])
 let searchInput = ref(null)
 let chart;
 let pauseSearch = ref(false)
+let listElement = ref(null)
 
 let usersData = []
 let isMock = true
@@ -198,10 +199,29 @@ function focusOptionByIndex(index) {
             item.focus = true
         }
     })
+    updateOptionListScrollOnFocus(index)
 }
 
 function unfocusOptionByIndex(index) {
     searchOptions.value.forEach((option) => option.focus = false)
+}
+
+function updateOptionListScrollOnFocus(index) {
+    //WIP
+    const offset = 100
+    const margin = 100
+    const listHeight = listElement.value.offsetHeight
+    const scroll = listElement.value.scrollTop
+
+    const insideHeight = offset * (index + 1)
+    if(insideHeight + margin < listHeight) return
+
+    if (scroll > 0 && insideHeight + margin < listHeight) {
+        return listElement.value.scrollTop = 0
+    }
+
+    const delta = insideHeight - listHeight
+    return listElement.value.scrollTop += delta + margin
 }
 
 function onKeyDown(evt) {
@@ -285,7 +305,7 @@ onMounted(() => {
                     <input ref="searchInput" class="input" type="search" :value="searchValue" placeholder="Search" name="" id="" @input="onSearchType" @click="onInputClick">
                 </div>
 
-                <div class="option-list">
+                <div ref="listElement" class="option-list">
                     <div class="option-list-wrapper">
                         <div
                             v-for="(option, index) in searchOptions"
