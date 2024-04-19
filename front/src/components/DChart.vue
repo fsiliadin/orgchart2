@@ -232,30 +232,30 @@ function focusOptionByIndex(index) {
             item.focus = true
         }
     })
-    updateOptionListScrollOnFocus(index)
+    // updateOptionListScrollOnFocus(index)
 }
 
 function unfocusOptionByIndex(index) {
     searchOptions.value.forEach((option) => option.focus = false)
 }
 
-function updateOptionListScrollOnFocus(index) {
-    //WIP
-    const offset = 100
-    const margin = 100
-    const listHeight = listElement.value.offsetHeight
-    const scroll = listElement.value.scrollTop
+// function updateOptionListScrollOnFocus(index) {
+//     //WIP
+//     const offset = 100
+//     const margin = 100
+//     const listHeight = listElement.value.offsetHeight
+//     const scroll = listElement.value.scrollTop
 
-    const insideHeight = offset * (index + 1)
-    if(insideHeight + margin < listHeight) return
+//     const insideHeight = offset * (index + 1)
+//     if(insideHeight + margin < listHeight) return
 
-    if (scroll > 0 && insideHeight + margin < listHeight) {
-        return listElement.value.scrollTop = 0
-    }
+//     if (scroll > 0 && insideHeight + margin < listHeight) {
+//         return listElement.value.scrollTop = 0
+//     }
 
-    const delta = insideHeight - listHeight
-    return listElement.value.scrollTop += delta + margin
-}
+//     const delta = insideHeight - listHeight
+//     return listElement.value.scrollTop += delta + margin
+// }
 
 function onKeyDown(evt) {
     const currentIndexFocus = searchOptions.value.findIndex((option) => option.focus === true)
@@ -683,6 +683,7 @@ rect {
     width: 100%;
     max-width: var(--search-max-width);
     margin: 0 auto;
+    padding-bottom: 200px;
   }
 
   .option {
