@@ -59,9 +59,10 @@ async function getData() {
     .compactMarginBetween(() => compactMarginBetween)
     .compactMarginPair(() => compactMarginPair)
     .buttonContent(({node, state}) => {
+        const descendantsToDisplay = getDescendantsToDisplay(node)
         return `
             <div class="pill-button">
-                <p class="pill-button-text"> ${ node.data._directSubordinatesPaging } </p>
+                <p class="pill-button-text"> ${ descendantsToDisplay } </p>
 
                 <svg class="pill-button-icon ${node.children ? 'down' : 'up'}" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
@@ -105,17 +106,34 @@ async function getData() {
     .render();
 
     chart.fit()
+}
 
-    function onNodeClick(node) {
-        chart.clearHighlighting()
+function getDescendantsToDisplay(node) {
+    let count = 0
+    if (node.data.type === "equipe") {
+        const children = node.children ?? node._children
+        count += children.length
 
-        if (!selectedNode.value || selectedNode.value.id != node.data.id) {
-            return selectedNode.value = node.data
-        } else {
-            unSelectNode()
-        }
-      }
- }
+        const total = children.forEach((child) => {
+            const greatChildren = child.children ?? child._children ? child._children : []
+            count += greatChildren.length
+        })
+
+        return count
+    }
+    return node.data._directSubordinatesPaging
+}
+
+function onNodeClick(node) {
+    if (node.data.type === "equipe") return
+    chart.clearHighlighting()
+
+    if (!selectedNode.value || selectedNode.value.id != node.data.id) {
+        return selectedNode.value = node.data
+    } else {
+        unSelectNode()
+    }
+  }
 
 function formatSelectedRectangle(employee) {
     const nodes = Array.from(document.querySelectorAll('.node'))
@@ -524,7 +542,6 @@ rect {
 
 .card.team .card-name {
     text-align: center;
-    text-transform: uppercase;
     color: var(--highlight-color);
     width: 100%;
     padding: 20px;
@@ -690,6 +707,7 @@ rect {
     height: 100%;
     width: 92px;
     overflow: hidden;
+    background: #efefef;
   }
 
   .option-image img {
@@ -717,7 +735,6 @@ rect {
   }
 
   .option.focus .option-image p {
-    color: white;
     font-weight: 700;
   }
 
