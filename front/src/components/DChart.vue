@@ -47,6 +47,9 @@ async function getData() {
  function initChart() {
     chart = new OrgChart()
     .onNodeClick((node) => onNodeClick(node))
+    .onExpandOrCollapse((node) => {
+        formatSelectedRectangle(node)
+    })
     .container('.d-chart')
     .data(usersData)
     .nodeButtonWidth(() => nodeButtonWidth)
@@ -104,6 +107,8 @@ async function getData() {
     chart.fit()
 
     function onNodeClick(node) {
+        chart.clearHighlighting()
+
         if (!selectedNode.value || selectedNode.value.id != node.data.id) {
             return selectedNode.value = node.data
         } else {
@@ -125,6 +130,15 @@ function formatSelectedRectangle(employee) {
     const rectToUpdate = map.get(employee.id)
     rectToUpdate.setAttribute("rx", 15)
     rectToUpdate.style.stroke = departementColors[employee.department] ?? "#DE5252"
+}
+
+function clearRectangles() {
+    const nodes = Array.from(document.querySelectorAll('.node'))
+
+    nodes.forEach(item => {
+        const rect = item.querySelector('.node-rect')
+        rect.style.stroke = 'transparent'
+    })
 }
 
 function onSearchType(e) {
@@ -160,6 +174,7 @@ function onOptionTap(option) {
     chart.clearHighlighting()
     chart.setHighlighted(option.id).render()
     clearSearch()
+    clearRectangles()
 
     if (option.type === "equipe") {
         setTimeout(() => {
