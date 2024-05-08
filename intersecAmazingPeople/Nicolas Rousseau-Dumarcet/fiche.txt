@@ -1,6 +1,0 @@
-firstname: Nicolas
-lastname: Rousseau-Dumarcet
-position: CFO
-n+1: yann.chevalier@intersec.com
-img: assets/photos/Nicolas.Rousseau-Dumarcet.jpg
-tags: management

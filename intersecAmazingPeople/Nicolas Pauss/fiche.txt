@@ -1,6 +1,0 @@
-firstname: Nicolas
-lastname: Pauss
-position: Software Architect
-n+1: alexis.brasy@intersec.com
-img: assets/photos/PAUSS.nicolas.JPG
-tags: 

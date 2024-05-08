@@ -1,6 +1,0 @@
-firstname: Nassim
-lastname: Mnafeg
-position: Team Leader
-n+1: mohamed.kahlal@intersec.com
-img: assets/photos/Nassim_MNAFEG.jpg
-tags: 

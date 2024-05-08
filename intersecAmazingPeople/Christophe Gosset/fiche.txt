@@ -1,6 +1,0 @@
-firstname: Christophe
-lastname: Gosset
-position: Data Scientist
-n+1: pierre-louis.cuny@intersec.com
-img: assets/photos/Gosset.Christophe.jpg
-tags: 

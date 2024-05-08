@@ -1,6 +1,0 @@
-firstname: Isabelle
-lastname: Granger
-position: General Accountant
-n+1: caroline.dumaitre@intersec.com
-img: assets/photos/Granger.Isabelle.jpeg
-tags: 

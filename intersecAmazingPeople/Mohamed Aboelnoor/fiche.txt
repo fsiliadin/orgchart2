@@ -1,6 +1,0 @@
-firstname: Mohamed
-lastname: Aboelnoor
-position: Integration Engineer (Egypt)
-n+1: neeraj.bhatnagar@intersec.com
-img: assets/photos/Aboelnoo.Mohamed.png
-tags: 

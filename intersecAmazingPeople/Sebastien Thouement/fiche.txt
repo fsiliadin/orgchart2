@@ -1,6 +1,0 @@
-firstname: Sebastien
-lastname: Thouement
-position: Software Architect
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/THOUEMENT.Sebastien.JPG
-tags: 

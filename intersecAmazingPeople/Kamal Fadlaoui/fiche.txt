@@ -1,6 +1,0 @@
-firstname: Kamal
-lastname: Fadlaoui
-position: VP Engineering
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/Fadlaoui.Kamal.jpg
-tags: management

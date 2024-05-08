@@ -1,6 +1,0 @@
-firstname: Latifa
-lastname: Chalouati
-position: Integration Engineer
-n+1: emilien.coffin@intersec.com
-img: assets/photos/Latifa_Chalouati.jpg
-tags: 

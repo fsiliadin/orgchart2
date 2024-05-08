@@ -1,6 +1,0 @@
-firstname: Fabien
-lastname: Marchand
-position: DevOps Engineer
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/MARCHAND.Fabien.jpg
-tags: 

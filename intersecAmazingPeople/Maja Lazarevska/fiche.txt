@@ -1,6 +1,0 @@
-firstname: Maja
-lastname: Lazarevska
-position: Project Manager
-n+1: emilien.coffin@intersec.com
-img: assets/photos/Lazarevska.Maja.jpg
-tags: 

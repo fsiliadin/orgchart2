@@ -1,6 +1,0 @@
-firstname: Sneha
-lastname: Dhotre
-position: Integration Engineer
-n+1: matthias.granger@intersec.com
-img: assets/photos/Sneha_DHOTRE.png
-tags: 

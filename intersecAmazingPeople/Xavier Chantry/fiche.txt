@@ -1,6 +1,0 @@
-firstname: Xavier
-lastname: Chantry
-position: Software Architect
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/CHANTRY.xavier.JPG
-tags: 
