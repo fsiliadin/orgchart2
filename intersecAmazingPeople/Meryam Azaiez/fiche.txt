@@ -1,6 +1,0 @@
-firstname: Meryam
-lastname: Azaiez
-position: Integration Engineer (TN)
-n+1: mohit.maheshwari@intersec.com
-img: assets/photos/Meryam_Azaiez.jpg
-tags: 

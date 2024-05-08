@@ -1,6 +1,0 @@
-firstname: Clement
-lastname: Vandoolaeghe
-position: Head of Platform Operations
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/Clement.Vandoolaeghe.jpg
-tags: 

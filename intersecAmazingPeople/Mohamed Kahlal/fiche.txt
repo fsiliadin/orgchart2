@@ -1,6 +1,0 @@
-firstname: Mohamed
-lastname: Kahlal
-position: VP Engineering Delivery
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/KAHLAL.mohamed.png
-tags: management

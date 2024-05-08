@@ -1,6 +1,0 @@
-firstname: Thomas
-lastname: Marquis
-position: Regional Sales Manager
-n+1: arnaud.westphal@intersec.com
-img: assets/photos/Marquis.Thomas.jpg
-tags: 

@@ -1,6 +1,0 @@
-firstname: Elie
-lastname: Duleu
-position: C Developer
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/Elie.Duleu.jpg
-tags: 

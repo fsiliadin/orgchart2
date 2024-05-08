@@ -1,6 +1,0 @@
-firstname: Antoine
-lastname: Loheac
-position: C Developer
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/loheac.antoine.png
-tags: 

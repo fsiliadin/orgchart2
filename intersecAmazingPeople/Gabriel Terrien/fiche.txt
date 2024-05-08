@@ -1,6 +1,0 @@
-firstname: Gabriel
-lastname: Terrien
-position: Integration Engineer
-n+1: matthias.granger@intersec.com
-img: assets/photos/terrien.gabriel.jpg
-tags: 

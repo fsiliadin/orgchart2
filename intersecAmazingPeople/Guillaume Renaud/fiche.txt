@@ -1,6 +1,0 @@
-firstname: Guillaume
-lastname: Renaud
-position: Continuous Integrator
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/Guillaume.Renaud.jpg
-tags: 

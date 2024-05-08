@@ -1,6 +1,0 @@
-firstname: Neeraj
-lastname: Bhatnagar
-position: Project Manager
-n+1: mohit.maheshwari@intersec.com
-img: assets/photos/Neeraj_BHATNAGAR.jpg
-tags: management

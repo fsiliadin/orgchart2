@@ -1,6 +1,0 @@
-firstname: Elie
-lastname: Hamawi
-position: Integration Engineer
-n+1: emilien.coffin@intersec.com
-img: assets/photos/Elie.ElHamawi.jpg
-tags: 

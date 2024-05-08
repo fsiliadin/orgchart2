@@ -1,6 +1,0 @@
-firstname: Braulio
-lastname: Castillo
-position: Solution Architect
-n+1: nicolas.najman@intersec.com
-img: assets/photos/Castillo.Braulio.jpg
-tags: 

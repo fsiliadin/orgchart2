@@ -1,6 +1,0 @@
-firstname: Nicolas
-lastname: Legrand
-position: Support Engineer
-n+1: onur.topcu@intersec.com
-img: assets/photos/LEGRAND.Nicolas.JPG
-tags: 

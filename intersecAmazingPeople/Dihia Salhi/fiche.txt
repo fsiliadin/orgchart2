@@ -1,6 +1,0 @@
-firstname: Dihia
-lastname: Salhi
-position: Continuous Integrator
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/Dihia_SALHI.jpg
-tags: 

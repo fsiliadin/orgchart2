@@ -1,6 +1,0 @@
-firstname: Alexis
-lastname: Brasy
-position: Team Leader
-n+1: mohamed.kahlal@intersec.com
-img: assets/photos/Brasy.Alexis.jpg
-tags: 

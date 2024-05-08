@@ -1,6 +1,0 @@
-firstname: Curtis
-lastname: Jameson
-position: Integration Engineer
-n+1: matthias.granger@intersec.com
-img: assets/photos/Jameson.Curtis.png
-tags: 

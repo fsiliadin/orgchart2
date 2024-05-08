@@ -1,6 +1,0 @@
-firstname: Nahin
-lastname: Musarrat
-position: Integration Engineer
-n+1: mohit.maheshwari@intersec.com
-img: assets/photos/Nahin.Musarrat.png
-tags: 

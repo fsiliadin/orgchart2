@@ -1,6 +1,0 @@
-firstname: Jean
-lastname: Huber
-position: Project Manager
-n+1: emilien.coffin@intersec.com
-img: assets/photos/Jean.Huber.png
-tags: 
