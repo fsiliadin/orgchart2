@@ -520,7 +520,7 @@ rect {
     width: 17px;
     transform-origin: center center;
     transform: scale(0);
-    transition: transform .4s cubic-bezier(0.1, 1.71, 0.46, 0.74);
+    transition: transform .4s var(--cubic-bounce);
 }
 
 .card:hover .card-infos {

@@ -30,6 +30,7 @@ import DChart from './components/DChart.vue'
   --cloudop-color: #817E9F;
   --hr-color: #AFBA32;
   --marketing-color: #AA4586;
+  --cubic-bounce: cubic-bezier(0.1, 1.71, 0.46, 0.74);
 }
 
 .app, #app {

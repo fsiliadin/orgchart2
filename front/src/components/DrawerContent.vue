@@ -1,13 +1,15 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { departementColors } from '../utils/colors'
+import IntroExampleImage from '../assets/images/intro-example.png'
+import alexImage from "../assets/images/alex.png"
 const props = defineProps(['node'])
 
 let showIntro = ref(false)
 </script>
 
 <template>
-    <div class="drawer-content" v-if="node">
+    <div class="drawer-content" v-if="node" :class="{showIntro: showIntro}">
         <div class="modal-card" :style="`--highlight-color: ${departementColors[node.department]}!important;`">
             <div class="profil">
                 <img :src="encodeURIComponent(node?.img)">
@@ -55,33 +57,49 @@ let showIntro = ref(false)
 
                 <p class="start-date">{{ node?.startDate ?? "1 year at Intersec" }}</p>
             </div>
+    
+            <!-- <div class="button-wrapper" v-if="node.welcomeSheetUrl"> -->
+            <div class="button-wrapper">
+                <button @click="() => showIntro = !showIntro" class="hide-show-btn">
+                    {{ showIntro ? 'Hide' : 'Show' }} intro pdf
+                    
+                    <svg v-if="!showIntro" class="arrow down" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
+                    </svg>
+                    
+                    <svg v-else class="arrow up" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.0001 4C5.8001 4 5.6001 4.1 5.5001 4.2L2.2001 7.5C1.9001 7.8 1.9001 8.3 2.2001 8.6C2.5001 8.9 3.0001 8.9 3.3001 8.6L6.0001 5.9L8.7001 8.6C9.0001 8.9 9.5001 8.9 9.8001 8.6C10.1001 8.3 10.1001 7.8 9.8001 7.5L6.6001 4.3C6.4001 4.1 6.2001 4 6.0001 4Z"/>
+                    </svg>
+                </button>
+            </div>
         </div>
 
-        <div class="button-wrapper">
-            <button @click="() => showIntro = !showIntro" class="hide-show-btn">
-                {{ showIntro ? 'Hide' : 'Show' }} intro pdf
-                
-                <svg v-if="!showIntro" class="arrow down" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.00015 8.825C6.20015 8.825 6.40015 8.725 6.50015 8.625L9.80015 5.325C10.1001 5.025 10.1001 4.525 9.80015 4.225C9.50015 3.925 9.00015 3.925 8.70015 4.225L6.00015 6.925L3.30015 4.225C3.00015 3.925 2.50015 3.925 2.20015 4.225C1.90015 4.525 1.90015 5.025 2.20015 5.325L5.40015 8.525C5.60015 8.725 5.80015 8.825 6.00015 8.825Z"/>
-                </svg>
-                
-                <svg v-else class="arrow up" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.0001 4C5.8001 4 5.6001 4.1 5.5001 4.2L2.2001 7.5C1.9001 7.8 1.9001 8.3 2.2001 8.6C2.5001 8.9 3.0001 8.9 3.3001 8.6L6.0001 5.9L8.7001 8.6C9.0001 8.9 9.5001 8.9 9.8001 8.6C10.1001 8.3 10.1001 7.8 9.8001 7.5L6.6001 4.3C6.4001 4.1 6.2001 4 6.0001 4Z"/>
-                </svg>
-            </button>
-        </div>
-
-        <div class="intro" v-if="showIntro && node.welcomeSheetUrl">
-            <img class="intro-img" :src="node.welcomeSheetUrl ?? ''">
+        <div class="intro" :class="{show: showIntro}">
+            <img class="intro-img" :src="node.welcomeSheetUrl ?? IntroExampleImage">
         </div>
     </div>
 </template>
 
 <style scoped>
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     .button-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
         display: block;
         width: 100%;
         text-align: center;
+        transform: translate(-50%, calc(100% + 15px));
+        pointer-events: none;
     }
 
     .hide-show-btn {
@@ -93,28 +111,40 @@ let showIntro = ref(false)
         line-height: 1;
         font-size: 18px;
         font-weight: 700;
+        pointer-events: all;
     }
 
     .drawer-content {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-rows: 1fr 0fr;
+        align-items: center;
+        gap: 60px;
         width: 100%;
         max-width: 800px;
-        border-radius: 20px 0 0 20px;   
+        margin: 0 auto;
+        border-radius: 20px 0 0 20px;  
+        animation: appear .4s forwards;
+        transition: grid-template-rows .4s ease-out;
+        pointer-events: none;
+    }
+
+    .drawer-content.showIntro {
+        grid-template-rows: 1fr 4fr;
     }
 
     .modal-card {
         position: relative;
         display: flex;
+        align-self: center;
         align-items: center;
         gap: 31px;
         width: 100%;
         height: 300px;
         background: white;
         border-radius: var(--border-radius);
-        overflow: hidden;
         border: solid var(--border-color) var(--border-width);
+        pointer-events: all;
     }
 
     .profil {
@@ -213,18 +243,26 @@ let showIntro = ref(false)
 
     .intro {
         display: flex;
-        align-items: start;
-        width: 80%;
-        height: 70vh;
-        overflow: hidden;
-        margin: 0 auto;
+        align-self: start;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity .2s, transform .2s;
+        pointer-events: none;
+    }
+
+    .intro.show {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .2s;
     }
 
     .intro-img {
-        width: 100%;
         border-radius: var(--border-radius);
         overflow: hidden;
-        object-fit: contain;
-        object-position: center;
+    }
+
+    .intro.show .intro-img {
+        pointer-events: all;
     }
 </style>
