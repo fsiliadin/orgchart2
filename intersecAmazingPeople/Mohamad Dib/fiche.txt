@@ -1,6 +1,0 @@
-firstname: Mohamad
-lastname: Dib
-position: Integration Engineer
-n+1: haytham.beshir@intersec.com
-img: assets/photos/dib.mohamad.png
-tags: 

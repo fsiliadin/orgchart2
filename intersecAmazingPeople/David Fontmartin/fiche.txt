@@ -1,7 +1,0 @@
-firstname: David
-lastname: Fontmartin
-position: Solution Architect
-n+1: nicolas.najman@intersec.com
-img: assets/photos/FONTMARTIN.David.jpg
-tags: 
-department: ps

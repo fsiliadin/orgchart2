@@ -1,7 +1,0 @@
-firstname: Christophe
-lastname: Nez
-position: VP Product Marketing
-n+1: yann.chevalier@intersec.com
-img: assets/photos/NEZ.christophe.png
-tags: management
-department: pdm

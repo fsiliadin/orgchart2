@@ -1,7 +1,0 @@
-firstname: Mathieu
-lastname: Vallet
-position: C Developer
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/Vallet.Mathieu.jpg
-tags: 
-department: rd

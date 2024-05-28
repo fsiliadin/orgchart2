@@ -1,7 +1,0 @@
-firstname: Frederic
-lastname: Tutzo
-position: Continuous Integrator
-n+1: nassim.mnafeg@intersec.com
-img: assets/photos/Frederic_Tutzo.jpg
-tags: 
-department: rd

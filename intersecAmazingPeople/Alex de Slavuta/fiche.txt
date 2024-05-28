@@ -1,7 +1,0 @@
-firstname: Alex
-lastname: de Slavuta
-position: UX/UI Designer
-email: alex.de.slavuta@intersec.com
-n+1: product.owner@intersec.com
-img: assets/photos/Alex.Slavutskyi.jpg
-tags: 

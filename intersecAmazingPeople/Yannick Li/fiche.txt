@@ -1,7 +1,0 @@
-firstname: Yannick
-lastname: Li
-position: C Developer
-n+1: nassim.mnafeg@intersec.com
-img: assets/photos/Li.Yannick.jpg
-tags: 
-department: rd

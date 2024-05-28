@@ -1,7 +1,0 @@
-firstname: Amira
-lastname: Bouali
-position: Developer
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/Bouali.Amira.jpg
-tags: 
-department: rd

@@ -1,7 +1,0 @@
-firstname: Mahdi
-lastname: Said
-position: Integration Engineer (TN)
-n+1: mohit.maheshwari@intersec.com
-img: 
-tags: 
-department: ps

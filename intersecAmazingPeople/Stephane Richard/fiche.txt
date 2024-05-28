@@ -1,7 +1,0 @@
-firstname: Stephane
-lastname: Richard
-position: C Developer
-n+1: alexis.brasy@intersec.com
-img: assets/photos/Stephane_RICHARD.jpg
-tags: 
-department: rd

@@ -1,7 +1,0 @@
-firstname: Rawad
-lastname: Zgheib
-position: Team Leader
-n+1: mohamed.kahlal@intersec.com
-img: assets/photos/Rawad_Zgheib.png
-tags: 
-department: rd

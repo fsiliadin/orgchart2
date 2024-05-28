@@ -1,1 +1,11 @@
 node_modules/
+dist/
+server.js
+tsconfig.tsbuildinfo
+.vscode/
+cert.pem
+key.pem
+server.d.ts
+intersecAmazingPeople/
+departments.txt
+teamLeaders.txt

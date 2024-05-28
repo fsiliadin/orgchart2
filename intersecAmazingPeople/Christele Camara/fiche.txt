@@ -1,6 +1,0 @@
-firstname: Christele
-lastname: Camara
-position: Technical Documentation Manager
-n+1: kamal.fadlaoui@intersec.com
-img: assets/photos/Camara.Christele.jpg
-tags: 

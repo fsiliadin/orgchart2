@@ -1,7 +1,0 @@
-firstname: Nicolas
-lastname: Haddad
-position: Regional Sales Manager
-n+1: arnaud.westphal@intersec.com
-img: assets/photos/haddad.Nicolas.jpg
-tags: 
-department: sales

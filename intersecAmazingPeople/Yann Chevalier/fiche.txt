@@ -1,6 +1,0 @@
-firstname: Yann
-lastname: Chevalier
-position: CEO
-n+1: 
-img: assets/photos/CHEVALIER.Yann.jpg
-tags: management

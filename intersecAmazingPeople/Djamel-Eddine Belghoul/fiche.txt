@@ -1,7 +1,0 @@
-firstname: Djamel-Eddine
-lastname: Belghoul
-position: Integration Engineer
-n+1: emilien.coffin@intersec.com
-img: assets/photos/Djamel.Eddine.Belghoul.jpg
-tags: 
-department: ps

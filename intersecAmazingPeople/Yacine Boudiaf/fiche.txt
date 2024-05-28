@@ -1,7 +1,0 @@
-firstname: Yacine
-lastname: Boudiaf
-position: Developer
-n+1: alexis.brasy@intersec.com
-img: assets/photos/Boudiaf.Yacine.jpg
-tags: 
-department: rd

@@ -1,7 +1,0 @@
-firstname: Djamel-Eddine
-lastname: Meharga
-position: Developer
-n+1: alexis.brasy@intersec.com
-img: assets/photos/Meharga.Djamel.jpg
-tags: 
-department: rd

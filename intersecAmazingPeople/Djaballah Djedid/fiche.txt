@@ -1,7 +1,0 @@
-firstname: Djaballah
-lastname: Djedid
-position: Developer
-n+1: nassim.mnafeg@intersec.com
-img: assets/photos/Djaballah_DJEDID.jpg
-tags: 
-department: rd

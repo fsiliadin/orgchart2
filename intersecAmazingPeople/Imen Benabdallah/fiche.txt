@@ -1,7 +1,0 @@
-firstname: Imen
-lastname: Benabdallah
-position: Continuous Integrator
-n+1: alexis.brasy@intersec.com
-img: assets/photos/Imen_BENABDALLAH.jpg
-tags: 
-department: rd

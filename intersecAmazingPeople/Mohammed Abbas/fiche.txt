@@ -1,7 +1,0 @@
-firstname: Mohammed
-lastname: Abbas
-position: Presales
-n+1: ingolf.ruh@intersec.com
-img: assets/photos/Mohamed.Abas.jpg
-tags: 
-department: sales

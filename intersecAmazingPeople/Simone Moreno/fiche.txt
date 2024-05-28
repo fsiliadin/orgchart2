@@ -1,7 +1,0 @@
-firstname: Simone
-lastname: Moreno
-position: Continuous Integrator
-n+1: rawad.zgheib@intersec.com
-img: assets/photos/MORENO.Simone.jpg
-tags: 
-department: rd

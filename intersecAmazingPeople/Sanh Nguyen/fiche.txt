@@ -1,7 +1,0 @@
-firstname: Sanh
-lastname: Nguyen
-position: Senior FP&A Analyst
-n+1: nicolas.dumarcet@intersec.com
-img: assets/photos/Sanh_NGUYEN.jpg
-tags: 
-department: accounting

@@ -1,7 +1,0 @@
-firstname: Alexandre
-lastname: Riquier
-position: Integration Engineer
-n+1: simon.ravier@intersec.com
-img: assets/photos/Alexandre_Riquier.jpg
-tags: 
-department: ps

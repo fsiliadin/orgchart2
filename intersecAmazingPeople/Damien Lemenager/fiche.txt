@@ -1,7 +1,0 @@
-firstname: Damien
-lastname: Lemenager
-position: Flutter Developer
-n+1: alexis.brasy@intersec.com
-img: assets/photos/Lemenager.Damien.jpg
-tags: 
-department: rd

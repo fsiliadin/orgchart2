@@ -1,7 +1,0 @@
-firstname: Pierre-Louis
-lastname: Cuny
-position: Data Science Team Lead
-n+1: jean-marc.coic@intersec.com
-img: assets/photos/CUNY.Pierre-Louis.jpg
-department: rd
-tags: 
