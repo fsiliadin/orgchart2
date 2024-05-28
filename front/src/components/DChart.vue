@@ -81,24 +81,28 @@ async function getData() {
     }
     else return `
     <div class="card" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
-        <div class="card-background">
-            <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
-        </div>
+        <div class="card-container">
+            <div class="card-tag"> </div>
 
-        <div class="card-content">
-            <div class="card-img">
+            <div class="card-background">
                 <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
             </div>
-                
-            <div class="card-body">
-                <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
-                <div class="card-position"> ${ d.data.position } </div>
-                <div class="card-infos">
-                    <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 9.08333V13.6667M10 18.25C8.91659 18.25 7.8438 18.0366 6.84286 17.622C5.84193 17.2074 4.93245 16.5997 4.16637 15.8336C3.40029 15.0675 2.7926 14.1581 2.37799 13.1571C1.96339 12.1562 1.75 11.0834 1.75 10C1.75 8.91659 1.96339 7.8438 2.37799 6.84286C2.7926 5.84193 3.40029 4.93245 4.16637 4.16637C4.93245 3.40029 5.84193 2.7926 6.84286 2.37799C7.8438 1.96339 8.91659 1.75 10 1.75C12.188 1.75 14.2865 2.61919 15.8336 4.16637C17.3808 5.71354 18.25 7.81196 18.25 10C18.25 12.188 17.3808 14.2865 15.8336 15.8336C14.2865 17.3808 12.188 18.25 10 18.25ZM10.0458 6.33333V6.425H9.95417V6.33333H10.0458Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+
+            <div class="card-content">
+                <div class="card-img">
+                    <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
                 </div>
-            </div> 
+                    
+                <div class="card-body">
+                    <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
+                    <div class="card-position"> ${ d.data.position } </div>
+                    <div class="card-infos">
+                        <svg class="card-infos-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 9.08333V13.6667M10 18.25C8.91659 18.25 7.8438 18.0366 6.84286 17.622C5.84193 17.2074 4.93245 16.5997 4.16637 15.8336C3.40029 15.0675 2.7926 14.1581 2.37799 13.1571C1.96339 12.1562 1.75 11.0834 1.75 10C1.75 8.91659 1.96339 7.8438 2.37799 6.84286C2.7926 5.84193 3.40029 4.93245 4.16637 4.16637C4.93245 3.40029 5.84193 2.7926 6.84286 2.37799C7.8438 1.96339 8.91659 1.75 10 1.75C12.188 1.75 14.2865 2.61919 15.8336 4.16637C17.3808 5.71354 18.25 7.81196 18.25 10C18.25 12.188 17.3808 14.2865 15.8336 15.8336C14.2865 17.3808 12.188 18.25 10 18.25ZM10.0458 6.33333V6.425H9.95417V6.33333H10.0458Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div> 
+            </div>
         </div>
     </div>
     `;
@@ -420,27 +424,28 @@ rect {
 }
 
 .card {
-    display: flex;
-    align-items: center;
     --highlight-color: var(--primary);
-    position: relative;
-    /* width: 420px; */
     height: 156px;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     cursor: pointer;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
     transition: transform .2s;
     transform-origin: center center;
-    margin-top: 1px;
 }
 
 .card-background {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: calc(100% - 2px);
+    position: relative;
+    z-index: 0;
+    width: 100%;
     height: calc(100% - 2px);
+    margin-top: 1px;
 }
 
 .card-background img {
@@ -448,13 +453,20 @@ rect {
     height: 100%;
     object-fit: cover;
     object-position: 30% 40%;
-    transform: scale(1.3);
+}
+
+.card-background-container {
+    width: 100%;
+    height: 100%;
 }
 
 .card-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
     border: solid var(--border-color) var(--border-width);
     border-radius: var(--border-radius);
-    position: relative;
     display: flex;
     height: 154px;
     width: 100%;
@@ -464,15 +476,14 @@ rect {
     backdrop-filter: blur(12px);
 }
 
-.card:hover {
-    /* border-color: var(--primary); */
-    transform: scale(1.02);
+.card:hover .card-container {
+    /* transform: scale(1.02); */
 }
 
 /* tag or area */
-.card::after {
-    content: '';
+.card-tag {
     position: absolute;
+    z-index: 10;
     top: 0;
     right: 0;
     width: 300px;
@@ -496,7 +507,6 @@ rect {
 .card-body {
     flex: 1;
     padding-top: 35px 20px 40px;
-    /* text-align:center; */
 }
 
 .card-name {
