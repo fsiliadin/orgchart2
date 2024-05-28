@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-back-end": "npx tsc --build",
-    "start": "npm run build-back-end && node server.js"
+    "start": "npm run build-back-end && node server.js",
+    "postinstall": "npm run build-back-end"
   },
   "repository": {
     "type": "git",
