@@ -1,0 +1,201 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    overflow: hidden;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+/*partial*/
+[lcn='hr-team']>rect {
+    fill: #FFCA28;
+}
+
+[lcn='sales-team']>rect {
+    fill: #F57C00;
+}
+
+[lcn='top-management']>rect {
+    fill: #f2f2f2;
+}
+
+[lcn='top-management']>text,
+.assistant>text {
+    fill: #aeaeae;
+}
+
+[lcn='top-management'] circle,
+[lcn='assistant'] {
+    fill: #aeaeae;
+}
+
+.assistant>rect {
+    fill: #ffffff;
+}
+
+.assistant [data-ctrl-n-menu-id]>circle {
+    fill: #aeaeae;
+}
+
+.rd-team>rect {
+    fill: #c8dbe4;
+}
+
+.rd-team>text {
+    fill: #039BE5;
+}
+
+.rd-team>[data-ctrl-n-menu-id] line {
+    stroke: #039BE5;
+}
+
+.rd-team>g>.ripple {
+    fill: #00efef;
+}
+
+.hr-team>rect {
+    fill: #fff5d8;
+}
+
+.hr-team>text {
+    fill: #ecaf00;
+}
+
+.hr-team>[data-ctrl-n-menu-id] line {
+    stroke: #ecaf00;
+}
+
+.hr-team>g>.ripple {
+    fill: #ecaf00;
+}
+
+.ps-team>rect {
+    fill: #C8E5C8;
+}
+
+.ps-team>text {
+    fill: #039401;
+}
+
+.ps-team>[data-ctrl-n-menu-id] line {
+    stroke: #039401;
+}
+
+.ps-team>g>.ripple {
+    fill: #2EEF00;
+}
+
+.accounting>rect {
+    fill: #f3ce9b;
+}
+
+.accounting>text {
+    fill: #ce7a06;
+}
+
+.accounting>[data-ctrl-n-menu-id] line {
+    stroke: #ce7a06;
+}
+
+.accounting>g>.ripple {
+    fill: #ff9e04;
+}
+
+.pdm-team>rect {
+    fill: #c0fdfa;
+}
+
+.pdm-team>text {
+    fill: #018f94;
+}
+
+.pdm-team>[data-ctrl-n-menu-id] line {
+    stroke: #018f94;
+}
+
+.pdm-team>g>.ripple {
+    fill: #7dfbf4;
+}
+
+.mkt-team>rect {
+    fill: #ffc4fc;
+}
+
+.mkt-team>text {
+    fill: #f920ee;
+}
+
+.mkt-team>[data-ctrl-n-menu-id] line {
+    stroke: #f920ee;
+}
+
+.mkt-team>g>.ripple {
+    fill: #ff67f7;
+}
+
+.it-team>rect {
+    fill: #c4c2ce;
+}
+
+.it-team>text {
+    fill: #54525c;
+}
+
+.it-team>[data-ctrl-n-menu-id] line {
+    stroke: #54525c;
+}
+
+.it-team>g>.ripple {
+    fill: #a997f5;
+}
+
+.sales-team>rect {
+    fill: #ffeedd;
+}
+
+.sales-team>text {
+    fill: #F57C00;
+}
+
+.sales-team>[data-ctrl-n-menu-id] line {
+    stroke: #F57C00;
+}
+
+.sales-presales>g>.ripple {
+    fill: #E46B00;
+}
+
+.sales-presales>rect {
+    fill: #eeddcc;
+}
+
+.sales-presales>text {
+    fill: #E46B00;
+}
+
+.sales-presales>[data-ctrl-n-menu-id] line {
+    stroke: #E46B00;
+}
+
+
+.ps-subteam>g>.ripple {
+    fill: #008400;
+}
+
+.ps-subteam>rect {
+    fill: #B8D5B8;
+}
+
+.ps-subteam>text {
+    fill: #008400;
+}
+
+.ps-subteam>[data-ctrl-n-menu-id] line {
+    stroke: #008400;
+}
