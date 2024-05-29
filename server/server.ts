@@ -70,7 +70,7 @@ type WorkerData = {
 type TeamData = {
     id: string;
     parentId: string;
-    name: string;
+    lastname: string;
     type: 'team';
 }
 
@@ -158,7 +158,7 @@ function parseWorkersFolder(res: any) {
     const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
 
     fs.readdir(peopleFolderPath, (error: NodeJS.ErrnoException | null, peopleFolders: File[]) => {
-        const workersData = new Set<WorkerData | TeamData>;
+        const workersData = new Array<WorkerData | TeamData>;
         let count = 0;
         const numberOfPersons = Object.keys(peopleFolders).length;
 
@@ -182,13 +182,14 @@ function parseWorkersFolder(res: any) {
                             }
                             let worker: WorkerData = parseWorkerData(ficheContent, image);
                             worker = setComputedData(worker);
-                            insertTeam(worker, workersData);
-                            workersData.add(worker);
+                            if(worker['n+1'] !== 'yann.chevalier@intersec.com') {
+                                insertTeam(worker, workersData);
+                            }
+                            workersData.push(worker);
                             count++;
                             if (count === numberOfPersons) {
-                                const workersArray = Array.from(workersData);
-                                showPeopleWithoutBosses(workersArray)
-                                res.json(workersArray);
+                                showPeopleWithoutBosses(workersData)
+                                res.json(workersData);
                             }
                         });
                     })();
@@ -200,7 +201,7 @@ function parseWorkersFolder(res: any) {
     });
 }
 
-function insertTeam (worker: WorkerData, workersData: Set<WorkerData | TeamData>) {
+function insertTeam (worker: WorkerData, workersData: Array<WorkerData | TeamData>) {
     const hashNplusUn = cypher.createHash('sha256');
     hashNplusUn.update(worker['n+1']);
     const teamParentId = hashNplusUn.digest('hex');
@@ -214,13 +215,14 @@ function insertTeam (worker: WorkerData, workersData: Set<WorkerData | TeamData>
         hashId.update(teamName);
         teamId = hashId.digest('hex');
         worker.parentId = teamId;
-
-        workersData.add({
-            id: teamId,
-            type: 'team',
-            name: teamName,
-            parentId: teamParentId,
-        })
+        if (!workersData.some((workerOrTeam) => { return workerOrTeam.id === teamId})) {
+            workersData.push({
+                id: teamId,
+                type: 'team',
+                lastname: teamName,
+                parentId: teamParentId,
+            })
+        }
     }
 
 
