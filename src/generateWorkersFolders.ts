@@ -79,14 +79,14 @@
         * on top of the game aka Yann Chevalier anyway
         */
        if (!worker.stpid) {
+
          return '';
         } else {
-          getDepartment(getNPlus1Object(worker, icTeams.teams), icTeams);
+          return getDepartment(getNPlus1Object(worker, icTeams.teams), icTeams);
         }
       } else {
         const head = worker.id;
-        const headName = decomposeString(head, ' ');
-        department = icTeams.departments.get(headName) ?? '';
+        department = icTeams.departments.get(head) ?? '';
       }
     } else {
       // In this block worker is not a head of department
@@ -94,10 +94,10 @@
       /* If the worker is not head of department but is
       * on top of the game aka Yann Chevalier anyway
       */
-     if (!worker.stpid) {
-       return '';
+      if (!worker.stpid) {
+        return '';
       } else {
-        getDepartment(getNPlus1Object(worker, icTeams.teams), icTeams);
+        return getDepartment(getNPlus1Object(worker, icTeams.teams), icTeams);
       }
     }
     return department;

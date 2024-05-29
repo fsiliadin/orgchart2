@@ -95,6 +95,7 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
             case 'position': workerData.position = keyValuePair[1].trim(); break;
             case 'email': workerData.email = keyValuePair[1].trim(); break;
             case 'n+1': workerData['n+1'] = keyValuePair[1].trim(); break;
+            case 'img': workerData.img = keyValuePair[1].trim(); break;
             case 'tags': workerData.tags = keyValuePair[1].split(',').map((tag: string) => tag.trim()); break;
         }
 
@@ -102,8 +103,10 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
     /*
     * We override the image property by the image file found in the user folder
     */
-   workerData.img = image;
-   return workerData;
+    if (image) {
+        workerData.img = image;
+    }
+    return workerData;
 }
 
 function setComputedData(worker: WorkerData) {
