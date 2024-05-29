@@ -13,9 +13,10 @@
     cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
 };
 
+app.use(express.static('front/dist/'))
 
 app.get('/', (_req:any, res: any) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'front/dist/index.html'));
 });
 
 app.get('/parsePeople', (_req: any, res: any) => {
