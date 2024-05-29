@@ -14,8 +14,10 @@
 };
 
 
+app.use(express.static('front/dist/'))
+
 app.get('/', (_req:any, res: any) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'front/dist/index.html'));
 });
 
 app.get('/parsePeople', (_req: any, res: any) => {
@@ -116,7 +118,11 @@ function setComputedData(worker: WorkerData) {
 
     const hashNplusUn = cypher.createHash('sha256');
     hashNplusUn.update(`${worker['n+1']}`);
-    worker.parentId = hashNplusUn.digest('hex');
+    if (worker['n+1'].length) {
+        worker.parentId = hashNplusUn.digest('hex');
+    } else {
+        worker.parentId = '';
+    }
     return worker;
 }
 
