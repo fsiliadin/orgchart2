@@ -71,7 +71,7 @@ async function getData() {
     if (d.data.type && d.data.type === "team") {
         return `
         <div class="card team" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
-            <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
+            <div class="card-name"> ${ d.data.lastname }</div>
         </div>
         `
     }
