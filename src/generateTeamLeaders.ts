@@ -43,8 +43,6 @@
         departmentAndHeads.set(teamName, team.pid);
       }
     });
-    console.log('chefs', teamsAndLeaders);
-    console.log('department heads ', departmentAndHeads);
     const teamsAndLeadersList = Array.from(teamsAndLeaders).map(([team, leader]) => `${team}: ${leader}`);
     const departmentAndHeadsList = Array.from(departmentAndHeads).map(([department, head]) => `${department}: ${head}`);
     return [teamsAndLeadersList, departmentAndHeadsList];

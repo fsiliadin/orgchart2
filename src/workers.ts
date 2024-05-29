@@ -47,75 +47,75 @@ const workers: Array<ICWorker | Head> = [
 
 
     /* PO */
-    { id: 'mas', stpid: 'po', name: 'Vincent Mas', title: 'Product Owner', img: 'assets/photos/Mas.Vincent.png'},
-    { id: 'yohann', stpid: 'po', name: 'Yohann Balawender', title: 'Product Owner', img: 'assets/photos/Balawander.Yohann.jpg'},
-    { id: 'marwane', stpid: 'po', name: 'Marwane Akram', title: 'Product Owner', img: 'assets/photos/AKRAM.Marwane.jpg'},
-    { id: 'amer', stpid: 'po', name: 'Amer Bdeoui', title: 'Product Owner', img: 'assets/photos/Bdoui.Amer.png'},
+    { id: 'vincent.mas@intersec.com', stpid: 'po', name: 'Vincent Mas', title: 'Product Owner', img: 'assets/photos/Mas.Vincent.png'},
+    { id: 'yohann.balawender@intersec.com', stpid: 'po', name: 'Yohann Balawender', title: 'Product Owner', img: 'assets/photos/Balawander.Yohann.jpg'},
+    { id: 'marwane.akram@intersec.com', stpid: 'po', name: 'Marwane Akram', title: 'Product Owner', img: 'assets/photos/AKRAM.Marwane.jpg'},
+    { id: 'amer.bdeoui@intersec.com', stpid: 'po', name: 'Amer Bdeoui', title: 'Product Owner', img: 'assets/photos/Bdoui.Amer.png'},
     { id: 'alex.de.slavuta@intersec.com', stpid: 'po', name: 'Alex De Slavuta', title: 'UX/UI Designer', img: 'assets/photos/Alex.Slavutskyi.jpg'},
 
     /* Data Science */
     { id: 'pierre-louis.cuny@intersec.com', stpid: 'rd-team', name: 'Pierre-Louis Cuny', title: 'Data Science Team Lead', img: 'assets/photos/CUNY.Pierre-Louis.jpg'},
-    { id: 'gosset', stpid: 'data-science', name: 'Christophe Gosset', title: 'Data Scientist', img: 'assets/photos/Gosset.Christophe.jpg'},
-    { id: 'killian', stpid: 'data-science', name: 'Killian Le Goff', title: 'Data Scientist', img: 'assets/photos/Killian_LeGoff.jpg'},
+    { id: 'christophe.gosset@intersec.com', stpid: 'data-science', name: 'Christophe Gosset', title: 'Data Scientist', img: 'assets/photos/Gosset.Christophe.jpg'},
+    { id: 'killian.legoff@intersec.com', stpid: 'data-science', name: 'Killian Le Goff', title: 'Data Scientist', img: 'assets/photos/Killian_LeGoff.jpg'},
 
     /* BogOps */
-    { id: 'marchand', stpid: 'bogops', name: 'Fabien Marchand', title: 'DevOps Engineer', img: 'assets/photos/MARCHAND.Fabien.jpg'},
-    { id: 'angevelle', stpid: 'bogops', name: 'Nicolas Angevelle', title: 'DevOps Engineer', img: 'assets/photos/ANGEVELLE.Nicolas.JPG'},
+    { id: 'fabien.marchand@intersec.com', stpid: 'bogops', name: 'Fabien Marchand', title: 'DevOps Engineer', img: 'assets/photos/MARCHAND.Fabien.jpg'},
+    { id: 'nicolas.angevelle@intersec.com', stpid: 'bogops', name: 'Nicolas Angevelle', title: 'DevOps Engineer', img: 'assets/photos/ANGEVELLE.Nicolas.JPG'},
     { id: 'aline.fauquette@intersec.com', stpid: 'bogops', name: 'Aline Fauquette', title: 'DevOps Engineer', img: 'assets/photos/Fauquette.Aline.jpg'},
 
     /* Doc */
     { id: 'christele.camara@intersec.com',  stpid: 'transverse', name: 'Christele Camara', title: 'Technical Documentation Manager', img: 'assets/photos/Camara.Christele.jpg'},
-    { id: 'oceane', stpid: 'doc', name: 'Oceane Boudinet', title: 'Technical Documentation Writer', img: 'assets/photos/Oceane_BOUDINET.jpg'},
+    { id: 'oceane.boudinet@intersec.com', stpid: 'doc', name: 'Oceane Boudinet', title: 'Technical Documentation Writer', img: 'assets/photos/Oceane_BOUDINET.jpg'},
 
     /* Archi independants */
-    { id: 'jonathan.squirawski', stpid: 'rd-team', name: 'Jonathan Squirawski', title: 'Software Architect', img: 'assets/photos/Jonathan_Squirawski.jpg'},
-    { id: 'sebastien', stpid: 'rd-team', name: 'Sebastien Thouement', title: 'Software Architect', img: 'assets/photos/THOUEMENT.Sebastien.JPG'},
-    { id: 'mariat', stpid: 'rd-team', name: 'Benoit Mariat', title: 'Software Architect', img: 'assets/photos/Mariat.benoit.jpg'},
+    { id: 'jonathan.squirawski@intersec.com', stpid: 'rd-team', name: 'Jonathan Squirawski', title: 'Software Architect', img: 'assets/photos/Jonathan_Squirawski.jpg'},
+    { id: 'sebastien.thouement@intersec.com', stpid: 'rd-team', name: 'Sebastien Thouement', title: 'Software Architect', img: 'assets/photos/THOUEMENT.Sebastien.JPG'},
+    { id: 'benoit.mariat@intersec.com', stpid: 'rd-team', name: 'Benoit Mariat', title: 'Software Architect', img: 'assets/photos/Mariat.benoit.jpg'},
 
     /* Palladium */
     { id: 'alexis.brasy@intersec.com', stpid: 'engineering', name: 'Alexis Brasy', title: 'Team Leader', img: 'assets/photos/Brasy.Alexis.jpg'},
-    { id: 'pauss', stpid: 'palladium', name: 'Nicolas Pauss', title: 'Software Architect', img: 'assets/photos/PAUSS.nicolas.JPG'},
-    { id: 'mathieuabou', stpid: 'palladium', name: 'Mathieu Abou Haydar', title: 'Continuous Integrator', img: 'assets/photos/Mathieu_ABOU-HAYDAR.jpg'},
-    { id: 'debroye', stpid: 'palladium', name: 'Antoine Debroye', title: 'Continuous Integrator', img: 'assets/photos/DEBROYE.Antoine.jpg'},
+    { id: 'nicolas.pauss@intersec.com', stpid: 'palladium', name: 'Nicolas Pauss', title: 'Software Architect', img: 'assets/photos/PAUSS.nicolas.JPG'},
+    { id: 'mathieu.abouhaydar@intersec.com', stpid: 'palladium', name: 'Mathieu Abou Haydar', title: 'Continuous Integrator', img: 'assets/photos/Mathieu_ABOU-HAYDAR.jpg'},
+    { id: 'antoine.debroye@intersec.com', stpid: 'palladium', name: 'Antoine Debroye', title: 'Continuous Integrator', img: 'assets/photos/DEBROYE.Antoine.jpg'},
     { id: 'stephane.richard@intersec.com', stpid: 'palladium', name: 'Stephane Richard', title: 'C Developer', img: 'assets/photos/Stephane_RICHARD.jpg'},
-    { id: 'muyao.chen', stpid: 'palladium', name: 'Muyao Chen', title: 'C Developer', img: 'assets/photos/Muyao.Chen.jpg'},
-    { id: 'fanyo.siliadin', stpid: 'palladium', name: 'Fanyo Siliadin', title: 'Frontend Developer', img: 'assets/photos/Fanyo.Siliadin.jpg'},
-    { id: 'dimitri.rivoire', stpid: 'palladium', name: 'Dimitri Rivoire', title: 'Frontend Developer', img: 'assets/photos/Dimitri_RIVOIRE.jpg'},
-    { id: 'frederic.chauveau', stpid: 'palladium', name: 'Frederic Chauveau', title: 'C Developer', img: 'assets/photos/Frederic.Chauveau.png'},
-    { id: 'mario', name: 'Marion Larsen', stpid: 'palladium', title: 'Frontend Developer', img: 'assets/photos/Mario.Larsen.jpg'},
-    { id: 'lemenager', name: 'Damien Lemenager', stpid: 'palladium', title: 'Flutter Developer', img: 'assets/photos/Lemenager.Damien.jpg'},
-    { id: 'yacine', stpid: 'palladium', name: 'Yacine Boudiaf', title: 'Developer', img: 'assets/photos/Boudiaf.Yacine.jpg'},
-    { id: 'imen', stpid: 'palladium', name: 'Imen Benabdallah', title: 'Continuous Integrator', img: 'assets/photos/Imen_BENABDALLAH.jpg'},
-    { id: 'djamel', stpid: 'palladium', name: 'Djamel-Eddine Meharga', title: 'Developer', img: 'assets/photos/Meharga.Djamel.jpg'},
+    { id: 'muyao.chen@intersec.com', stpid: 'palladium', name: 'Muyao Chen', title: 'C Developer', img: 'assets/photos/Muyao.Chen.jpg'},
+    { id: 'fanyo.siliadin@intersec.com', stpid: 'palladium', name: 'Fanyo Siliadin', title: 'Frontend Developer', img: 'assets/photos/Fanyo.Siliadin.jpg'},
+    { id: 'dimitri.rivoire@intersec.com', stpid: 'palladium', name: 'Dimitri Rivoire', title: 'Frontend Developer', img: 'assets/photos/Dimitri_RIVOIRE.jpg'},
+    { id: 'frederic.chauveau@intersec.com', stpid: 'palladium', name: 'Frederic Chauveau', title: 'C Developer', img: 'assets/photos/Frederic.Chauveau.png'},
+    { id: 'mario.larsen@intersec.com', name: 'Marion Larsen', stpid: 'palladium', title: 'Frontend Developer', img: 'assets/photos/Mario.Larsen.jpg'},
+    { id: 'damien.lemenager@intersec.com', name: 'Damien Lemenager', stpid: 'palladium', title: 'Flutter Developer', img: 'assets/photos/Lemenager.Damien.jpg'},
+    { id: 'yacine.boudiaf-ext@intersec.com', stpid: 'palladium', name: 'Yacine Boudiaf', title: 'Developer', img: 'assets/photos/Boudiaf.Yacine.jpg'},
+    { id: 'i.benabdallah-ext@intersec.com', stpid: 'palladium', name: 'Imen Benabdallah', title: 'Continuous Integrator', img: 'assets/photos/Imen_BENABDALLAH.jpg'},
+    { id: 'd.meharga-ext@intersec.com', stpid: 'palladium', name: 'Djamel-Eddine Meharga', title: 'Developer', img: 'assets/photos/Meharga.Djamel.jpg'},
 
     /* Cobalt */
     { id: 'nassim.mnafeg@intersec.com', stpid: 'engineering', name: 'Nassim Mnafeg', title: 'Team Leader', img: 'assets/photos/Nassim_MNAFEG.jpg'},
-    { id: 'romain', stpid: 'cobalt', name: 'Romain Le Godais', title: 'Software Architect', img: 'assets/photos/legodais.romain.jpg'},
-    { id: 'guillaume', stpid: 'cobalt', name: 'Guillaume Chevallerau', title: 'Software Architect', img: 'assets/photos/chevallereau.guillaume.png'},
-    { id: 'yannick', stpid: 'cobalt', name: 'Yannick Li', title: 'C Developer', img: 'assets/photos/Li.Yannick.jpg'},
-    { id: 'maxime', stpid: 'cobalt', name: 'Maxime Leblanc', title: 'C Developer', img: 'assets/photos/Maxime_Leblanc.jpg'},
-    { id: 'frederict', stpid: 'cobalt', name: 'Frederic Tutzo', title: 'Continuous Integrator', img: 'assets/photos/Frederic_Tutzo.jpg'},
-    { id: 'segolene.tutzo', stpid: 'cobalt', name: 'Segolene Tutzo', title: 'Frontend Developer', img: 'assets/photos/Segolene_TUTZO.jpg'},
-    { id: 'djaballah', stpid: 'cobalt', name: 'Djaballah Djedid', title: 'Developer', img: 'assets/photos/Djaballah_DJEDID.jpg'},
-    { id: 'hassina', stpid: 'cobalt', name: 'Hassina Moulai', title: 'Developer', img: 'assets/photos/Hassina.Moulai.jpg'},
-    { id: 'daosavanh', stpid: 'cobalt', name: 'Daosavanh THEPSOUVANH', title: 'Continuous Integrator', img: 'assets/photos/Daosavanh.Thepsouvanh.jpg'},
-    { id: 'amira', stpid: 'telco', name: 'Amira Hadjer Bouali', title: 'Developer', img: 'assets/photos/Bouali.Amira.jpg'},
-    { id: 'dihia', stpid: 'telco', name: 'Dihia Salhi', title: 'Continuous Integrator', img: 'assets/photos/Dihia_SALHI.jpg'},
+    { id: 'romain.legodais@intersec.com', stpid: 'cobalt', name: 'Romain Le Godais', title: 'Software Architect', img: 'assets/photos/legodais.romain.jpg'},
+    { id: 'guillaume.chevallerau@intersec.com', stpid: 'cobalt', name: 'Guillaume Chevallerau', title: 'Software Architect', img: 'assets/photos/chevallereau.guillaume.png'},
+    { id: 'yannick.li@intersec.com', stpid: 'cobalt', name: 'Yannick Li', title: 'C Developer', img: 'assets/photos/Li.Yannick.jpg'},
+    { id: 'maxime.leblanc@intersec.com', stpid: 'cobalt', name: 'Maxime Leblanc', title: 'C Developer', img: 'assets/photos/Maxime_Leblanc.jpg'},
+    { id: 'frederic.tutzo@intersec.com', stpid: 'cobalt', name: 'Frederic Tutzo', title: 'Continuous Integrator', img: 'assets/photos/Frederic_Tutzo.jpg'},
+    { id: 'segolene.tutzo@intersec.com', stpid: 'cobalt', name: 'Segolene Tutzo', title: 'Frontend Developer', img: 'assets/photos/Segolene_TUTZO.jpg'},
+    { id: 'djaballah.djedid@intersec.com', stpid: 'cobalt', name: 'Djaballah Djedid', title: 'Developer', img: 'assets/photos/Djaballah_DJEDID.jpg'},
+    { id: 'hassina.safaamoulai@intersec.com', stpid: 'cobalt', name: 'Hassina Moulai', title: 'Developer', img: 'assets/photos/Hassina.Moulai.jpg'},
+    { id: 'daosavanh.thepsouvanh@intersec.com', stpid: 'cobalt', name: 'Daosavanh THEPSOUVANH', title: 'Continuous Integrator', img: 'assets/photos/Daosavanh.Thepsouvanh.jpg'},
+    { id: 'a.bouali-ext@intersec.com', stpid: 'telco', name: 'Amira Hadjer Bouali', title: 'Developer', img: 'assets/photos/Bouali.Amira.jpg'},
+    { id: 'd.salhi-ext@intersec.com', stpid: 'telco', name: 'Dihia Salhi', title: 'Continuous Integrator', img: 'assets/photos/Dihia_SALHI.jpg'},
 
     /* Telco */
     { id: 'rawad.zgheib@intersec.com', stpid: 'engineering', name: 'Rawad Zgheib', title: 'Team Leader', img: 'assets/photos/Rawad_Zgheib.png'},
-    { id: 'kagan', stpid: 'telco', name: 'Yann Kagan', title: 'Software Architect', img: 'assets/photos/Kagan.Yann.jpg'},
-    { id: 'simone', stpid: 'telco', name: 'Simone Moreno', title: 'Continuous Integrator', img: 'assets/photos/MORENO.Simone.jpg'},
-    { id: 'biancale', stpid: 'telco', name: 'Marion Biancale', title: 'Continuous Integrator', img: 'assets/photos/Biancale.Marion.jpg'},
-    { id: 'manu', stpid: 'telco', name: 'Emmanuel Cousin', title: 'C Developer', img: 'assets/photos/COUSIN.Emmanuel.JPG'},
-    { id: 'xavier', stpid: 'telco', name: 'Xavier Chantry', title: 'Software Architect', img: 'assets/photos/CHANTRY.xavier.JPG'},
-    { id: 'caradec', stpid: 'telco', name: 'Jeremy Caradec', title: 'C Developer', img: 'assets/photos/Caradec.Jeremy.png'},
-    { id: 'loheac', stpid: 'telco', name: 'Antoine Loheac', title: 'C Developer', img: 'assets/photos/loheac.antoine.png'},
-    { id: 'matt', stpid: 'telco', name: 'Mathieu Vallet', title: 'C Developer', img: 'assets/photos/Vallet.Mathieu.jpg'},
-    { id: 'safwan', stpid: 'telco', name: 'Safwan Alwan', title: 'C Developer', img: 'assets/photos/Alwane.Safwan.jpg'},
-    { id: 'yossef', stpid: 'telco', name: 'Yossef Rostaqi', title: 'C Developer', img: 'assets/photos/Rostaqi.Yossef.jpg'},
+    { id: 'yann.kagan@intersec.com', stpid: 'telco', name: 'Yann Kagan', title: 'Software Architect', img: 'assets/photos/Kagan.Yann.jpg'},
+    { id: 'simone.moreno@intersec.com', stpid: 'telco', name: 'Simone Moreno', title: 'Continuous Integrator', img: 'assets/photos/MORENO.Simone.jpg'},
+    { id: 'marion.biancale@intersec.com', stpid: 'telco', name: 'Marion Biancale', title: 'Continuous Integrator', img: 'assets/photos/Biancale.Marion.jpg'},
+    { id: 'emmanuel.cousin@intersec.com', stpid: 'telco', name: 'Emmanuel Cousin', title: 'C Developer', img: 'assets/photos/COUSIN.Emmanuel.JPG'},
+    { id: 'xavier.chantry@intersec.com', stpid: 'telco', name: 'Xavier Chantry', title: 'Software Architect', img: 'assets/photos/CHANTRY.xavier.JPG'},
+    { id: 'jeremy.caradec@intersec.com', stpid: 'telco', name: 'Jeremy Caradec', title: 'C Developer', img: 'assets/photos/Caradec.Jeremy.png'},
+    { id: 'antoine.loheac@intersec.com', stpid: 'telco', name: 'Antoine Loheac', title: 'C Developer', img: 'assets/photos/loheac.antoine.png'},
+    { id: 'mathieu.vallet@intersec.com', stpid: 'telco', name: 'Mathieu Vallet', title: 'C Developer', img: 'assets/photos/Vallet.Mathieu.jpg'},
+    { id: 'safwan.alwan@intersec.com', stpid: 'telco', name: 'Safwan Alwan', title: 'C Developer', img: 'assets/photos/Alwane.Safwan.jpg'},
+    { id: 'yossef.rostaqi@intersec.com', stpid: 'telco', name: 'Yossef Rostaqi', title: 'C Developer', img: 'assets/photos/Rostaqi.Yossef.jpg'},
     { id: 'elie.duleu@intersec.com', stpid: 'telco', name: 'Elie Duleu', title: 'C Developer', img: 'assets/photos/Elie.Duleu.jpg'},
-    { id: 'guillaume.renaud', stpid: 'telco', name: 'Guillaume Renaud', title: 'Continuous Integrator', img: 'assets/photos/Guillaume.Renaud.jpg'},
+    { id: 'guillaume.renaud@intersec.com', stpid: 'telco', name: 'Guillaume Renaud', title: 'Continuous Integrator', img: 'assets/photos/Guillaume.Renaud.jpg'},
 
 
 
@@ -133,7 +133,7 @@ const workers: Array<ICWorker | Head> = [
 
     { id: 'ali.houssni@intersec.com', stpid: 'presales-eu', name: 'Ali Houssni', title: 'Presales', img: 'assets/photos/Houssni.Ali.jpg' },
     { id: 'cedrick.vero@intersec.com', stpid: 'presales-eu', name: 'Cedrick Vero', title: 'Presales', img: 'assets/photos/Vero.Cedrick.png' },
-    { id: 'chloe', stpid: 'presales-eu', name: 'Chloe MAROUN', title: 'Presales', img: 'assets/photos/Chloe_MAROUN.jpg' },
+    { id: 'chloe.maroun@intersec.com', stpid: 'presales-eu', name: 'Chloe MAROUN', title: 'Presales', img: 'assets/photos/Chloe_MAROUN.jpg' },
     { id: 'ahmed.lyahou@intersec.com', stpid: 'presales-eu', name: 'Ahmed LYAHOU', title: 'Presales', img: 'assets/photos/Ahmed_LYAHOU.jpg' },
 
     /* Trela */
@@ -141,19 +141,19 @@ const workers: Array<ICWorker | Head> = [
 
     /* EEME */
     { id: 'ahmed.hamza@intersec.com', stpid: 'sales-team', name: 'Ahmed Hamza', title: 'VP Sales', tags: ['management'], img: 'assets/photos/HAMZA.Ahmed.jpg' },
-    { id: 'fehmi.sanaa', stpid: 'sales-eeme', name: 'Fehmi SANAA', title: 'Regional Sales Manager - Dubai', img: 'assets/photos/Fehmi_SANAA.jpg' },
-    { id: 'abdurrahim.suslu', stpid: 'sales-eeme', name: 'Abdurrahim SUSLU', title: 'Regional Sales Manager - Dubai', img: 'assets/photos/Abdurrahim_SUSLU.jpg' },
+    { id: 'fehmi.sanaa@intersec.com', stpid: 'sales-eeme', name: 'Fehmi SANAA', title: 'Regional Sales Manager - Dubai', img: 'assets/photos/Fehmi_SANAA.jpg' },
+    { id: 'abdurrahim.suslu@intersec.com', stpid: 'sales-eeme', name: 'Abdurrahim SUSLU', title: 'Regional Sales Manager - Dubai', img: 'assets/photos/Abdurrahim_SUSLU.jpg' },
 
     { id: 'tarek.tarawneh@intersec.com', stpid: 'presales-eeme', name: 'Tarek Al Tarawneh', title: 'Presales', img: 'assets/photos/Tarawneh.Tarek.png' },
     { id: 'mohammed.abbas@intersec.com', stpid: 'presales-eeme', name: 'Mohammed Abbas', title: 'Presales', img: 'assets/photos/Mohamed.Abas.jpg' },
 
     /* Americas */
     { id: 'tom.mcewan@intersec.com', stpid: 'sales-americas', name: 'Tom McEwan', title: 'Regional Sales Manager', img: 'assets/photos/mcewan.Tom.JPG' },
-    { id: 'stephane.jutras', stpid: 'presales-americas', name: 'Stephane Jutras', title: 'Presales', img: 'assets/photos/Stephane_JUTRAS.jpg' },
+    { id: 'stephane.jutras@intersec.com', stpid: 'presales-americas', name: 'Stephane Jutras', title: 'Presales', img: 'assets/photos/Stephane_JUTRAS.jpg' },
 
     /* APAC */
     { id: 'kurian.manjakkal@intersec.com', stpid: 'sales-apac', name: 'Kurian Manjakkal', title: 'VP Sales', tags: ['management'], img: 'assets/photos/Manjakkal.Kurian.jpg'},
-    { id: 'yonghaw.goh', stpid: 'presales-apac', name: 'Yonghaw GOH', title: 'Pre Sales', img: 'assets/photos/Yonghaw_GOH.jpg'},
+    { id: 'yonghaw.goh@intersec.com', stpid: 'presales-apac', name: 'Yonghaw GOH', title: 'Pre Sales', img: 'assets/photos/Yonghaw_GOH.jpg'},
 
 
     /* }}} */
@@ -199,19 +199,19 @@ const workers: Array<ICWorker | Head> = [
     /* Middle East */
     { id: 'haytham.beshir@intersec.com', stpid: 'ps-team', tags: ['management'], name: 'Haytham Beshir', title: 'Program Manager', img: 'assets/photos/beshir.haytham.jpg' },
     { id: 'mohamad.dib@intersec.com', stpid: 'ps-eeme-program', name: 'Mohamad Dib', title: 'Integration Engineer', img: 'assets/photos/dib.mohamad.png' },
-    { id: 'preeti', stpid: 'ps-eeme-program', name: 'Preeti AGGARWAL', title: 'Managed Service Expert - DUBAI', img: 'assets/photos/Preeti_AGGARWAL.jpg' },
-    { id: 'anand.panwar', stpid: 'ps-eeme-program', name: 'Anand PANWAR', title: 'Integration Engineer', img: 'assets/photos/Anand.Panwar.jpg' },
+    { id: 'preeti.aggarwal@intersec.com', stpid: 'ps-eeme-program', name: 'Preeti AGGARWAL', title: 'Managed Service Expert - DUBAI', img: 'assets/photos/Preeti_AGGARWAL.jpg' },
+    { id: 'anand.panwar@intersec.com', stpid: 'ps-eeme-program', name: 'Anand PANWAR', title: 'Integration Engineer', img: 'assets/photos/Anand.Panwar.jpg' },
 
 
     { id: 'neeraj.bhatnagar@intersec.com', stpid: 'ps-team', tags: ['management'], name: 'Neeraj BHATNAGAR', title: 'Project Manager', img: 'assets/photos/Neeraj_BHATNAGAR.jpg' },
-    { id: 'naveen', stpid: 'ps-eeme-project', name: 'Naveen KUMAR', title: 'Solution Architect - DUBAI', img: 'assets/photos/Naveen_KUMAR.jpg' },
+    { id: 'naveen.kumar@intersec.com', stpid: 'ps-eeme-project', name: 'Naveen KUMAR', title: 'Solution Architect - DUBAI', img: 'assets/photos/Naveen_KUMAR.jpg' },
     { id: 'mohamed.aboelnoor@intersec.com', stpid: 'ps-eeme-project', name: 'Mohamed Aboelnoor', title: 'Integration Engineer (Egypt)', img: 'assets/photos/Aboelnoo.Mohamed.png' },
     { id: 'anas.mohamed@intersec.com', stpid: 'ps-eeme-project', name: 'Anas Mohamed', title: 'Integration Engineer (Egypt)', img: 'assets/photos/Anas_Mohamed.jpg' },
 
     /* Americas */
     { id: 'matthias.granger@intersec.com', stpid: 'ps-team', tags: ['management'], name: 'Matthias Granger', title: 'Project Manager & Regional TL', img: 'assets/photos/granger.matthias.jpg' },
     { id: 'curtis.jameson@intersec.com', stpid: 'ps-americas', name: 'Curtis Jameson', title: 'Integration Engineer', img: 'assets/photos/Jameson.Curtis.png' },
-    { id: 'sneha.dhotre', stpid: 'ps-americas', name: 'Sneha DHOTRE', title: 'Integration Engineer', img: 'assets/photos/Sneha_DHOTRE.png'},
+    { id: 'sneha.dhotre@intersec.com', stpid: 'ps-americas', name: 'Sneha DHOTRE', title: 'Integration Engineer', img: 'assets/photos/Sneha_DHOTRE.png'},
     { id: 'gabriel.terrien@intersec.com', stpid: 'ps-americas', name: 'Gabriel Terrien', title: 'Integration Engineer', img: 'assets/photos/terrien.gabriel.jpg' },
 
     /* Tiger */
@@ -240,8 +240,8 @@ const workers: Array<ICWorker | Head> = [
 
     { id: 'kevin.champion@intersec.com', stpid: 'it-team', name: 'Kevin Champion', title: 'IT Manager', img: 'assets/photos/Kevin_Champion.jpg'},
     { id: 'nicolas.sery@intersec.com', stpid: 'it-team', name: 'Nicolas Sery', title: 'System administrator', img: 'assets/photos/Nicolas.Sery.jpg'},
-    { id: 'matthieu.michelet', stpid: 'it-team', name: 'Matthieu Michelet', title: 'Site Reliability Engineer', img: 'assets/photos/matthieu_michelet.jpg'},
-    { id: 'bree', stpid: 'it-team', name: 'Simon Bree', title: 'Site Reliability Engineer', img: 'assets/photos/Bree.simon.jpg'},
+    { id: 'matthieu.michelet@intersec.com', stpid: 'it-team', name: 'Matthieu Michelet', title: 'Site Reliability Engineer', img: 'assets/photos/matthieu_michelet.jpg'},
+    { id: 'simon.bree@intersec.com', stpid: 'it-team', name: 'Simon Bree', title: 'Site Reliability Engineer', img: 'assets/photos/Bree.simon.jpg'},
 
     /* }}} */
     /* {{{ HR */

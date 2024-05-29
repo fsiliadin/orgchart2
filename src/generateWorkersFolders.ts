@@ -127,7 +127,6 @@
   }
 
   function updateWorkerFolder(worker: ICWorker | Head, icTeams: IntersecTeams) {
-
     worker.name = getWorkerNameFromId(worker.id);
     const workerFolder = createdWorkerFolder(worker.name);
     const ficheFilePath = path.join(workerFolder, 'fiche.txt');

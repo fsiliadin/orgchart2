@@ -62,7 +62,7 @@ type WorkerData = {
     department: string;
     slack: string,
     phone: string,
-    welcomeSheet: string,
+    welcome: string,
     dayOne: string,
     tags: string[];
 }
@@ -92,7 +92,7 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
         department: '',
         slack: '',
         phone: '',
-        welcomeSheet: '',
+        welcome: '',
         dayOne: '',
         tags: []
     };
