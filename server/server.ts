@@ -85,10 +85,11 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
         img: '',
         tags: []
     };
+
     workerFicheContent.split('\n')
     .map((line: string) => line.split(':'))
     .forEach((keyValuePair: string[]) => {
-        switch(keyValuePair[0]) {
+        switch(keyValuePair[0].trim()) {
             case 'firstname': workerData.fistname = keyValuePair[1].trim(); break;
             case 'lastname': workerData.lastname = keyValuePair[1].trim(); break;
             case 'position': workerData.position = keyValuePair[1].trim(); break;

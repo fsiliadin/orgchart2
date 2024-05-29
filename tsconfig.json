@@ -11,8 +11,7 @@
     "skipLibCheck": true
   },
   "references": [
-    { "path": "./server" },
-    // { "path": "./src/app" }
+    { "path": "./server" }
   ],
   "include": ["src/**/*.ts"]
 }
