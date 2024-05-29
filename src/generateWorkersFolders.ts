@@ -109,7 +109,7 @@
     * in kebab case "that-team". While in the teams Map which comes from a human readable
     * file it's in this format "That Team"
     */
-   const nPlus1 = icTeams.teams.get(decomposeString(worker.stpid, ' ')) ?? 'God';
+   const nPlus1 = icTeams.teams.get(decomposeString(worker.stpid, ' ')) ?? '';
    const [firstname, lastname] = getWorkerNameFromId(worker.id).split(' ');
    const department = getDepartment(worker, icTeams);
    const fileContent = `
