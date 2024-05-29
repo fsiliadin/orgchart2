@@ -9,6 +9,7 @@
     const teamLeadersFileContent = teamsAndLeaders.join('\n');
     const departmentsAndHeadsFileContent = departmentsAndHeads.join('\n');
 
+
     // Generate team leaders file
     fs.writeFile('teamLeaders.txt', teamLeadersFileContent, 'utf-8', (err: any) => {
       if (err) {
@@ -42,6 +43,8 @@
         departmentAndHeads.set(teamName, team.pid);
       }
     });
+    console.log('chefs', teamsAndLeaders);
+    console.log('department heads ', departmentAndHeads);
     const teamsAndLeadersList = Array.from(teamsAndLeaders).map(([team, leader]) => `${team}: ${leader}`);
     const departmentAndHeadsList = Array.from(departmentAndHeads).map(([department, head]) => `${department}: ${head}`);
     return [teamsAndLeadersList, departmentAndHeadsList];

@@ -59,6 +59,11 @@ type WorkerData = {
     email: string;
     "n+1": string;
     img: string;
+    department: string;
+    slack: string,
+    phone: string,
+    welcomeSheet: string,
+    dayOne: string,
     tags: string[];
 }
 
@@ -84,6 +89,11 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
         email: '',
         "n+1": '',
         img: '',
+        department: '',
+        slack: '',
+        phone: '',
+        welcomeSheet: '',
+        dayOne: '',
         tags: []
     };
 
@@ -94,6 +104,7 @@ function parseWorkerData(workerFicheContent: string, image: string): WorkerData 
             case 'firstname': workerData.firstname = keyValuePair[1].trim(); break;
             case 'lastname': workerData.lastname = keyValuePair[1].trim(); break;
             case 'position': workerData.position = keyValuePair[1].trim(); break;
+            case 'department': workerData.department = keyValuePair[1].trim(); break;
             case 'email': workerData.email = keyValuePair[1].trim(); break;
             case 'n+1': workerData['n+1'] = keyValuePair[1].trim(); break;
             case 'img': workerData.img = keyValuePair[1].trim(); break;
