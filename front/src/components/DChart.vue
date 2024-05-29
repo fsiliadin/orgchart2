@@ -28,7 +28,7 @@ let listElement = ref(null)
 let usersData = []
 let isMock = true
 
-const apiUrl = 'http://localhost:2024'
+const apiUrl = 'https://localhost:2024'
 
 async function getData() {
     await fetch(apiUrl + "/parsePeople").then(async (response) => {
