@@ -67,6 +67,23 @@ type WorkerData = {
     tags: string[];
 }
 
+type TeamData = {
+    id: string;
+    parentId: string;
+    name: string;
+    type: 'team';
+}
+
+let teams;
+
+fs.readFile(path.join(__dirname, './teamLeaders.txt'), 'utf-8', (err, teamsAndLeadersFileContent) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    teams = parseTeamsAndLeaders(teamsAndLeadersFileContent);
+});
+
 function getImageInWorkerFolder(workerFolderFilesPath: string[], personFolderPath: string) {
     const imageFile = workerFolderFilesPath.find(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
     let imagePath = '';
@@ -127,13 +144,13 @@ function setComputedData(worker: WorkerData) {
     worker.id = hash.digest('hex');
 
     const hashNplusUn = cypher.createHash('sha256');
-    hashNplusUn.update(`${worker['n+1']}`);
+    hashNplusUn.update(worker['n+1']);
+
     if (worker['n+1'].length) {
         worker.parentId = hashNplusUn.digest('hex');
     } else {
         worker.parentId = '';
     }
-
     return worker;
 }
 
@@ -141,7 +158,7 @@ function parseWorkersFolder(res: any) {
     const peopleFolderPath = path.join(__dirname, 'intersecAmazingPeople');
 
     fs.readdir(peopleFolderPath, (error: NodeJS.ErrnoException | null, peopleFolders: File[]) => {
-        const workersData: WorkerData[] = [];
+        const workersData = new Set<WorkerData | TeamData>;
         let count = 0;
         const numberOfPersons = Object.keys(peopleFolders).length;
 
@@ -165,11 +182,13 @@ function parseWorkersFolder(res: any) {
                             }
                             let worker: WorkerData = parseWorkerData(ficheContent, image);
                             worker = setComputedData(worker);
-                            workersData.push(worker);
+                            insertTeam(worker, workersData);
+                            workersData.add(worker);
                             count++;
                             if (count === numberOfPersons) {
-                                showPeopleWithoutBosses(workersData)
-                                res.json(workersData);
+                                const workersArray = Array.from(workersData);
+                                showPeopleWithoutBosses(workersArray)
+                                res.json(workersArray);
                             }
                         });
                     })();
@@ -181,7 +200,46 @@ function parseWorkersFolder(res: any) {
     });
 }
 
-function showPeopleWithoutBosses(workersData: WorkerData[]) {
+function insertTeam (worker: WorkerData, workersData: Set<WorkerData | TeamData>) {
+    const hashNplusUn = cypher.createHash('sha256');
+    hashNplusUn.update(worker['n+1']);
+    const teamParentId = hashNplusUn.digest('hex');
+
+    console.log('teams', teams)
+    const teamName = getTeamName(worker['n+1']);
+    console.log('teamName', teamName);
+    let teamId;
+    if(teamName) {
+        const hashId = cypher.createHash('sha256');
+        hashId.update(teamName);
+        teamId = hashId.digest('hex');
+        worker.parentId = teamId;
+
+        workersData.add({
+            id: teamId,
+            type: 'team',
+            name: teamName,
+            parentId: teamParentId,
+        })
+    }
+
+
+}
+
+function getTeamName(leader: string): string {
+    return teams.get(leader);
+}
+
+function parseTeamsAndLeaders(teamsAndLeadersFileContent: string) {
+    const teamsAndLeaders = new Map;
+    teamsAndLeadersFileContent.split('\n').forEach(line => {
+        const [team, leader] = line.split(':').map(item => item.trim());
+        teamsAndLeaders.set(leader, team);
+    });
+    return teamsAndLeaders;
+}
+
+function showPeopleWithoutBosses(workersData: Array<WorkerData | TeamData>) {
     const idSet = new Set();
 
     workersData.forEach(element => {
