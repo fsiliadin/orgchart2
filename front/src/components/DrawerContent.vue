@@ -1,11 +1,22 @@
 <script setup>
+import moment from 'moment';
 import { onMounted, ref } from 'vue'
 import { departementColors } from '../utils/colors'
-import IntroExampleImage from '../assets/images/intro-example.png'
-import alexImage from "../assets/images/alex.png"
 const props = defineProps(['node'])
 
 let showIntro = ref(false)
+
+function getDayOneDiff(dayOne) {
+    const a = moment(dayOne, 'DD/MM/YYYY');
+    const b = moment(Date.now())
+    const years = b.diff(a, 'years');
+    const months = b.diff(a, 'months') - 12 * years;
+
+    let construct = "";
+    if (years > 1) construct += `${years} years`
+    if (months > 0) construct += `, ${months} months`
+    return construct
+}
 </script>
 
 <template>
@@ -27,39 +38,40 @@ let showIntro = ref(false)
                 </p>
 
                 <div class="actions">
-                    <div class="action slack">
+                    <a :href="node.slack" class="action slack" v-if="node.slack">
                         <svg class="action-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 15C6 15.5304 5.78929 16.0391 5.41421 16.4142C5.03914 16.7893 4.53043 17 4 17C3.46957 17 2.96086 16.7893 2.58579 16.4142C2.21071 16.0391 2 15.5304 2 15C2 14.4696 2.21071 13.9609 2.58579 13.5858C2.96086 13.2107 3.46957 13 4 13H6V15ZM7 15C7 14.4696 7.21071 13.9609 7.58579 13.5858C7.96086 13.2107 8.46957 13 9 13C9.53043 13 10.0391 13.2107 10.4142 13.5858C10.7893 13.9609 11 14.4696 11 15V20C11 20.5304 10.7893 21.0391 10.4142 21.4142C10.0391 21.7893 9.53043 22 9 22C8.46957 22 7.96086 21.7893 7.58579 21.4142C7.21071 21.0391 7 20.5304 7 20V15ZM9 7C8.46957 7 7.96086 6.78929 7.58579 6.41421C7.21071 6.03914 7 5.53043 7 5C7 4.46957 7.21071 3.96086 7.58579 3.58579C7.96086 3.21071 8.46957 3 9 3C9.53043 3 10.0391 3.21071 10.4142 3.58579C10.7893 3.96086 11 4.46957 11 5V7H9ZM9 8C9.53043 8 10.0391 8.21071 10.4142 8.58579C10.7893 8.96086 11 9.46957 11 10C11 10.5304 10.7893 11.0391 10.4142 11.4142C10.0391 11.7893 9.53043 12 9 12H4C3.46957 12 2.96086 11.7893 2.58579 11.4142C2.21071 11.0391 2 10.5304 2 10C2 9.46957 2.21071 8.96086 2.58579 8.58579C2.96086 8.21071 3.46957 8 4 8H9ZM17 10C17 9.46957 17.2107 8.96086 17.5858 8.58579C17.9609 8.21071 18.4696 8 19 8C19.5304 8 20.0391 8.21071 20.4142 8.58579C20.7893 8.96086 21 9.46957 21 10C21 10.5304 20.7893 11.0391 20.4142 11.4142C20.0391 11.7893 19.5304 12 19 12H17V10ZM16 10C16 10.5304 15.7893 11.0391 15.4142 11.4142C15.0391 11.7893 14.5304 12 14 12C13.4696 12 12.9609 11.7893 12.5858 11.4142C12.2107 11.0391 12 10.5304 12 10V5C12 4.46957 12.2107 3.96086 12.5858 3.58579C12.9609 3.21071 13.4696 3 14 3C14.5304 3 15.0391 3.21071 15.4142 3.58579C15.7893 3.96086 16 4.46957 16 5V10ZM14 18C14.5304 18 15.0391 18.2107 15.4142 18.5858C15.7893 18.9609 16 19.4696 16 20C16 20.5304 15.7893 21.0391 15.4142 21.4142C15.0391 21.7893 14.5304 22 14 22C13.4696 22 12.9609 21.7893 12.5858 21.4142C12.2107 21.0391 12 20.5304 12 20V18H14ZM14 17C13.4696 17 12.9609 16.7893 12.5858 16.4142C12.2107 16.0391 12 15.5304 12 15C12 14.4696 12.2107 13.9609 12.5858 13.5858C12.9609 13.2107 13.4696 13 14 13H19C19.5304 13 20.0391 13.2107 20.4142 13.5858C20.7893 13.9609 21 14.4696 21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H14Z"/>
                         </svg>
 
                         Slack
-                    </div>
+                    </a>
 
-                    <div class="action mail">
+                    <a class="action mail" :href="`mailto:${ node.email }`">
                         <svg class="action-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22 7.535V17C22 17.7652 21.7077 18.5015 21.1827 19.0583C20.6578 19.615 19.9399 19.9501 19.176 19.995L19 20H5C4.23479 20 3.49849 19.7077 2.94174 19.1827C2.38499 18.6578 2.04989 17.9399 2.005 17.176L2 17V7.535L11.445 13.832L11.561 13.898C11.6977 13.9648 11.8478 13.9995 12 13.9995C12.1522 13.9995 12.3023 13.9648 12.439 13.898L12.555 13.832L22 7.535Z"/>
                             <path d="M19 4C20.08 4 21.027 4.57 21.555 5.427L12 11.797L2.445 5.427C2.69573 5.01977 3.04021 4.6784 3.44971 4.43138C3.8592 4.18436 4.32183 4.03886 4.799 4.007L5 4H19Z"/>
                         </svg>
 
                         Mail
-                    </div>
+                    </a>
 
-                    <div class="action phone">
+                    <a :href="`tel:${node.phone}`" class="action phone" v-if="node.phone">
                         <svg class="action-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.2475 16.11L16.9275 14.43C17.1538 14.2065 17.44 14.0536 17.7516 13.9897C18.0631 13.9257 18.3865 13.9537 18.6825 14.07L20.73 14.8875C21.0291 15.0089 21.2856 15.2161 21.4671 15.4831C21.6486 15.75 21.747 16.0647 21.75 16.3875V20.1375C21.7482 20.3571 21.7021 20.574 21.6143 20.7753C21.5265 20.9766 21.3989 21.158 21.2391 21.3087C21.0793 21.4593 20.8907 21.5761 20.6847 21.6519C20.4786 21.7278 20.2593 21.7611 20.04 21.75C5.69248 20.8575 2.79748 8.7075 2.24998 4.0575C2.22456 3.82915 2.24778 3.59801 2.31811 3.37928C2.38844 3.16055 2.50429 2.95919 2.65803 2.78845C2.81177 2.61771 2.99992 2.48145 3.2101 2.38865C3.42028 2.29584 3.64772 2.24859 3.87748 2.25H7.49998C7.82324 2.25096 8.13881 2.3486 8.40612 2.53037C8.67344 2.71214 8.88025 2.96973 8.99998 3.27L9.81748 5.3175C9.93767 5.6123 9.96833 5.93598 9.90564 6.24811C9.84295 6.56024 9.68968 6.84697 9.46498 7.0725L7.78498 8.7525C7.78498 8.7525 8.75248 15.3 15.2475 16.11Z"/>
                         </svg>
 
                         06 XX XX XX XX
-                    </div>
+                    </a>
                 </div>
 
-                <p class="tags">{{ node?.tags ?? "No tags" }}</p>
+                <p class="tags">
+                    <span v-for="(tag, index) in node.tags">{{ tag }}</span>
+                </p>
 
-                <p class="start-date">{{ node?.startDate ?? "1 year at Intersec" }}</p>
+                <p v-if="node.dayOne" class="start-date">{{ getDayOneDiff(node.dayOne) }}</p>
             </div>
     
-            <!-- <div class="button-wrapper" v-if="node.welcomeSheetUrl"> -->
-            <div class="button-wrapper">
+            <div class="button-wrapper" v-if="node.welcome">
                 <button @click="() => showIntro = !showIntro" class="hide-show-btn">
                     {{ showIntro ? 'Hide' : 'Show' }} intro pdf
                     
@@ -74,8 +86,8 @@ let showIntro = ref(false)
             </div>
         </div>
 
-        <div class="intro" :class="{show: showIntro}">
-            <img class="intro-img" :src="node.welcomeSheetUrl ?? IntroExampleImage">
+        <div class="intro" :class="{show: showIntro}" v-if="node.welcome">
+            <img class="intro-img" :src="node.welcome">
         </div>
     </div>
 </template>
@@ -150,7 +162,8 @@ let showIntro = ref(false)
     .profil {
         width: 300px;
         height: 100%;
-        border-radius: 100%;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        overflow: hidden;
     }
 
     .profil img {
@@ -221,6 +234,7 @@ let showIntro = ref(false)
         color: white;
         font-size: 18px;
         font-weight: 700;
+        text-decoration: none;
     }
 
     .action.slack {

@@ -3,9 +3,7 @@ import DrawerContent from './DrawerContent.vue'
 import Drawer from './Drawer.vue'
 import { onMounted, ref } from 'vue';
 import { OrgChart } from 'd3-org-chart';
-import alexImage from "../assets/images/alex.png"
-import IntroExampleImage from '../assets/images/intro-example.png'
-import mockData from '../utils/mock.json'
+// import mockData from '../utils/mock.json'
 import Legend from './Legend.vue';
 import { departementColors } from '../utils/colors'
 
@@ -26,7 +24,6 @@ let pauseSearch = ref(false)
 let listElement = ref(null)
 
 let usersData = []
-let isMock = true
 
 const apiUrl = 'https://localhost:2024'
 
@@ -36,9 +33,8 @@ async function getData() {
     
         usersData = people
     })
-    .catch(() => {
-        usersData = mockData
-        isMock = true
+    .catch((err) => {
+        console.error(err)
     })
 
     initChart()
@@ -48,7 +44,7 @@ async function getData() {
     chart = new OrgChart()
     .onNodeClick((node) => onNodeClick(node))
     .onExpandOrCollapse((node) => {
-        formatSelectedRectangle(node)
+        // formatSelectedRectangle(node)
     })
     .container('.d-chart')
     .data(usersData)
@@ -71,8 +67,8 @@ async function getData() {
         `
     })
     .nodeContent(function (d, i, arr, state) {
-        const depColor = departementColors[d.data.department]
-    if (d.data.type && d.data.type === "equipe") {
+        const depColor = departementColors[d.data.department] ?? ''
+    if (d.data.type && d.data.type === "team") {
         return `
         <div class="card team" style="--highlight-color: ${depColor};" data-id="${d.data.id}">
             <div class="card-name"> ${ d.data.firstname } ${d.data.lastname}</div>
@@ -85,12 +81,12 @@ async function getData() {
             <div class="card-tag"> </div>
 
             <div class="card-background">
-                <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
+                <img src=" ${ encodeURIComponent(d.data.img) }"/>
             </div>
 
             <div class="card-content">
                 <div class="card-img">
-                    <img src=" ${ isMock ? alexImage : encodeURIComponent(d.data.img) }"/>
+                    <img src=" ${ encodeURIComponent(d.data.img) }"/>
                 </div>
                     
                 <div class="card-body">
@@ -140,12 +136,14 @@ function onNodeClick(node) {
   }
 
 function formatSelectedRectangle(employee) {
+    // console.log(employee)
     const nodes = Array.from(document.querySelectorAll('.node'))
     const map = new Map()
 
     nodes.forEach(item => {
         const rect = item.querySelector('.node-rect')
         const id = item.querySelector('.card').dataset.id
+        console.log(id)
         map.set(id, rect)
     })
     
@@ -198,14 +196,14 @@ function onOptionTap(option) {
     clearSearch()
     clearRectangles()
 
-    if (option.type === "equipe") {
-        setTimeout(() => {
-            highlightChildren(option.id)
-            formatSelectedRectangle(option)
-        }, 300)
-    } else {
-        formatSelectedRectangle(option)
-    }
+    // if (option.type === "equipe") {
+    //     setTimeout(() => {
+    //         highlightChildren(option.id)
+    //         formatSelectedRectangle(option)
+    //     }, 300)
+    // } else {
+    //     formatSelectedRectangle(option)
+    // }
 }
 
 function clearSearch() {
@@ -244,7 +242,7 @@ function unfocusOptionByIndex(index) {
 }
 
 // function updateOptionListScrollOnFocus(index) {
-//     //WIP
+//     //WIP AUTO SCROLL ON KEY MOVES
 //     const offset = 100
 //     const margin = 100
 //     const listHeight = listElement.value.offsetHeight
@@ -307,19 +305,13 @@ function searchClickOut(e) {
             pauseSearch.value = true
             searchOptions.value = []
         }
-    }
-
-    // if(!target.closest('.search').length) {
-    //     console.log('test')
-    // }        
+    }  
 }
 
 onMounted(() => {
     getData()
     document.addEventListener('keydown', onKeyDown)
-
     document.addEventListener('click', (e) => searchClickOut(e))
-
     focusSearchInput()
 })
 </script>
@@ -355,7 +347,7 @@ onMounted(() => {
                         >
                             <div class="option-image">
                                 <p  v-if="option.type === 'equipe'">Team</p>
-                                <img v-else :src="isMock ? alexImage : option.img">
+                                <img v-else :src="option.img">
                             </div>
 
                             <p class="option-name"> {{ `${option.firstname} ${option.lastname}` }} </p>

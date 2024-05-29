@@ -54,9 +54,15 @@ defineEmits(['close'])
     cursor: pointer;
     background: transparent;
     border: 0;
-    opacity: .5;
-    transition: opacity .2s, transform .4s ease-out;
+    opacity: 0;
+    transition: opacity .2s, transform .4s var(--cubic-bounce);
     transform-origin: center center;
+    transform: scale(0);
+  }
+
+  .drawer.open .drawer-close {
+    opacity: .4;
+    transform: scale(1);
   }
 
   .drawer-close:hover {
